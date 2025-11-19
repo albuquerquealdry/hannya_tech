@@ -2,255 +2,255 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hannya Tech</title>
-    <link>http://localhost:1412/tags/</link>
+    <link>https://albuquerquealdry.github.io/tags/</link>
     <description>Recent content in Tags on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Wed, 19 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1412/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://albuquerquealdry.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Anonimato</title>
-      <link>http://localhost:1412/tags/anonimato/</link>
+      <link>https://albuquerquealdry.github.io/tags/anonimato/</link>
       <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/anonimato/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/anonimato/</guid>
       <description></description>
     </item>
     <item>
       <title>Browser</title>
-      <link>http://localhost:1412/tags/browser/</link>
+      <link>https://albuquerquealdry.github.io/tags/browser/</link>
       <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/browser/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/browser/</guid>
       <description></description>
     </item>
     <item>
       <title>Privacidade</title>
-      <link>http://localhost:1412/tags/privacidade/</link>
+      <link>https://albuquerquealdry.github.io/tags/privacidade/</link>
       <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/privacidade/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/privacidade/</guid>
       <description></description>
     </item>
     <item>
       <title>Rastreamento</title>
-      <link>http://localhost:1412/tags/rastreamento/</link>
+      <link>https://albuquerquealdry.github.io/tags/rastreamento/</link>
       <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/rastreamento/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/rastreamento/</guid>
       <description></description>
     </item>
     <item>
       <title>Segurança</title>
-      <link>http://localhost:1412/tags/seguran%C3%A7a/</link>
+      <link>https://albuquerquealdry.github.io/tags/seguran%C3%A7a/</link>
       <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/seguran%C3%A7a/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/seguran%C3%A7a/</guid>
       <description></description>
     </item>
     <item>
       <title>Ai-Security</title>
-      <link>http://localhost:1412/tags/ai-security/</link>
+      <link>https://albuquerquealdry.github.io/tags/ai-security/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/ai-security/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/ai-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Ansible</title>
-      <link>http://localhost:1412/tags/ansible/</link>
+      <link>https://albuquerquealdry.github.io/tags/ansible/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/ansible/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/ansible/</guid>
       <description></description>
     </item>
     <item>
       <title>Automation</title>
-      <link>http://localhost:1412/tags/automation/</link>
+      <link>https://albuquerquealdry.github.io/tags/automation/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/automation/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/automation/</guid>
       <description></description>
     </item>
     <item>
       <title>Dual-Stack</title>
-      <link>http://localhost:1412/tags/dual-stack/</link>
+      <link>https://albuquerquealdry.github.io/tags/dual-stack/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/dual-stack/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/dual-stack/</guid>
       <description></description>
     </item>
     <item>
       <title>Malware-Analysis</title>
-      <link>http://localhost:1412/tags/malware-analysis/</link>
+      <link>https://albuquerquealdry.github.io/tags/malware-analysis/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/malware-analysis/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/malware-analysis/</guid>
       <description></description>
     </item>
     <item>
       <title>Proxmox</title>
-      <link>http://localhost:1412/tags/proxmox/</link>
+      <link>https://albuquerquealdry.github.io/tags/proxmox/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/proxmox/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/proxmox/</guid>
       <description></description>
     </item>
     <item>
       <title>Estudo Comparativo</title>
-      <link>http://localhost:1412/tags/estudo-comparativo/</link>
+      <link>https://albuquerquealdry.github.io/tags/estudo-comparativo/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/estudo-comparativo/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/estudo-comparativo/</guid>
       <description></description>
     </item>
     <item>
       <title>Network</title>
-      <link>http://localhost:1412/tags/network/</link>
+      <link>https://albuquerquealdry.github.io/tags/network/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/network/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/network/</guid>
       <description></description>
     </item>
     <item>
       <title>Ofuscação</title>
-      <link>http://localhost:1412/tags/ofusca%C3%A7%C3%A3o/</link>
+      <link>https://albuquerquealdry.github.io/tags/ofusca%C3%A7%C3%A3o/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/ofusca%C3%A7%C3%A3o/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/ofusca%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
     <item>
       <title>Privacy</title>
-      <link>http://localhost:1412/tags/privacy/</link>
+      <link>https://albuquerquealdry.github.io/tags/privacy/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/privacy/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/privacy/</guid>
       <description></description>
     </item>
     <item>
       <title>Rede</title>
-      <link>http://localhost:1412/tags/rede/</link>
+      <link>https://albuquerquealdry.github.io/tags/rede/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/rede/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/rede/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
-      <link>http://localhost:1412/tags/security/</link>
+      <link>https://albuquerquealdry.github.io/tags/security/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/security/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/security/</guid>
       <description></description>
     </item>
     <item>
       <title>Tails</title>
-      <link>http://localhost:1412/tags/tails/</link>
+      <link>https://albuquerquealdry.github.io/tags/tails/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/tails/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/tails/</guid>
       <description></description>
     </item>
     <item>
       <title>Tor</title>
-      <link>http://localhost:1412/tags/tor/</link>
+      <link>https://albuquerquealdry.github.io/tags/tor/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/tor/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/tor/</guid>
       <description></description>
     </item>
     <item>
       <title>Vigilância</title>
-      <link>http://localhost:1412/tags/vigil%C3%A2ncia/</link>
+      <link>https://albuquerquealdry.github.io/tags/vigil%C3%A2ncia/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/vigil%C3%A2ncia/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/vigil%C3%A2ncia/</guid>
       <description></description>
     </item>
     <item>
       <title>Whonix</title>
-      <link>http://localhost:1412/tags/whonix/</link>
+      <link>https://albuquerquealdry.github.io/tags/whonix/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/whonix/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/whonix/</guid>
       <description></description>
     </item>
     <item>
       <title>Bridges</title>
-      <link>http://localhost:1412/tags/bridges/</link>
+      <link>https://albuquerquealdry.github.io/tags/bridges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/bridges/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/bridges/</guid>
       <description></description>
     </item>
     <item>
       <title>Engenharia-Reversa</title>
-      <link>http://localhost:1412/tags/engenharia-reversa/</link>
+      <link>https://albuquerquealdry.github.io/tags/engenharia-reversa/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/engenharia-reversa/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/engenharia-reversa/</guid>
       <description></description>
     </item>
     <item>
       <title>Gemini</title>
-      <link>http://localhost:1412/tags/gemini/</link>
+      <link>https://albuquerquealdry.github.io/tags/gemini/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/gemini/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/gemini/</guid>
       <description></description>
     </item>
     <item>
       <title>Go</title>
-      <link>http://localhost:1412/tags/go/</link>
+      <link>https://albuquerquealdry.github.io/tags/go/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/go/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/go/</guid>
       <description></description>
     </item>
     <item>
       <title>Llm</title>
-      <link>http://localhost:1412/tags/llm/</link>
+      <link>https://albuquerquealdry.github.io/tags/llm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/llm/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/llm/</guid>
       <description></description>
     </item>
     <item>
       <title>Logs</title>
-      <link>http://localhost:1412/tags/logs/</link>
+      <link>https://albuquerquealdry.github.io/tags/logs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/logs/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/logs/</guid>
       <description></description>
     </item>
     <item>
       <title>Malware</title>
-      <link>http://localhost:1412/tags/malware/</link>
+      <link>https://albuquerquealdry.github.io/tags/malware/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/malware/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/malware/</guid>
       <description></description>
     </item>
     <item>
       <title>Metadados</title>
-      <link>http://localhost:1412/tags/metadados/</link>
+      <link>https://albuquerquealdry.github.io/tags/metadados/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/metadados/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/metadados/</guid>
       <description></description>
     </item>
     <item>
       <title>Metadata</title>
-      <link>http://localhost:1412/tags/metadata/</link>
+      <link>https://albuquerquealdry.github.io/tags/metadata/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/metadata/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/metadata/</guid>
       <description></description>
     </item>
     <item>
       <title>Navegação</title>
-      <link>http://localhost:1412/tags/navega%C3%A7%C3%A3o/</link>
+      <link>https://albuquerquealdry.github.io/tags/navega%C3%A7%C3%A3o/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/navega%C3%A7%C3%A3o/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/navega%C3%A7%C3%A3o/</guid>
       <description></description>
     </item>
     <item>
       <title>Opsec</title>
-      <link>http://localhost:1412/tags/opsec/</link>
+      <link>https://albuquerquealdry.github.io/tags/opsec/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/opsec/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/opsec/</guid>
       <description></description>
     </item>
     <item>
       <title>Prompt-Engineering</title>
-      <link>http://localhost:1412/tags/prompt-engineering/</link>
+      <link>https://albuquerquealdry.github.io/tags/prompt-engineering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/prompt-engineering/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/prompt-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Tracking</title>
-      <link>http://localhost:1412/tags/tracking/</link>
+      <link>https://albuquerquealdry.github.io/tags/tracking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/tracking/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/tracking/</guid>
       <description></description>
     </item>
     <item>
       <title>Web</title>
-      <link>http://localhost:1412/tags/web/</link>
+      <link>https://albuquerquealdry.github.io/tags/web/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/tags/web/</guid>
+      <guid>https://albuquerquealdry.github.io/tags/web/</guid>
       <description></description>
     </item>
   </channel>

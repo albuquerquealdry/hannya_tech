@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Privacidade on Hannya Tech</title>
-    <link>http://localhost:1412/tags/privacidade/</link>
+    <link>https://albuquerquealdry.github.io/tags/privacidade/</link>
     <description>Recent content in Privacidade on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Wed, 19 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1412/tags/privacidade/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://albuquerquealdry.github.io/tags/privacidade/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fingerprinting de Navegador: Técnicas e Contramedidas</title>
-      <link>http://localhost:1412/subpesquisa/fingerprinting-de-navegador/</link>
+      <link>https://albuquerquealdry.github.io/subpesquisa/fingerprinting-de-navegador/</link>
       <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/subpesquisa/fingerprinting-de-navegador/</guid>
+      <guid>https://albuquerquealdry.github.io/subpesquisa/fingerprinting-de-navegador/</guid>
       <description>Análise técnica das técnicas de fingerprinting de navegadores e métodos defensivos para preservação de privacidade digital.</description>
     </item>
     <item>
       <title>Análise Prática de Anonimato Digital: Um Estudo Comparativo de Técnicas de Ofuscação e Evasão à Vigilância</title>
-      <link>http://localhost:1412/pesquisa/anonimato/</link>
+      <link>https://albuquerquealdry.github.io/pesquisa/anonimato/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/pesquisa/anonimato/</guid>
+      <guid>https://albuquerquealdry.github.io/pesquisa/anonimato/</guid>
       <description>Esta pesquisa investiga e compara, através de um estudo experimental, o nível de anonimato e privacidade de um ambiente de usuário padrão (Cenário A) contra um ambiente &amp;lsquo;hardened&amp;rsquo; (Cenário B) com ferramentas de ofuscação, focando na evasão à vigilância de big techs.</description>
     </item>
   </channel>

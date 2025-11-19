@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ofuscação on Hannya Tech</title>
-    <link>http://localhost:1412/tags/ofusca%C3%A7%C3%A3o/</link>
+    <link>https://albuquerquealdry.github.io/tags/ofusca%C3%A7%C3%A3o/</link>
     <description>Recent content in Ofuscação on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1412/tags/ofusca%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://albuquerquealdry.github.io/tags/ofusca%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Análise Prática de Anonimato Digital: Um Estudo Comparativo de Técnicas de Ofuscação e Evasão à Vigilância</title>
-      <link>http://localhost:1412/pesquisa/anonimato/</link>
+      <link>https://albuquerquealdry.github.io/pesquisa/anonimato/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/pesquisa/anonimato/</guid>
+      <guid>https://albuquerquealdry.github.io/pesquisa/anonimato/</guid>
       <description>Esta pesquisa investiga e compara, através de um estudo experimental, o nível de anonimato e privacidade de um ambiente de usuário padrão (Cenário A) contra um ambiente &amp;lsquo;hardened&amp;rsquo; (Cenário B) com ferramentas de ofuscação, focando na evasão à vigilância de big techs.</description>
     </item>
     <item>
       <title>Subpesquisa 3: Prova de Conceito de Pontes Tor</title>
-      <link>http://localhost:1412/subpesquisa/prova-de-conceito-pontes-tor/</link>
+      <link>https://albuquerquealdry.github.io/subpesquisa/prova-de-conceito-pontes-tor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/subpesquisa/prova-de-conceito-pontes-tor/</guid>
+      <guid>https://albuquerquealdry.github.io/subpesquisa/prova-de-conceito-pontes-tor/</guid>
       <description>Testes de Pontes Tor Meek, OBFS4 e Snowflake e validação de eficácia.</description>
     </item>
     <item>
       <title>Subpesquisa 4: Navegação e Ofuscação Avançada</title>
-      <link>http://localhost:1412/subpesquisa/navegacao-e-ofuscacao-avancada/</link>
+      <link>https://albuquerquealdry.github.io/subpesquisa/navegacao-e-ofuscacao-avancada/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1412/subpesquisa/navegacao-e-ofuscacao-avancada/</guid>
+      <guid>https://albuquerquealdry.github.io/subpesquisa/navegacao-e-ofuscacao-avancada/</guid>
       <description>Demonstrar uso prático de redes de anonimato (Tor, I2P) e técnicas de ofuscação (pluggable transports).</description>
     </item>
   </channel>
