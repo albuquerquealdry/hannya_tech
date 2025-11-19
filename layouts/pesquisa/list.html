@@ -15,7 +15,7 @@
         {{ $percent = div (mul $done 100) $total }}
       {{ end }}
 
-      <article class="card" style="cursor: pointer;" onclick="window.location.href='{{ .RelPermalink }}'">
+      <article class="card" style="cursor: pointer;" onclick="window.location.href='{{ .RelPermalink | relURL }}'">
         <div class="card-header">
           <h2>{{ .Title }}</h2>
           {{ $status := default "em progresso" .Params.status }}
