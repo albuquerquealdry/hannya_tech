@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Status on Hannya Tech</title>
-    <link>https://albuquerquealdry.github.io/hannya_tech/status/</link>
+    <link>http://localhost:1412/status/</link>
     <description>Recent content in Status on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/status/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1412/status/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Em Progresso</title>
-      <link>https://albuquerquealdry.github.io/hannya_tech/status/em-progresso/</link>
+      <link>http://localhost:1412/status/em-progresso/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/hannya_tech/status/em-progresso/</guid>
+      <guid>http://localhost:1412/status/em-progresso/</guid>
       <description></description>
     </item>
     <item>
       <title>In Progress</title>
-      <link>https://albuquerquealdry.github.io/hannya_tech/status/in-progress/</link>
+      <link>http://localhost:1412/status/in-progress/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/hannya_tech/status/in-progress/</guid>
+      <guid>http://localhost:1412/status/in-progress/</guid>
       <description></description>
     </item>
     <item>
       <title>Draft</title>
-      <link>https://albuquerquealdry.github.io/hannya_tech/status/draft/</link>
+      <link>http://localhost:1412/status/draft/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/hannya_tech/status/draft/</guid>
+      <guid>http://localhost:1412/status/draft/</guid>
       <description></description>
     </item>
     <item>
       <title>Rascunho</title>
-      <link>https://albuquerquealdry.github.io/hannya_tech/status/rascunho/</link>
+      <link>http://localhost:1412/status/rascunho/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/hannya_tech/status/rascunho/</guid>
+      <guid>http://localhost:1412/status/rascunho/</guid>
       <description></description>
     </item>
   </channel>

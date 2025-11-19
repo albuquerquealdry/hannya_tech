@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pt on Hannya Tech</title>
-    <link>https://albuquerquealdry.github.io/hannya_tech/pt/</link>
+    <link>http://localhost:1412/pt/</link>
     <description>Recent content in Pt on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/pt/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1412/pt/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

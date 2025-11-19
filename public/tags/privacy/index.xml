@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Privacy on Hannya Tech</title>
-    <link>https://albuquerquealdry.github.io/hannya_tech/tags/privacy/</link>
+    <link>http://localhost:1412/tags/privacy/</link>
     <description>Recent content in Privacy on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1412/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Anonymity in the Digital Age</title>
-      <link>https://albuquerquealdry.github.io/hannya_tech/en/pesquisa/anonimato/</link>
+      <link>http://localhost:1412/en/pesquisa/anonimato/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/hannya_tech/en/pesquisa/anonimato/</guid>
+      <guid>http://localhost:1412/en/pesquisa/anonimato/</guid>
       <description>Overview of techniques, risks, and ethical implications of online anonymity.</description>
     </item>
     <item>
       <title>Browser Fingerprinting</title>
-      <link>https://albuquerquealdry.github.io/hannya_tech/en/subpesquisa/browser-fingerprinting/</link>
+      <link>http://localhost:1412/en/subpesquisa/browser-fingerprinting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/hannya_tech/en/subpesquisa/browser-fingerprinting/</guid>
+      <guid>http://localhost:1412/en/subpesquisa/browser-fingerprinting/</guid>
       <description>Techniques to identify devices via browser characteristics.</description>
     </item>
   </channel>

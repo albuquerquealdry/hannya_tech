@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bridges on Hannya Tech</title>
-    <link>https://albuquerquealdry.github.io/hannya_tech/tags/bridges/</link>
+    <link>http://localhost:1412/tags/bridges/</link>
     <description>Recent content in Bridges on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/tags/bridges/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1412/tags/bridges/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Subpesquisa 3: Prova de Conceito de Pontes Tor</title>
-      <link>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/prova-de-conceito-pontes-tor/</link>
+      <link>http://localhost:1412/subpesquisa/prova-de-conceito-pontes-tor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/prova-de-conceito-pontes-tor/</guid>
+      <guid>http://localhost:1412/subpesquisa/prova-de-conceito-pontes-tor/</guid>
       <description>Testes de Pontes Tor Meek, OBFS4 e Snowflake e validação de eficácia.</description>
     </item>
   </channel>

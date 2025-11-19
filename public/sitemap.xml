@@ -2,221 +2,218 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/nao-clique/</loc>
+    <loc>http://localhost:1412/nao-clique/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/anonimato/</loc>
+    <loc>http://localhost:1412/tags/anonimato/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/browser/</loc>
+    <loc>http://localhost:1412/tags/browser/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/fingerprinting-de-navegador/</loc>
+    <loc>http://localhost:1412/subpesquisa/fingerprinting-de-navegador/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/</loc>
+    <loc>http://localhost:1412/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/privacidade/</loc>
+    <loc>http://localhost:1412/tags/privacidade/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/rastreamento/</loc>
+    <loc>http://localhost:1412/tags/rastreamento/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/seguran%C3%A7a/</loc>
+    <loc>http://localhost:1412/tags/seguran%C3%A7a/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/</loc>
+    <loc>http://localhost:1412/subpesquisa/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/</loc>
+    <loc>http://localhost:1412/tags/</loc>
     <lastmod>2025-11-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/ai-security/</loc>
+    <loc>http://localhost:1412/tags/ai-security/</loc>
     <lastmod>2025-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/ansible/</loc>
+    <loc>http://localhost:1412/tags/ansible/</loc>
     <lastmod>2025-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/pesquisa/malware/</loc>
+    <loc>http://localhost:1412/pesquisa/malware/</loc>
     <lastmod>2025-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/automation/</loc>
+    <loc>http://localhost:1412/tags/automation/</loc>
     <lastmod>2025-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/dual-stack/</loc>
+    <loc>http://localhost:1412/tags/dual-stack/</loc>
     <lastmod>2025-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/status/em-progresso/</loc>
+    <loc>http://localhost:1412/status/em-progresso/</loc>
     <lastmod>2025-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/malware-analysis/</loc>
+    <loc>http://localhost:1412/tags/malware-analysis/</loc>
     <lastmod>2025-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/pesquisa/</loc>
+    <loc>http://localhost:1412/pesquisa/</loc>
     <lastmod>2025-11-18T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://albuquerquealdry.github.io/hannya_tech/en/pesquisa/"
+                href="http://localhost:1412/en/pesquisa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://albuquerquealdry.github.io/hannya_tech/pesquisa/"
+                href="http://localhost:1412/pesquisa/"
                 />
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/proxmox/</loc>
+    <loc>http://localhost:1412/tags/proxmox/</loc>
     <lastmod>2025-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/status/</loc>
+    <loc>http://localhost:1412/status/</loc>
     <lastmod>2025-11-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/pesquisa/anonimato/</loc>
+    <loc>http://localhost:1412/pesquisa/anonimato/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/en/pesquisa/anonimato/</loc>
+    <loc>http://localhost:1412/en/pesquisa/anonimato/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/en/</loc>
+    <loc>http://localhost:1412/en/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/estudo-comparativo/</loc>
+    <loc>http://localhost:1412/tags/estudo-comparativo/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/status/in-progress/</loc>
+    <loc>http://localhost:1412/status/in-progress/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/network/</loc>
+    <loc>http://localhost:1412/tags/network/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/ofusca%C3%A7%C3%A3o/</loc>
+    <loc>http://localhost:1412/tags/ofusca%C3%A7%C3%A3o/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/privacy/</loc>
+    <loc>http://localhost:1412/tags/privacy/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/rede/</loc>
+    <loc>http://localhost:1412/tags/rede/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/en/pesquisa/</loc>
+    <loc>http://localhost:1412/en/pesquisa/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://albuquerquealdry.github.io/hannya_tech/pesquisa/"
+                href="http://localhost:1412/pesquisa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://albuquerquealdry.github.io/hannya_tech/en/pesquisa/"
+                href="http://localhost:1412/en/pesquisa/"
                 />
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/security/</loc>
+    <loc>http://localhost:1412/tags/security/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/tails/</loc>
+    <loc>http://localhost:1412/tags/tails/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/tor/</loc>
+    <loc>http://localhost:1412/tags/tor/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/vigil%C3%A2ncia/</loc>
+    <loc>http://localhost:1412/tags/vigil%C3%A2ncia/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/whonix/</loc>
+    <loc>http://localhost:1412/tags/whonix/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/posts/my-first-post/</loc>
+    <loc>http://localhost:1412/posts/</loc>
     <lastmod>2024-01-14T07:07:07+01:00</lastmod>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/posts/</loc>
-    <lastmod>2024-01-14T07:07:07+01:00</lastmod>
+    <loc>http://localhost:1412/subpesquisa/arquitetura-ambiente-hardened-cenario-b/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/arquitetura-ambiente-hardened-cenario-b/</loc>
+    <loc>http://localhost:1412/subpesquisa/baseline-de-vigilancia-cenario-a/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/baseline-de-vigilancia-cenario-a/</loc>
-  </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/en/sobre/</loc>
+    <loc>http://localhost:1412/en/sobre/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://albuquerquealdry.github.io/hannya_tech/sobre/"
+                href="http://localhost:1412/sobre/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://albuquerquealdry.github.io/hannya_tech/en/sobre/"
+                href="http://localhost:1412/en/sobre/"
                 />
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/bridges/</loc>
+    <loc>http://localhost:1412/tags/bridges/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/en/subpesquisa/browser-fingerprinting/</loc>
+    <loc>http://localhost:1412/en/subpesquisa/browser-fingerprinting/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/categories/</loc>
+    <loc>http://localhost:1412/categories/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/status/draft/</loc>
+    <loc>http://localhost:1412/status/draft/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/engenharia-reversa/</loc>
+    <loc>http://localhost:1412/tags/engenharia-reversa/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/gemini/</loc>
+    <loc>http://localhost:1412/tags/gemini/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/go/</loc>
+    <loc>http://localhost:1412/tags/go/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/llm/</loc>
+    <loc>http://localhost:1412/tags/llm/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/logs/</loc>
+    <loc>http://localhost:1412/tags/logs/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/malware/</loc>
+    <loc>http://localhost:1412/tags/malware/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/metadados/</loc>
+    <loc>http://localhost:1412/tags/metadados/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/metadata/</loc>
+    <loc>http://localhost:1412/tags/metadata/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/projeto/meu-novo-projeto/</loc>
+    <loc>http://localhost:1412/projeto/meu-novo-projeto/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/en/subpesquisa/mixnets-and-latency/</loc>
+    <loc>http://localhost:1412/en/subpesquisa/mixnets-and-latency/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/mixnets-e-latencia/</loc>
+    <loc>http://localhost:1412/subpesquisa/mixnets-e-latencia/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/navega%C3%A7%C3%A3o/</loc>
+    <loc>http://localhost:1412/tags/navega%C3%A7%C3%A3o/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/opsec/</loc>
+    <loc>http://localhost:1412/tags/opsec/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/en/subpesquisa/opsec-for-journalists/</loc>
+    <loc>http://localhost:1412/en/subpesquisa/opsec-for-journalists/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/opsec-para-jornalistas/</loc>
+    <loc>http://localhost:1412/subpesquisa/opsec-para-jornalistas/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/projeto/</loc>
+    <loc>http://localhost:1412/projeto/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/prompt-engineering/</loc>
+    <loc>http://localhost:1412/tags/prompt-engineering/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/pt/</loc>
+    <loc>http://localhost:1412/pt/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/status/rascunho/</loc>
+    <loc>http://localhost:1412/status/rascunho/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/sobre/</loc>
+    <loc>http://localhost:1412/sobre/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://albuquerquealdry.github.io/hannya_tech/en/sobre/"
+                href="http://localhost:1412/en/sobre/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://albuquerquealdry.github.io/hannya_tech/sobre/"
+                href="http://localhost:1412/sobre/"
                 />
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/prompt-engineering-malware/</loc>
+    <loc>http://localhost:1412/subpesquisa/prompt-engineering-malware/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/engenharia-reversa-assistida/</loc>
+    <loc>http://localhost:1412/subpesquisa/engenharia-reversa-assistida/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/prova-de-conceito-pontes-tor/</loc>
+    <loc>http://localhost:1412/subpesquisa/prova-de-conceito-pontes-tor/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/navegacao-e-ofuscacao-avancada/</loc>
+    <loc>http://localhost:1412/subpesquisa/navegacao-e-ofuscacao-avancada/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/tracking/</loc>
+    <loc>http://localhost:1412/tags/tracking/</loc>
   </url><url>
-    <loc>https://albuquerquealdry.github.io/hannya_tech/tags/web/</loc>
+    <loc>http://localhost:1412/tags/web/</loc>
   </url>
 </urlset>

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ens on Hannya Tech</title>
-    <link>https://albuquerquealdry.github.io/hannya_tech/en/</link>
+    <link>http://localhost:1412/en/</link>
     <description>Recent content in Ens on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/en/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1412/en/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Browser Fingerprinting</title>
-      <link>https://albuquerquealdry.github.io/hannya_tech/en/subpesquisa/browser-fingerprinting/</link>
+      <link>http://localhost:1412/en/subpesquisa/browser-fingerprinting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/hannya_tech/en/subpesquisa/browser-fingerprinting/</guid>
+      <guid>http://localhost:1412/en/subpesquisa/browser-fingerprinting/</guid>
       <description>Techniques to identify devices via browser characteristics.</description>
     </item>
     <item>
       <title>Mixnets and Latency</title>
-      <link>https://albuquerquealdry.github.io/hannya_tech/en/subpesquisa/mixnets-and-latency/</link>
+      <link>http://localhost:1412/en/subpesquisa/mixnets-and-latency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/hannya_tech/en/subpesquisa/mixnets-and-latency/</guid>
+      <guid>http://localhost:1412/en/subpesquisa/mixnets-and-latency/</guid>
       <description>How mixing networks protect metadata and their latency costs.</description>
     </item>
     <item>
       <title>OPSEC for Journalists</title>
-      <link>https://albuquerquealdry.github.io/hannya_tech/en/subpesquisa/opsec-for-journalists/</link>
+      <link>http://localhost:1412/en/subpesquisa/opsec-for-journalists/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/hannya_tech/en/subpesquisa/opsec-for-journalists/</guid>
+      <guid>http://localhost:1412/en/subpesquisa/opsec-for-journalists/</guid>
       <description>Practical protocols for sources and communicators in hostile environments.</description>
     </item>
   </channel>

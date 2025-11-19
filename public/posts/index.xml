@@ -2,18 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Hannya Tech</title>
-    <link>https://albuquerquealdry.github.io/hannya_tech/posts/</link>
+    <link>http://localhost:1412/posts/</link>
     <description>Recent content in Posts on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <lastBuildDate>Sun, 14 Jan 2024 07:07:07 +0100</lastBuildDate>
-    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My First Post</title>
-      <link>https://albuquerquealdry.github.io/hannya_tech/posts/my-first-post/</link>
-      <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
-      <guid>https://albuquerquealdry.github.io/hannya_tech/posts/my-first-post/</guid>
-      <description>&lt;h2 id=&#34;tese&#34;&gt;Tese&lt;/h2&gt;</description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1412/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
