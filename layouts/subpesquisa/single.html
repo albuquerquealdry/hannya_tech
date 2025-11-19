@@ -1,8 +1,316 @@
 {{ define "title" }}{{ .Title }} :: {{ .Site.Title }}{{ end }}
 {{ define "main" }}
-  <div class="hannya-container">
-    <article class="content box">
-      {{ .Content }}
+  <div class="hannya-container" style="max-width: 1300px; padding-left: clamp(1rem, 4vw, 2.5rem); padding-right: clamp(1rem, 4vw, 2.5rem);">
+    <!-- Navegação -->
+    <nav style="margin-bottom: clamp(1.5rem, 3vh, 2rem);">
+      <a href="{{ "pesquisa/" | relURL }}" style="color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: gap 0.2s ease;">
+        <span>←</span> Voltar para Pesquisas
+      </a>
+    </nav>
+
+    <!-- Hero com imagem de capa -->
+    {{ if .Params.cover_image }}
+    <div style="width: 100%; height: clamp(250px, 40vh, 400px); border-radius: clamp(12px, 2vw, 20px); overflow: hidden; margin-bottom: clamp(1.5rem, 3vh, 2rem); position: relative; box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12);">
+      <img src="{{ .Params.cover_image | relURL }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.7)); display: flex; align-items: flex-end; padding: clamp(1.25rem, 3vw, 2rem);">
+        <div>
+          <h1 style="color: white; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">{{ .Title }}</h1>
+        </div>
+      </div>
+    </div>
+    {{ else }}
+    <header style="margin-bottom: clamp(2rem, 4vh, 3rem); text-align: center;">
+      <h1 class="hannya-title" style="margin-bottom: 1rem; font-size: clamp(2.5rem, 5vw, 3.5rem);">{{ .Title }}</h1>
+      {{ with .Params.summary }}
+        <p class="hannya-subtitle" style="font-size: clamp(1.1rem, 2vw, 1.3rem); line-height: 1.7; max-width: 800px; margin: 0 auto;">{{ . }}</p>
+      {{ end }}
+    </header>
+    {{ end }}
+
+    <!-- Metadata -->
+    <div style="display: flex; flex-wrap: wrap; gap: clamp(0.75rem, 2vw, 1rem); align-items: center; justify-content: center; margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1rem, 2.5vw, 1.5rem); background: var(--card-bg); border: 1px solid var(--border); border-radius: clamp(12px, 2vw, 16px);">
+      {{ if .Params.tags }}
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        {{ range .Params.tags }}<span class="chip">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+      {{ if .Params.author }}
+      <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--muted);">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span style="font-weight: 600;">{{ .Params.author }}</span>
+      </div>
+      {{ end }}
+      {{ if .Date }}
+      <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--muted);">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>{{ .Date.Format "02/01/2006" }}</span>
+      </div>
+      {{ end }}
+    </div>
+
+    <!-- Conteúdo principal em formato whitepaper -->
+    <article class="whitepaper-content" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+      
+      <!-- Resumo Executivo -->
+      {{ if .Params.executive_summary }}
+      <section class="box" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(167, 139, 250, 0.05)); border-left: 4px solid var(--accent); margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem);">
+        <h2 style="font-size: 1.75rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 1.5rem;">📋</span>
+          Resumo Executivo
+        </h2>
+        <div style="line-height: 1.8; color: var(--text);">
+          {{ .Params.executive_summary | markdownify }}
+        </div>
+      </section>
+      {{ end }}
+
+      <!-- Introdução -->
+      <section class="box" style="margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem);">
+        <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 2px solid var(--border); padding-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">🎯</span>
+          Introdução
+        </h2>
+        <div class="content" style="line-height: 1.8;">
+          {{ .Content }}
+        </div>
+      </section>
+
+      <!-- Desenvolvimento / Metodologia -->
+      {{ if .Params.methodology }}
+      <section class="box" style="margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem);">
+        <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 2px solid var(--border); padding-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">🔬</span>
+          Metodologia
+        </h2>
+        <div class="content" style="line-height: 1.8;">
+          {{ .Params.methodology | markdownify }}
+        </div>
+      </section>
+      {{ end }}
+
+      <!-- Testes e Resultados -->
+      {{ if .Params.tests }}
+      <section class="box" style="margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem); background: linear-gradient(135deg, rgba(16, 185, 129, 0.03), rgba(16, 185, 129, 0.08));">
+        <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 2px solid var(--success); padding-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">🧪</span>
+          Testes e Resultados
+        </h2>
+        <div class="content" style="line-height: 1.8;">
+          {{ .Params.tests | markdownify }}
+        </div>
+      </section>
+      {{ end }}
+
+      <!-- Conclusão -->
+      {{ if .Params.conclusion }}
+      <section class="box" style="margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem); border: 2px solid var(--accent-2);">
+        <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 2px solid var(--border); padding-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">✅</span>
+          Conclusão
+        </h2>
+        <div class="content" style="line-height: 1.8; font-size: 1.05rem;">
+          {{ .Params.conclusion | markdownify }}
+        </div>
+      </section>
+      {{ end }}
+
+      <!-- Referências -->
+      {{ if .Params.references }}
+      <section class="box" style="margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem); background: var(--card-bg);">
+        <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 1.25rem;">📚</span>
+          Referências
+        </h2>
+        <ul style="line-height: 2; color: var(--muted); padding-left: 1.5rem;">
+          {{ range .Params.references }}
+          <li><a href="{{ .url }}" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s;">{{ .title }}</a></li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
     </article>
+
+    <!-- Link para pesquisa principal -->
+    {{ if .Params.parent_path }}
+    <div style="margin-top: clamp(3rem, 5vh, 4rem); text-align: center; padding: clamp(1.5rem, 3vw, 2rem); background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(167, 139, 250, 0.05)); border-radius: clamp(12px, 2vw, 16px);">
+      {{ $parentPath := .Params.parent_path }}
+      {{ $parent := .Site.GetPage $parentPath }}
+      {{ if $parent }}
+      <p style="color: var(--muted); margin-bottom: 1rem;">Este whitepaper faz parte de:</p>
+      <a href="{{ $parent.RelPermalink }}" class="btn primary" style="text-decoration: none; font-size: 1.05rem;">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        {{ $parent.Title }}
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
   </div>
+
+<style>
+.whitepaper-content h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.whitepaper-content h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.whitepaper-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  max-width: 85ch;
+}
+
+.whitepaper-content ul,
+.whitepaper-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
+.whitepaper-content li {
+  margin-bottom: 0.5rem;
+}
+
+.whitepaper-content code {
+  background: rgba(124, 58, 237, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: 'Courier New', monospace;
+}
+
+.whitepaper-content pre {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.whitepaper-content blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.whitepaper-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.1);
+}
+
+.whitepaper-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.whitepaper-content th,
+.whitepaper-content td {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.whitepaper-content th {
+  background: var(--card-bg);
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .whitepaper-content {
+    max-width: 100%;
+  }
+  
+  .whitepaper-content p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hannya-container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  
+  .whitepaper-content {
+    padding: 0;
+  }
+  
+  .box {
+    padding: 1.25rem !important;
+    border-radius: 12px !important;
+  }
+  
+  .whitepaper-content h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .whitepaper-content h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  .whitepaper-content table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hannya-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .box {
+    padding: 1rem !important;
+  }
+  
+  .whitepaper-content h2 {
+    font-size: 1.35rem !important;
+  }
+  
+  .whitepaper-content h3 {
+    font-size: 1.15rem !important;
+  }
+  
+  .whitepaper-content h4 {
+    font-size: 1.05rem !important;
+  }
+  
+  .whitepaper-content table {
+    font-size: 0.85rem;
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .whitepaper-content pre {
+    font-size: 0.85rem;
+    padding: 1rem !important;
+  }
+}
+</style>
 {{ end }}

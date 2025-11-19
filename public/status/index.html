@@ -1,203 +1,135 @@
 <!DOCTYPE html>
-<html lang="pt" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1412&amp;path=livereload" data-no-instant defer></script>
-  <title>Status :: Hannya Tech - Example site for hugo-theme-tailwind</title>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hannya Tech">
+  <title>Status :: Hannya Tech</title>
   
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta
-  name="description"
-  content=""
-/>
-<meta
-  name="keywords"
-  content="hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
-/>
-<meta name="robots" content="noodp" /><link rel="manifest" href="/manifest.json" /><meta property="og:url" content="http://localhost:1412/status/">
-  <meta property="og:site_name" content="Hannya Tech">
-  <meta property="og:title" content="Status">
-  <meta property="og:locale" content="pt">
-  <meta property="og:type" content="website">
-
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Status">
-      <meta name="twitter:site" content="@#">
-
-
-<link rel="canonical" href="http://localhost:1412/status/" />
-
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="stylesheet" href="/css/index.d6c3044e2ccd17f959e01250645c77d28de7db3e6614a18e762198e9bf30fb5b.css">
-
-
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <link rel="stylesheet" href="/hannya_tech/css/hannya.css">
+  
+  
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/hannya.css">
-  
+<link rel="stylesheet" href="/hannya_tech/css/hannya.css">
 </head>
-<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
-    
-<div class="fixed right-0 top-0 z-50 flex items-center justify-center bg-gray-200 p-2 text-sm uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200">
-  <span class="block sm:hidden">all</span>
-  <span class="hidden sm:block md:hidden">sm</span>
-  <span class="hidden md:block lg:hidden">md</span>
-  <span class="hidden lg:block xl:hidden">lg</span>
-  <span class="hidden xl:block 2xl:hidden">xl</span>
-  <span class="hidden 2xl:block">2xl</span>
-</div>
-
-  <header class="flex flex-none justify-center z-10">
+<body class="">
+  <header>
     
 
-<div class="hannya-container flex items-center justify-between w-full px-4 py-3">
-  <a href="/" aria-label="Home" class="flex items-center gap-3">
-    <img src="/logo.svg" alt="Hannya Tech" style="height:48px;width:auto;"/>
-    <span class="font-extrabold text-slate-900 dark:text-slate-100 text-lg md:text-xl">Hannya Tech</span>
+<div class="hannya-container" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem;">
+  <a href="/" aria-label="Home" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+    <img src="/hannya_tech/logo.svg" alt="Hannya Tech" style="height: 40px; width: auto;"/>
+    <span style="font-weight: 800; font-size: 1.25rem; color: var(--text);">Hannya Tech</span>
   </a>
 
-  <div class="flex items-center gap-2">
+  <nav style="display: flex; align-items: center; gap: 0.5rem;">
     
-<nav class="main-menu hidden md:flex items-center gap-2">
-  
+      
+        <a class="btn ghost" href="/hannya_tech/pesquisa/" style="text-decoration: none;">Pesquisas</a>
+      
+        <a class="btn ghost" href="/hannya_tech/sobre/" style="text-decoration: none;">Sobre</a>
+      
     
-      <a class="btn ghost" href="/pesquisa/">Pesquisas</a>
-    
-      <a class="btn ghost" href="/sobre/">Sobre</a>
-    
-  
-</nav>
 
-
-    <div class="darkmode-toggle hidden md:flex">
-      <label for="darkmode-toggle" class="btn ghost cursor-pointer" title="Alternar tema">
-        <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only" aria-label="Alternar tema">
-        <span class="icon-sun"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-   <path d="M12 5l0 .01"></path>
-   <path d="M17 7l0 .01"></path>
-   <path d="M19 12l0 .01"></path>
-   <path d="M17 17l0 .01"></path>
-   <path d="M12 19l0 .01"></path>
-   <path d="M7 17l0 .01"></path>
-   <path d="M5 12l0 .01"></path>
-   <path d="M7 7l0 .01"></path>
-</svg>
-</span>
-        <span class="icon-moon"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
-   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
-   <path d="M19 11h2m-1 -1v2"></path>
-</svg>
-</span>
-      </label>
-    </div>
-  </div>
+    <label for="darkmode-toggle" class="btn ghost" style="cursor: pointer;" title="Alternar tema">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" style="position: absolute; opacity: 0; pointer-events: none;" aria-label="Alternar tema">
+      <span class="icon-sun" style="display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="4"></circle>
+  <path d="M12 2v2"></path>
+  <path d="M12 20v2"></path>
+  <path d="m4.93 4.93 1.41 1.41"></path>
+  <path d="m17.66 17.66 1.41 1.41"></path>
+  <path d="M2 12h2"></path>
+  <path d="M20 12h2"></path>
+  <path d="m6.34 17.66-1.41 1.41"></path>
+  <path d="m19.07 4.93-1.41 1.41"></path>
+</svg></span>
+      <span class="icon-moon" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+  <path d="M19 3v4"></path>
+  <path d="M21 5h-4"></path>
+</svg></span>
+    </label>
+  </nav>
 </div>
   </header>
-  <main class="flex flex-auto justify-center">
+
+  <main>
     
-  
-  <div class="flex flex-col gap-y-3 p-6 mt-6 mx-2 md:mx-0 rounded-lg shadow-md bg-white dark:bg-gray-700 w-full max-w-4xl lg:max-w-5xl">
-    <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-200">
-      <a href="/status/"></a>
-    </h1>
-    <ul class="flex flex-col gap-3">
-      
-        
-        
-        
-          <li class="">
-            <a href="/status/em-progresso/"
-              class="flex flex-row text-slate-600 dark:text-slate-300 backdrop-blur-sm">
-              <span class="text-lg mr-2">Em Progresso</span>
-              <span class="self-center rounded-full text-xs px-2 bg-red-400 text-white">7</span>
-            </a>
-          </li>
-        
-      
-        
-        
-        
-          <li class="">
-            <a href="/status/in-progress/"
-              class="flex flex-row text-slate-600 dark:text-slate-300 backdrop-blur-sm">
-              <span class="text-lg mr-2">In Progress</span>
-              <span class="self-center rounded-full text-xs px-2 bg-red-400 text-white">3</span>
-            </a>
-          </li>
-        
-      
-        
-        
-        
-          <li class="">
-            <a href="/status/draft/"
-              class="flex flex-row text-slate-600 dark:text-slate-300 backdrop-blur-sm">
-              <span class="text-lg mr-2">Draft</span>
-              <span class="self-center rounded-full text-xs px-2 bg-red-400 text-white">1</span>
-            </a>
-          </li>
-        
-      
-        
-        
-        
-          <li class="">
-            <a href="/status/rascunho/"
-              class="flex flex-row text-slate-600 dark:text-slate-300 backdrop-blur-sm">
-              <span class="text-lg mr-2">Rascunho</span>
-              <span class="self-center rounded-full text-xs px-2 bg-red-400 text-white">1</span>
-            </a>
-          </li>
-        
-      
-    </ul>
+<div class="hannya-container">
+  <header style="text-align: center; margin-bottom: 2.5rem;">
+    <h1 class="hannya-title">Status</h1>
+  </header>
+
+  <div class="grid">
+    
+      <a class="card" href="/hannya_tech/status/em-progresso/">
+        <div class="card-header">
+          <h2>Em Progresso</h2>
+          <span class="badge">8 itens</span>
+        </div>
+      </a>
+    
+      <a class="card" href="/hannya_tech/status/in-progress/">
+        <div class="card-header">
+          <h2>In Progress</h2>
+          <span class="badge">3 itens</span>
+        </div>
+      </a>
+    
+      <a class="card" href="/hannya_tech/status/draft/">
+        <div class="card-header">
+          <h2>Draft</h2>
+          <span class="badge">1 item</span>
+        </div>
+      </a>
+    
+      <a class="card" href="/hannya_tech/status/rascunho/">
+        <div class="card-header">
+          <h2>Rascunho</h2>
+          <span class="badge">1 item</span>
+        </div>
+      </a>
+    
   </div>
+</div>
 
   </main>
-  <footer class="flex flex-none justify-center">
-    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
-  <div class="flex flex-row">
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
-
-  </div>
-  <div class="grow"></div>
-  <div class="flex flex-row">
-    
-    
-  </div>
-  
-  <div class="flex flex-row">
-    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-slate-300 dark:border-slate-400">
-      
-    </span>
-  </div>
-  
-</section>
-
+  <footer style="text-align: center; padding: 2rem 1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 4rem;">
+    <div class="hannya-container">
+      <p>&copy; 2025 Hannya Tech. Feito com <a href="https://gohugo.io/" target="_blank" rel="noopener" style="color: var(--accent);">Hugo</a>.</p>
+    </div>
   </footer>
-  <script src="/main.js"></script>
 
-
-
-
+  
+  <script>
+    const toggle = document.getElementById('darkmode-toggle');
+    const html = document.documentElement;
+    
+    
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      html.classList.add('dark');
+      if (toggle) toggle.checked = true;
+    }
+    
+    if (toggle) {
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    }
+  </script>
 </body>
 </html>

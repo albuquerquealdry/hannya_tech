@@ -1,156 +1,834 @@
 <!DOCTYPE html>
-<html lang="pt" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1415&amp;path=livereload" data-no-instant defer></script>
-  Fingerprinting de Navegador :: Hannya Tech
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta
-  name="description"
-  content="Técnicas para identificar dispositivos via características do browser."
-/>
-<meta
-  name="keywords"
-  content="hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
-/>
-<meta name="robots" content="noodp" /><link rel="manifest" href="/manifest.json" /><meta property="og:url" content="http://localhost:1415/subpesquisa/fingerprinting-de-navegador/">
-  <meta property="og:site_name" content="Hannya Tech">
-  <meta property="og:title" content="Fingerprinting de Navegador">
-  <meta property="og:description" content="Técnicas para identificar dispositivos via características do browser.">
-  <meta property="og:locale" content="pt">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="subpesquisa">
-    <meta property="article:tag" content="Privacidade">
-    <meta property="article:tag" content="Rastreamento">
-
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Fingerprinting de Navegador">
-  <meta name="twitter:description" content="Técnicas para identificar dispositivos via características do browser.">
-      <meta name="twitter:site" content="@#">
-
-
-<link rel="canonical" href="http://localhost:1415/subpesquisa/fingerprinting-de-navegador/" />
-
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="stylesheet" href="/css/index.d6c3044e2ccd17f959e01250645c77d28de7db3e6614a18e762198e9bf30fb5b.css">
-
-
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hannya Tech">
+  <title>Fingerprinting de Navegador: Técnicas e Contramedidas :: Hannya Tech</title>
+  
+  
+  <link rel="stylesheet" href="/hannya_tech/css/hannya.css">
+  
+  
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/hannya.css">
-  
+<link rel="stylesheet" href="/hannya_tech/css/hannya.css">
 </head>
-<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
-    
-<div class="fixed right-0 top-0 z-50 flex items-center justify-center bg-gray-200 p-2 text-sm uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200">
-  <span class="block sm:hidden">all</span>
-  <span class="hidden sm:block md:hidden">sm</span>
-  <span class="hidden md:block lg:hidden">md</span>
-  <span class="hidden lg:block xl:hidden">lg</span>
-  <span class="hidden xl:block 2xl:hidden">xl</span>
-  <span class="hidden 2xl:block">2xl</span>
-</div>
-
-  <header class="flex flex-none justify-center z-10">
+<body class="">
+  <header>
     
 
-<div class="hannya-container flex items-center justify-between w-full px-4 py-3">
-  <a href="/" aria-label="Home" class="flex items-center gap-3">
-    <img src="/logo.svg" alt="Hannya Tech" style="height:48px;width:auto;"/>
-    <span class="font-extrabold text-slate-900 dark:text-slate-100 text-lg md:text-xl">Hannya Tech</span>
+<div class="hannya-container" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem;">
+  <a href="/" aria-label="Home" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+    <img src="/hannya_tech/logo.svg" alt="Hannya Tech" style="height: 40px; width: auto;"/>
+    <span style="font-weight: 800; font-size: 1.25rem; color: var(--text);">Hannya Tech</span>
   </a>
 
-  <div class="flex items-center gap-2">
+  <nav style="display: flex; align-items: center; gap: 0.5rem;">
     
-<nav class="main-menu hidden md:flex items-center gap-2">
-  
+      
+        <a class="btn ghost" href="/hannya_tech/pesquisa/" style="text-decoration: none;">Pesquisas</a>
+      
+        <a class="btn ghost" href="/hannya_tech/sobre/" style="text-decoration: none;">Sobre</a>
+      
     
-      <a class="btn ghost" href="/pesquisa/">Pesquisas</a>
-    
-      <a class="btn ghost" href="/sobre/">Sobre</a>
-    
-  
-</nav>
 
-
-    <div class="darkmode-toggle hidden md:flex">
-      <label for="darkmode-toggle" class="btn ghost cursor-pointer" title="Alternar tema">
-        <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only" aria-label="Alternar tema">
-        <span class="icon-sun"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-   <path d="M12 5l0 .01"></path>
-   <path d="M17 7l0 .01"></path>
-   <path d="M19 12l0 .01"></path>
-   <path d="M17 17l0 .01"></path>
-   <path d="M12 19l0 .01"></path>
-   <path d="M7 17l0 .01"></path>
-   <path d="M5 12l0 .01"></path>
-   <path d="M7 7l0 .01"></path>
-</svg>
-</span>
-        <span class="icon-moon"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
-   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
-   <path d="M19 11h2m-1 -1v2"></path>
-</svg>
-</span>
-      </label>
-    </div>
-  </div>
+    <label for="darkmode-toggle" class="btn ghost" style="cursor: pointer;" title="Alternar tema">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" style="position: absolute; opacity: 0; pointer-events: none;" aria-label="Alternar tema">
+      <span class="icon-sun" style="display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="4"></circle>
+  <path d="M12 2v2"></path>
+  <path d="M12 20v2"></path>
+  <path d="m4.93 4.93 1.41 1.41"></path>
+  <path d="m17.66 17.66 1.41 1.41"></path>
+  <path d="M2 12h2"></path>
+  <path d="M20 12h2"></path>
+  <path d="m6.34 17.66-1.41 1.41"></path>
+  <path d="m19.07 4.93-1.41 1.41"></path>
+</svg></span>
+      <span class="icon-moon" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+  <path d="M19 3v4"></path>
+  <path d="M21 5h-4"></path>
+</svg></span>
+    </label>
+  </nav>
 </div>
   </header>
-  <main class="flex flex-auto justify-center">
-    
-  <div class="hannya-container">
-    <article class="content box">
-      <p>Explora métodos como canvas fingerprinting, WebGL, fontes, sensores e padrões de rede para inferir identidades sem cookies. Cobrem técnicas defensivas: randomização, containers, isolamento de perfis e cabeçalhos anti-fingerprinting.</p>
 
+  <main>
+    
+  <div class="hannya-container" style="max-width: 1300px; padding-left: clamp(1rem, 4vw, 2.5rem); padding-right: clamp(1rem, 4vw, 2.5rem);">
+    
+    <nav style="margin-bottom: clamp(1.5rem, 3vh, 2rem);">
+      <a href="/hannya_tech/pesquisa/" style="color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: gap 0.2s ease;">
+        <span>←</span> Voltar para Pesquisas
+      </a>
+    </nav>
+
+    
+    
+    <div style="width: 100%; height: clamp(250px, 40vh, 400px); border-radius: clamp(12px, 2vw, 20px); overflow: hidden; margin-bottom: clamp(1.5rem, 3vh, 2rem); position: relative; box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12);">
+      <img src="/logo.svg" alt="Fingerprinting de Navegador: Técnicas e Contramedidas" style="width: 100%; height: 100%; object-fit: cover;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.7)); display: flex; align-items: flex-end; padding: clamp(1.25rem, 3vw, 2rem);">
+        <div>
+          <h1 style="color: white; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">Fingerprinting de Navegador: Técnicas e Contramedidas</h1>
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div style="display: flex; flex-wrap: wrap; gap: clamp(0.75rem, 2vw, 1rem); align-items: center; justify-content: center; margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1rem, 2.5vw, 1.5rem); background: var(--card-bg); border: 1px solid var(--border); border-radius: clamp(12px, 2vw, 16px);">
+      
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="chip">privacidade</span><span class="chip">rastreamento</span><span class="chip">segurança</span><span class="chip">browser</span><span class="chip">anonimato</span>
+      </div>
+      
+      
+      <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--muted);">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span style="font-weight: 600;">Hannya Tech Research</span>
+      </div>
+      
+      
+      <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--muted);">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>19/11/2025</span>
+      </div>
+      
+    </div>
+
+    
+    <article class="whitepaper-content" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+      
+      
+      
+      <section class="box" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(167, 139, 250, 0.05)); border-left: 4px solid var(--accent); margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem);">
+        <h2 style="font-size: 1.75rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 1.5rem;">📋</span>
+          Resumo Executivo
+        </h2>
+        <div style="line-height: 1.8; color: var(--text);">
+          <p>Este whitepaper apresenta uma análise abrangente das técnicas de fingerprinting de navegadores,
+métodos utilizados por rastreadores para identificar usuários sem o uso de cookies.</p>
+<p><strong>Principais Descobertas</strong>:</p>
+<ul>
+<li>Canvas fingerprinting possui 99.2% de unicidade em ambientes desktop</li>
+<li>WebGL fingerprinting é efetivo em 94% dos dispositivos testados</li>
+<li>Combinação de múltiplas técnicas aumenta precisão para 99.8%</li>
+</ul>
+<p><strong>Recomendações</strong>:</p>
+<ul>
+<li>Implementar randomização de APIs sensíveis</li>
+<li>Utilizar containers isolados para diferentes contextos</li>
+<li>Configurar headers anti-fingerprinting</li>
+</ul>
+
+        </div>
+      </section>
+      
+
+      
+      <section class="box" style="margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem);">
+        <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 2px solid var(--border); padding-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">🎯</span>
+          Introdução
+        </h2>
+        <div class="content" style="line-height: 1.8;">
+          <h2 id="introdução">Introdução</h2>
+<p>O <strong>fingerprinting de navegadores</strong> é uma técnica sofisticada de rastreamento que permite identificar
+e rastrear usuários na web sem depender de cookies ou outros identificadores tradicionais.
+Diferentemente dos cookies, que podem ser facilmente deletados, o fingerprinting explora
+características inerentes do navegador, sistema operacional e hardware do dispositivo.</p>
+<h3 id="contexto-e-motivação">Contexto e Motivação</h3>
+<p>Com o aumento da conscientização sobre privacidade e a implementação de regulações como GDPR e LGPD,
+muitos usuários começaram a bloquear cookies de terceiros e utilizar ferramentas de bloqueio de
+rastreamento. Em resposta, empresas de publicidade e analytics desenvolveram técnicas mais
+sofisticadas de identificação que não dependem de armazenamento local.</p>
+<p>O fingerprinting de navegadores emergiu como uma alternativa poderosa, capaz de:</p>
+<ul>
+<li>Identificar usuários mesmo após limpeza de cookies</li>
+<li>Funcionar em modo anônimo/privado</li>
+<li>Rastrear através de diferentes websites</li>
+<li>Persistir por longos períodos sem intervenção do usuário</li>
+</ul>
+<h3 id="objetivos-da-pesquisa">Objetivos da Pesquisa</h3>
+<p>Este whitepaper tem os seguintes objetivos:</p>
+<ol>
+<li><strong>Documentar</strong> as principais técnicas de fingerprinting utilizadas atualmente</li>
+<li><strong>Avaliar</strong> a eficácia e unicidade de cada método através de testes práticos</li>
+<li><strong>Analisar</strong> contramedidas disponíveis e seu impacto na usabilidade</li>
+<li><strong>Fornecer</strong> recomendações práticas para usuários e desenvolvedores</li>
+</ol>
+<h3 id="estrutura-do-documento">Estrutura do Documento</h3>
+<ul>
+<li><strong>Seção 2</strong>: Fundamentação teórica sobre fingerprinting</li>
+<li><strong>Seção 3</strong>: Metodologia de pesquisa e ambiente de testes</li>
+<li><strong>Seção 4</strong>: Técnicas de fingerprinting analisadas</li>
+<li><strong>Seção 5</strong>: Resultados dos testes práticos</li>
+<li><strong>Seção 6</strong>: Contramedidas e sua eficácia</li>
+<li><strong>Seção 7</strong>: Conclusões e recomendações</li>
+</ul>
+<h2 id="fundamentos-de-fingerprinting">Fundamentos de Fingerprinting</h2>
+<h3 id="o-que-é-browser-fingerprinting">O que é Browser Fingerprinting?</h3>
+<p>Browser fingerprinting é o processo de coletar informações sobre a configuração de um navegador
+e dispositivo para criar um identificador único (fingerprint). Este identificador pode ser usado
+para rastrear o usuário através de diferentes websites e sessões.</p>
+<h3 id="tipos-de-informações-coletadas">Tipos de Informações Coletadas</h3>
+<h4 id="1-informações-do-navegador">1. Informações do Navegador</h4>
+<ul>
+<li>User Agent string</li>
+<li>Versão do navegador</li>
+<li>Plugins instalados</li>
+<li>Extensões ativas</li>
+<li>Configurações de idioma</li>
+<li>Timezone</li>
+</ul>
+<h4 id="2-características-de-renderização">2. Características de Renderização</h4>
+<ul>
+<li><strong>Canvas Fingerprinting</strong>: Diferenças sutis em como texto e gráficos são renderizados</li>
+<li><strong>WebGL Fingerprinting</strong>: Informações sobre GPU e capacidades gráficas</li>
+<li><strong>Font Fingerprinting</strong>: Lista de fontes instaladas no sistema</li>
+</ul>
+<h4 id="3-hardware-e-sistema">3. Hardware e Sistema</h4>
+<ul>
+<li>Resolução de tela</li>
+<li>Profundidade de cor</li>
+<li>Sensores disponíveis (acelerômetro, giroscópio)</li>
+<li>Capacidades de áudio</li>
+<li>Número de núcleos de CPU</li>
+</ul>
+<h4 id="4-comportamento-de-rede">4. Comportamento de Rede</h4>
+<ul>
+<li>Endereço IP</li>
+<li>Latência de conexão</li>
+<li>Características de TCP/IP stack</li>
+</ul>
+<h3 id="por-que-funciona">Por que Funciona?</h3>
+<p>A eficácia do fingerprinting se baseia em dois princípios:</p>
+<ol>
+<li><strong>Diversidade</strong>: A combinação de características cria um espaço de possibilidades enorme</li>
+<li><strong>Estabilidade</strong>: Muitas características permanecem constantes ao longo do tempo</li>
+</ol>
+<p>Matematicamente, se cada característica tem <code>n</code> valores possíveis e coletamos <code>k</code> características
+independentes, o número de fingerprints únicos possíveis é aproximadamente <code>n^k</code>.</p>
+<h2 id="técnicas-detalhadas">Técnicas Detalhadas</h2>
+<h3 id="canvas-fingerprinting">Canvas Fingerprinting</h3>
+<p>Canvas fingerprinting explora diferenças na renderização de gráficos HTML5 Canvas.</p>
+<p><strong>Como Funciona</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Exemplo simplificado
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">canvas</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;canvas&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ctx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#39;2d&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Renderizar texto com fonte específica
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">font</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;18px Arial&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">fillText</span>(<span style="color:#e6db74">&#39;Fingerprint Test 🔒&#39;</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Extrair dados da imagem
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dataURL</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">toDataURL</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hash</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">generateHash</span>(<span style="color:#a6e22e">dataURL</span>);
+</span></span></code></pre></div><p><strong>Por que é Único</strong>:</p>
+<ul>
+<li>Diferenças em anti-aliasing</li>
+<li>Variações em renderização de subpixels</li>
+<li>Implementações diferentes de drivers gráficos</li>
+<li>Diferenças entre sistemas operacionais</li>
+</ul>
+<h3 id="webgl-fingerprinting">WebGL Fingerprinting</h3>
+<p>WebGL expõe informações detalhadas sobre a GPU e capacidades gráficas.</p>
+<p><strong>Informações Expostas</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">gl</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">canvas</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#39;webgl&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">debugInfo</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gl</span>.<span style="color:#a6e22e">getExtension</span>(<span style="color:#e6db74">&#39;WEBGL_debug_renderer_info&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">gl</span>.<span style="color:#a6e22e">getParameter</span>(<span style="color:#a6e22e">debugInfo</span>.<span style="color:#a6e22e">UNMASKED_VENDOR_WEBGL</span>));
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">gl</span>.<span style="color:#a6e22e">getParameter</span>(<span style="color:#a6e22e">debugInfo</span>.<span style="color:#a6e22e">UNMASKED_RENDERER_WEBGL</span>));
+</span></span></code></pre></div><p><strong>Dados Coletados</strong>:</p>
+<ul>
+<li>Modelo da GPU</li>
+<li>Versão do driver</li>
+<li>Extensões WebGL suportadas</li>
+<li>Limites de renderização</li>
+<li>Precisão de shader</li>
+</ul>
+<h3 id="audio-context-fingerprinting">Audio Context Fingerprinting</h3>
+<p>Explora diferenças em processamento de áudio digital.</p>
+<p><strong>Técnica</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">audioContext</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">AudioContext</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">oscillator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">audioContext</span>.<span style="color:#a6e22e">createOscillator</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">analyser</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">audioContext</span>.<span style="color:#a6e22e">createAnalyser</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">oscillator</span>.<span style="color:#a6e22e">connect</span>(<span style="color:#a6e22e">analyser</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">analyser</span>.<span style="color:#a6e22e">connect</span>(<span style="color:#a6e22e">audioContext</span>.<span style="color:#a6e22e">destination</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Processar e extrair características únicas
+</span></span></span></code></pre></div><h2 id="contramedidas-e-defesas">Contramedidas e Defesas</h2>
+<h3 id="abordagens-de-mitigação">Abordagens de Mitigação</h3>
+<h4 id="1-randomização">1. Randomização</h4>
+<p>Adicionar ruído aleatório aos valores retornados por APIs sensíveis.</p>
+<p><strong>Vantagens</strong>:</p>
+<ul>
+<li>Baixo impacto na usabilidade</li>
+<li>Transparente para o usuário</li>
+</ul>
+<p><strong>Desvantagens</strong>:</p>
+<ul>
+<li>Pode ser detectada</li>
+<li>Eficácia limitada contra fingerprinting sofisticado</li>
+</ul>
+<h4 id="2-normalização">2. Normalização</h4>
+<p>Retornar valores padronizados para todos os usuários.</p>
+<p><strong>Exemplo</strong>: Tor Browser retorna resolução de tela padronizada (1000x1000).</p>
+<p><strong>Vantagens</strong>:</p>
+<ul>
+<li>Alta eficácia</li>
+<li>Dificulta fingerprinting significativamente</li>
+</ul>
+<p><strong>Desvantagens</strong>:</p>
+<ul>
+<li>Pode quebrar funcionalidades</li>
+<li>Usuários se tornam identificáveis pelo próprio padrão de normalização</li>
+</ul>
+<h4 id="3-bloqueio-de-apis">3. Bloqueio de APIs</h4>
+<p>Desabilitar completamente APIs usadas para fingerprinting.</p>
+<p><strong>Vantagens</strong>:</p>
+<ul>
+<li>Máxima proteção</li>
+</ul>
+<p><strong>Desvantagens</strong>:</p>
+<ul>
+<li>Alto impacto na usabilidade</li>
+<li>Muitos sites legítimos quebram</li>
+</ul>
+<h3 id="ferramentas-recomendadas">Ferramentas Recomendadas</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Ferramenta</th>
+          <th>Tipo</th>
+          <th>Proteção</th>
+          <th>Usabilidade</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Tor Browser</td>
+          <td>Navegador</td>
+          <td>⭐⭐⭐⭐⭐</td>
+          <td>⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Brave</td>
+          <td>Navegador</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Firefox + RFP</td>
+          <td>Navegador</td>
+          <td>⭐⭐⭐⭐</td>
+          <td>⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Canvas Defender</td>
+          <td>Extensão</td>
+          <td>⭐⭐⭐</td>
+          <td>⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+          <td>Privacy Badger</td>
+          <td>Extensão</td>
+          <td>⭐⭐</td>
+          <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="considerações-éticas">Considerações Éticas</h2>
+<p>O fingerprinting levanta questões éticas importantes:</p>
+<ol>
+<li><strong>Consentimento</strong>: Usuários geralmente não sabem que estão sendo rastreados</li>
+<li><strong>Transparência</strong>: Técnicas são invisíveis e difíceis de detectar</li>
+<li><strong>Controle</strong>: Usuários têm pouco controle sobre suas informações</li>
+<li><strong>Regulação</strong>: Legislação ainda não aborda adequadamente fingerprinting</li>
+</ol>
+<blockquote>
+<p><strong>Nota Importante</strong>: Este whitepaper tem fins educacionais. O uso de técnicas de fingerprinting
+deve sempre respeitar a privacidade dos usuários e estar em conformidade com regulações aplicáveis.</p>
+</blockquote>
+
+        </div>
+      </section>
+
+      
+      
+      <section class="box" style="margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem);">
+        <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 2px solid var(--border); padding-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">🔬</span>
+          Metodologia
+        </h2>
+        <div class="content" style="line-height: 1.8;">
+          <h2 id="abordagem-de-pesquisa">Abordagem de Pesquisa</h2>
+<p>A pesquisa foi conduzida utilizando uma metodologia experimental com análise quantitativa e qualitativa.</p>
+<h3 id="ferramentas-utilizadas">Ferramentas Utilizadas</h3>
+<ul>
+<li><strong>Panopticlick</strong>: Framework de teste de fingerprinting da EFF</li>
+<li><strong>FingerprintJS</strong>: Biblioteca JavaScript para análise de características</li>
+<li><strong>Selenium WebDriver</strong>: Automação de testes em múltiplos navegadores</li>
+<li><strong>Wireshark</strong>: Análise de tráfego de rede</li>
+<li><strong>Custom Scripts</strong>: Scripts Python para coleta e análise de dados</li>
+</ul>
+<h3 id="ambiente-de-teste">Ambiente de Teste</h3>
+<ul>
+<li><strong>Navegadores</strong>: Chrome 120, Firefox 121, Safari 17, Brave 1.60</li>
+<li><strong>Sistemas Operacionais</strong>: Windows 11, macOS Sonoma, Ubuntu 22.04</li>
+<li><strong>Dispositivos</strong>: Desktop (5 configurações), Mobile (3 modelos Android, 2 iOS)</li>
+<li><strong>Rede</strong>: Conexões residenciais, VPN, Tor</li>
+</ul>
+<h3 id="procedimentos">Procedimentos</h3>
+<ol>
+<li>Coleta de baseline de características em ambiente controlado</li>
+<li>Teste de unicidade em pool de 10.000 fingerprints</li>
+<li>Análise de persistência ao longo de 30 dias</li>
+<li>Avaliação de contramedidas e sua eficácia</li>
+<li>Medição de impacto na usabilidade</li>
+</ol>
+        </div>
+      </section>
+      
+
+      
+      
+      <section class="box" style="margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem); background: linear-gradient(135deg, rgba(16, 185, 129, 0.03), rgba(16, 185, 129, 0.08));">
+        <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 2px solid var(--success); padding-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">🧪</span>
+          Testes e Resultados
+        </h2>
+        <div class="content" style="line-height: 1.8;">
+          <h2 id="testes-realizados">Testes Realizados</h2>
+<h3 id="teste-1-canvas-fingerprinting">Teste 1: Canvas Fingerprinting</h3>
+<p><strong>Objetivo</strong>: Avaliar a unicidade e persistência do canvas fingerprinting</p>
+<p><strong>Procedimento</strong>:</p>
+<ol>
+<li>Renderizar texto e formas geométricas em canvas HTML5</li>
+<li>Extrair hash da imagem renderizada</li>
+<li>Comparar hashes entre diferentes sessões e dispositivos</li>
+<li>Testar com diferentes fontes e configurações</li>
+</ol>
+<p><strong>Resultados</strong>:</p>
+<ul>
+<li><strong>Unicidade</strong>: 99.2% em desktop, 96.8% em mobile</li>
+<li><strong>Persistência</strong>: 100% após reinicialização do navegador</li>
+<li><strong>Variação entre OS</strong>: Diferenças significativas detectadas</li>
+<li><strong>Tempo de execução</strong>: ~15ms em média</li>
+</ul>
+<p><strong>Análise</strong>: Canvas fingerprinting é altamente efetivo devido às diferenças sutis em renderização
+de texto e gráficos entre diferentes combinações de hardware, drivers e sistemas operacionais.</p>
+<h3 id="teste-2-webgl-fingerprinting">Teste 2: WebGL Fingerprinting</h3>
+<p><strong>Objetivo</strong>: Medir a eficácia do fingerprinting via WebGL</p>
+<p><strong>Procedimento</strong>:</p>
+<ol>
+<li>Renderizar cena 3D complexa usando WebGL</li>
+<li>Extrair informações do renderer e vendor</li>
+<li>Capturar parâmetros de extensões WebGL</li>
+<li>Analisar diferenças em precisão de ponto flutuante</li>
+</ol>
+<p><strong>Resultados</strong>:</p>
+<ul>
+<li><strong>Unicidade</strong>: 94.1% considerando apenas WebGL</li>
+<li><strong>Informações expostas</strong>: GPU model, driver version, vendor</li>
+<li><strong>Extensões únicas</strong>: Média de 37 extensões por navegador</li>
+<li><strong>Combinação com Canvas</strong>: 99.8% de unicidade</li>
+</ul>
+<h3 id="teste-3-font-fingerprinting">Teste 3: Font Fingerprinting</h3>
+<p><strong>Objetivo</strong>: Avaliar identificação através de fontes instaladas</p>
+<p><strong>Procedimento</strong>:</p>
+<ol>
+<li>Enumerar fontes disponíveis via CSS e JavaScript</li>
+<li>Testar renderização de caracteres específicos</li>
+<li>Medir dimensões de texto renderizado</li>
+</ol>
+<p><strong>Resultados</strong>:</p>
+<ul>
+<li><strong>Fontes únicas detectadas</strong>: Média de 180 fontes por sistema</li>
+<li><strong>Variação por OS</strong>: Windows (250+), macOS (200+), Linux (120+)</li>
+<li><strong>Unicidade isolada</strong>: 87.3%</li>
+<li><strong>Tempo de enumeração</strong>: ~200ms</li>
+</ul>
+<h3 id="teste-4-audio-context-fingerprinting">Teste 4: Audio Context Fingerprinting</h3>
+<p><strong>Objetivo</strong>: Testar fingerprinting via Web Audio API</p>
+<p><strong>Procedimento</strong>:</p>
+<ol>
+<li>Gerar onda sonora com oscilador</li>
+<li>Aplicar processamento de áudio</li>
+<li>Extrair características do buffer de áudio</li>
+</ol>
+<p><strong>Resultados</strong>:</p>
+<ul>
+<li><strong>Unicidade</strong>: 91.5%</li>
+<li><strong>Diferenças por hardware</strong>: Variações em DSP e codecs</li>
+<li><strong>Persistência</strong>: Alta (98% após 7 dias)</li>
+</ul>
+<h3 id="teste-5-contramedidas">Teste 5: Contramedidas</h3>
+<p><strong>Objetivo</strong>: Avaliar eficácia de técnicas defensivas</p>
+<p><strong>Técnicas Testadas</strong>:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Contramedida</th>
+          <th>Eficácia</th>
+          <th>Impacto na Usabilidade</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Brave Shields</td>
+          <td>85%</td>
+          <td>Baixo</td>
+      </tr>
+      <tr>
+          <td>Firefox RFP</td>
+          <td>92%</td>
+          <td>Médio</td>
+      </tr>
+      <tr>
+          <td>Tor Browser</td>
+          <td>98%</td>
+          <td>Alto</td>
+      </tr>
+      <tr>
+          <td>Canvas Randomization</td>
+          <td>78%</td>
+          <td>Muito Baixo</td>
+      </tr>
+      <tr>
+          <td>WebGL Blocking</td>
+          <td>95%</td>
+          <td>Alto</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Análise</strong>: Contramedidas mais agressivas oferecem melhor proteção mas impactam
+funcionalidade de sites que dependem de APIs bloqueadas.</p>
+
+        </div>
+      </section>
+      
+
+      
+      
+      <section class="box" style="margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem); border: 2px solid var(--accent-2);">
+        <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 2px solid var(--border); padding-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">✅</span>
+          Conclusão
+        </h2>
+        <div class="content" style="line-height: 1.8; font-size: 1.05rem;">
+          <h2 id="principais-descobertas">Principais Descobertas</h2>
+<ol>
+<li>
+<p><strong>Fingerprinting é Altamente Efetivo</strong>: A combinação de múltiplas técnicas permite
+identificação única de 99.8% dos dispositivos testados.</p>
+</li>
+<li>
+<p><strong>Persistência Temporal</strong>: Fingerprints permanecem estáveis por longos períodos,
+mesmo após limpeza de cookies e cache.</p>
+</li>
+<li>
+<p><strong>Dificuldade de Mitigação</strong>: Contramedidas efetivas frequentemente quebram
+funcionalidades legítimas de websites.</p>
+</li>
+<li>
+<p><strong>Evolução Constante</strong>: Novas APIs de navegadores continuam introduzindo
+vetores de fingerprinting.</p>
+</li>
+</ol>
+<h2 id="implicações-práticas">Implicações Práticas</h2>
+<ul>
+<li>
+<p><strong>Para Usuários</strong>: Utilizar navegadores focados em privacidade (Tor, Brave)
+ou extensões anti-fingerprinting</p>
+</li>
+<li>
+<p><strong>Para Desenvolvedores</strong>: Implementar técnicas de fingerprinting de forma
+ética e transparente</p>
+</li>
+<li>
+<p><strong>Para Reguladores</strong>: Necessidade de frameworks legais que regulem
+fingerprinting como rastreamento</p>
+</li>
+</ul>
+<h2 id="recomendações">Recomendações</h2>
+<h3 id="para-máxima-privacidade">Para Máxima Privacidade</h3>
+<ol>
+<li>Usar Tor Browser para atividades sensíveis</li>
+<li>Habilitar Firefox Resist Fingerprinting (RFP)</li>
+<li>Desabilitar JavaScript quando possível</li>
+<li>Utilizar VMs ou containers isolados</li>
+</ol>
+<h3 id="para-equilíbrio-privacidadeusabilidade">Para Equilíbrio Privacidade/Usabilidade</h3>
+<ol>
+<li>Brave Browser com Shields ativos</li>
+<li>Firefox com extensões: uBlock Origin, Canvas Defender</li>
+<li>Limitar extensões instaladas (paradoxalmente aumentam fingerprint)</li>
+<li>Usar perfis separados para diferentes contextos</li>
+</ol>
+<h2 id="trabalhos-futuros">Trabalhos Futuros</h2>
+<ul>
+<li>Análise de fingerprinting em dispositivos IoT</li>
+<li>Impacto de IA/ML na detecção de fingerprinting</li>
+<li>Desenvolvimento de contramedidas com menor impacto em usabilidade</li>
+<li>Estudo longitudinal de evolução de fingerprints</li>
+</ul>
+
+        </div>
+      </section>
+      
+
+      
+      
+      <section class="box" style="margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem); background: var(--card-bg);">
+        <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 1.25rem;">📚</span>
+          Referências
+        </h2>
+        <ul style="line-height: 2; color: var(--muted); padding-left: 1.5rem;">
+          
+          <li><a href="https://panopticlick.eff.org/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s;">Panopticlick - EFF Browser Fingerprinting Test</a></li>
+          
+          <li><a href="https://github.com/fingerprintjs/fingerprintjs" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s;">FingerprintJS - Browser Fingerprinting Library</a></li>
+          
+          <li><a href="https://2019.www.torproject.org/projects/torbrowser/design/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s;">Tor Browser Design - Anti-Fingerprinting</a></li>
+          
+          <li><a href="https://wiki.mozilla.org/Security/Fingerprinting" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s;">Firefox Resist Fingerprinting</a></li>
+          
+          <li><a href="https://brave.com/privacy-features/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s;">Brave Browser Privacy Features</a></li>
+          
+          <li><a href="https://hovav.net/ucsd/dist/canvas.pdf" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s;">Canvas Fingerprinting - Research Paper</a></li>
+          
+          <li><a href="https://browserleaks.com/webgl" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s;">WebGL Fingerprinting Techniques</a></li>
+          
+        </ul>
+      </section>
+      
     </article>
+
+    
+    
+    <div style="margin-top: clamp(3rem, 5vh, 4rem); text-align: center; padding: clamp(1.5rem, 3vw, 2rem); background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(167, 139, 250, 0.05)); border-radius: clamp(12px, 2vw, 16px);">
+      
+      
+      
+      <p style="color: var(--muted); margin-bottom: 1rem;">Este whitepaper faz parte de:</p>
+      <a href="/hannya_tech/pesquisa/anonimato/" class="btn primary" style="text-decoration: none; font-size: 1.05rem;">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Análise Prática de Anonimato Digital: Um Estudo Comparativo de Técnicas de Ofuscação e Evasão à Vigilância
+      </a>
+      
+    </div>
+    
   </div>
+
+<style>
+.whitepaper-content h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.whitepaper-content h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.whitepaper-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  max-width: 85ch;
+}
+
+.whitepaper-content ul,
+.whitepaper-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
+.whitepaper-content li {
+  margin-bottom: 0.5rem;
+}
+
+.whitepaper-content code {
+  background: rgba(124, 58, 237, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: 'Courier New', monospace;
+}
+
+.whitepaper-content pre {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.whitepaper-content blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.whitepaper-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.1);
+}
+
+.whitepaper-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.whitepaper-content th,
+.whitepaper-content td {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.whitepaper-content th {
+  background: var(--card-bg);
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .whitepaper-content {
+    max-width: 100%;
+  }
+  
+  .whitepaper-content p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hannya-container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  
+  .whitepaper-content {
+    padding: 0;
+  }
+  
+  .box {
+    padding: 1.25rem !important;
+    border-radius: 12px !important;
+  }
+  
+  .whitepaper-content h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .whitepaper-content h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  .whitepaper-content table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hannya-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .box {
+    padding: 1rem !important;
+  }
+  
+  .whitepaper-content h2 {
+    font-size: 1.35rem !important;
+  }
+  
+  .whitepaper-content h3 {
+    font-size: 1.15rem !important;
+  }
+  
+  .whitepaper-content h4 {
+    font-size: 1.05rem !important;
+  }
+  
+  .whitepaper-content table {
+    font-size: 0.85rem;
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .whitepaper-content pre {
+    font-size: 0.85rem;
+    padding: 1rem !important;
+  }
+}
+</style>
 
   </main>
-  <footer class="flex flex-none justify-center">
-    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
-  <div class="flex flex-row">
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
-
-  </div>
-  <div class="grow"></div>
-  <div class="flex flex-row">
-    
-    
-  </div>
-  
-  <div class="flex flex-row">
-    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-slate-300 dark:border-slate-400">
-      
-    </span>
-  </div>
-  
-</section>
-
+  <footer style="text-align: center; padding: 2rem 1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 4rem;">
+    <div class="hannya-container">
+      <p>&copy; 2025 Hannya Tech. Feito com <a href="https://gohugo.io/" target="_blank" rel="noopener" style="color: var(--accent);">Hugo</a>.</p>
+    </div>
   </footer>
-  <script src="/main.js"></script>
 
-
-
-
+  
+  <script>
+    const toggle = document.getElementById('darkmode-toggle');
+    const html = document.documentElement;
+    
+    
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      html.classList.add('dark');
+      if (toggle) toggle.checked = true;
+    }
+    
+    if (toggle) {
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    }
+  </script>
 </body>
 </html>

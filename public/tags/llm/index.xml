@@ -2,18 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Llm on Hannya Tech</title>
-    <link>http://localhost:1415/tags/llm/</link>
+    <link>https://albuquerquealdry.github.io/hannya_tech/tags/llm/</link>
     <description>Recent content in Llm on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <managingEditor>user@example.com (Hugo Author)</managingEditor>
-    <webMaster>user@example.com (Hugo Author)</webMaster>
-    <atom:link href="http://localhost:1415/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/tags/llm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Subpesquisa 2: Engenharia Reversa Assistida: Tradução de Código Malicioso</title>
-      <link>http://localhost:1415/subpesquisa/engenharia-reversa-assistida/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1415/subpesquisa/engenharia-reversa-assistida/</guid>
+      <link>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/engenharia-reversa-assistida/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/engenharia-reversa-assistida/</guid>
       <description>Avaliar o uso de LLMs para traduzir trechos de código malicioso (baixo nível) em pseudo-código legível, apoiando a engenharia reversa.</description>
     </item>
   </channel>

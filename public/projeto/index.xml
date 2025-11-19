@@ -2,18 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projetos on Hannya Tech</title>
-    <link>http://localhost:1412/projeto/</link>
+    <link>https://albuquerquealdry.github.io/hannya_tech/projeto/</link>
     <description>Recent content in Projetos on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <managingEditor>user@example.com (Hugo Author)</managingEditor>
-    <webMaster>user@example.com (Hugo Author)</webMaster>
-    <atom:link href="http://localhost:1412/projeto/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/projeto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Meu Novo Projeto</title>
-      <link>http://localhost:1412/projeto/meu-novo-projeto/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
-      <guid>http://localhost:1412/projeto/meu-novo-projeto/</guid>
+      <link>https://albuquerquealdry.github.io/hannya_tech/projeto/meu-novo-projeto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/projeto/meu-novo-projeto/</guid>
       <description>Descrição curta do objetivo e escopo.</description>
     </item>
   </channel>

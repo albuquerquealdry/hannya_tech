@@ -1,0 +1,37 @@
+{{ define "title" }}{{ .Title }} :: {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<div class="hannya-container">
+  <header style="text-align: center; margin-bottom: 2.5rem;">
+    <h1 class="hannya-title">{{ .Title }}</h1>
+    {{ with .Params.summary }}
+      <p class="hannya-subtitle" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  {{ if .Content }}
+  <div class="content box" style="max-width: 800px; margin: 0 auto 2rem;">
+    {{ .Content }}
+  </div>
+  {{ end }}
+
+  {{ if .Pages }}
+  <div class="grid">
+    {{ range .Pages }}
+      <article class="card" style="cursor: pointer;" onclick="window.location.href='{{ .RelPermalink }}'">
+        <div class="card-header">
+          <h2>{{ .Title }}</h2>
+        </div>
+        {{ with .Summary }}
+          <p class="muted" style="line-height: 1.6;">{{ . }}</p>
+        {{ end }}
+        {{ if .Params.tags }}
+        <div class="chips" style="margin-top: 0.75rem;">
+          {{ range first 3 .Params.tags }}<span class="chip">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

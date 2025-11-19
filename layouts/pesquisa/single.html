@@ -7,48 +7,51 @@
     {{ $percent = div (mul $done 100) $total }}
   {{ end }}
 
-  <div class="hannya-container wide">
-    <header>
-      <h1 class="hannya-title">{{ .Title }}</h1>
-      <p class="hannya-subtitle">{{ or .Params.summary .Summary }}</p>
-      <div class="chips">
+  <div class="hannya-container" style="max-width: 1400px;">
+    <header style="margin-bottom: 2.5rem; max-width: 1100px; margin-left: auto; margin-right: auto;">
+      <h1 class="hannya-title" style="margin-bottom: 1rem; font-size: clamp(2rem, 4vw, 2.75rem);">{{ .Title }}</h1>
+      <p class="hannya-subtitle" style="font-size: clamp(1rem, 2vw, 1.2rem); line-height: 1.7; margin-bottom: 1.25rem; max-width: 900px;">{{ or .Params.summary .Summary }}</p>
+      <div class="chips" style="align-items: center; gap: 0.5rem;">
         {{ range .Params.tags }}<span class="chip">{{ . }}</span>{{ end }}
         {{ $status := default "em progresso" .Params.status }}
-        <a class="badge {{ if eq $status "concluído" }}success{{ else if eq $status "rascunho" }}warn{{ end }}" href="{{ (printf "/status/%s" (urlize $status)) | relLangURL }}">{{ $status }}</a>
+        <a class="badge {{ if eq $status "concluído" }}success{{ else if eq $status "rascunho" }}warn{{ end }}" href="{{ (printf "/status/%s" (urlize $status)) | relLangURL }}" style="text-decoration: none;">{{ $status }}</a>
       </div>
     </header>
 
     <!-- Resumo compacto com progresso destacado no topo -->
-    <section class="summary box">
-      <div class="summary-row">
-        <div class="summary-title">{{ T "pesquisa.progresso" }}</div>
-        <div class="summary-progress">
-          <div class="progress"><div class="progress__bar" style="width: {{ $percent }}%;"></div></div>
+    <section class="summary box" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(167, 139, 250, 0.08)); max-width: 1100px; margin: 0 auto 2rem; border: 2px solid var(--accent-2); box-shadow: 0 4px 20px rgba(124, 58, 237, 0.1);">
+      <div class="summary-row" style="gap: 1.5rem;">
+        <div class="summary-title" style="font-size: 1.1rem; font-weight: 700;">{{ T "pesquisa.progresso" }}</div>
+        <div class="summary-progress" style="flex: 1 1 300px;">
+          <div class="progress" style="height: 12px; border-radius: 999px;"><div class="progress__bar" style="width: {{ $percent }}%;"></div></div>
         </div>
-        <div class="summary-kpis">
-          <span>{{ $done }}/{{ $total }} checkpoints</span>
-          <span>{{ $percent }}%</span>
+        <div class="summary-kpis" style="font-weight: 700; gap: 1rem;">
+          <span style="font-size: 1rem;">{{ $done }}/{{ $total }} checkpoints</span>
+          <span style="color: var(--accent); font-size: 1.3rem;">{{ $percent }}%</span>
         </div>
       </div>
     </section>
 
     <!-- Layout em duas colunas: Visão Geral à esquerda; Subpesquisas + Progresso à direita -->
-    <section class="layout-2col" style="margin-top: 1rem;">
-      <article class="content box">
+    <section class="layout-2col" style="gap: 2rem; max-width: 1400px; margin: 0 auto;">
+      <article class="content box" style="padding: 2rem;">
         {{ .Content }}
       </article>
 
       <div class="stack-column">
         <section class="box">
-          <h2>{{ T "pesquisa.subpesquisas" }}</h2>
+          <h2 style="font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 1.25rem;">🔍</span>
+            {{ T "pesquisa.subpesquisas" }}
+          </h2>
           {{ $parentPath := trim .File.Dir "/" }}
           {{ $subs := where .Site.RegularPages "Params.parent_path" "eq" $parentPath }}
           {{ if gt (len $subs) 0 }}
             <div class="sub-grid">
               {{ range $subs }}
-                <a id="subpesquisa-{{ .File.BaseFileName }}" class="card" style="padding:0.75rem;" href="{{ .RelPermalink }}">
-                  <div class="card-header"><h3>{{ .Title }}</h3></div>
-                  {{ with .Params.summary }}<p class="muted">{{ . }}</p>{{ end }}
+                <a id="subpesquisa-{{ .File.BaseFileName }}" class="card" style="padding: 1rem; text-decoration: none;" href="{{ .RelPermalink }}">
+                  <div class="card-header"><h3 style="font-size: 1.1rem;">{{ .Title }}</h3></div>
+                  {{ with .Params.summary }}<p class="muted" style="font-size: 0.9rem; line-height: 1.5;">{{ . }}</p>{{ end }}
                 </a>
               {{ end }}
             </div>
@@ -59,10 +62,10 @@
                 {{ $slug := cond (isset $item "slug") (urlize $item.slug) (urlize $item.title) }}
                 {{ $sub := .Site.GetPage "page" (printf "subpesquisa/%s" $slug) }}
                 {{ $href := cond $sub $sub.RelPermalink (relURL (printf "/subpesquisa/%s/" $slug)) }}
-                <a id="subpesquisa-{{ $slug }}" class="card" style="padding:0.75rem;" href="{{ $href }}">
-                  <div class="card-header"><h3>{{ $item.title }}</h3></div>
-                  {{ with $item.summary }}<p class="muted">{{ . }}</p>{{ end }}
-                  <p class="muted" style="margin-top:0.5rem;">Clique para abrir</p>
+                <a id="subpesquisa-{{ $slug }}" class="card" style="padding: 1rem; text-decoration: none;" href="{{ $href }}">
+                  <div class="card-header"><h3 style="font-size: 1.1rem;">{{ $item.title }}</h3></div>
+                  {{ with $item.summary }}<p class="muted" style="font-size: 0.9rem; line-height: 1.5;">{{ . }}</p>{{ end }}
+                  <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.8;">→ Ver detalhes</p>
                 </a>
               {{ end }}
             </div>
@@ -72,7 +75,10 @@
         </section>
 
         <section class="box">
-          <h2>{{ T "pesquisa.progresso" }}</h2>
+          <h2 style="font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 1.25rem;">📋</span>
+            {{ T "pesquisa.progresso" }}
+          </h2>
       <div class="timeline" style="margin-top: 0.5rem;">
         {{ range .Params.checkpoints }}
           <div id="checkpoint-{{ urlize .title }}" class="checkpoint {{ if .done }}done{{ end }}">

@@ -1,21 +1,22 @@
-{{/* Wrapper para centralizar logo e manter toggle de tema do tema */}}
+{{/* Header com navegação responsiva */}}
 {{ $logo := "logo.svg" | relURL }}
-<div class="hannya-container flex items-center justify-between w-full px-4 py-3">
-  <a href="/" aria-label="Home" class="flex items-center gap-3">
-    <img src="{{ $logo }}" alt="Hannya Tech" style="height:48px;width:auto;"/>
-    <span class="font-extrabold text-slate-900 dark:text-slate-100 text-lg md:text-xl">{{ .Site.Title }}</span>
+<div class="hannya-container" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem;">
+  <a href="{{ "/" | relURL }}" aria-label="Home" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+    <img src="{{ $logo }}" alt="Hannya Tech" style="height: 40px; width: auto;"/>
+    <span style="font-weight: 800; font-size: 1.25rem; color: var(--text);">{{ .Site.Title }}</span>
   </a>
 
-  <div class="flex items-center gap-2">
-    {{ partial "menu.html" . }}
+  <nav style="display: flex; align-items: center; gap: 0.5rem;">
+    {{ with .Site.Menus.main }}
+      {{ range . }}
+        <a class="btn ghost" href="{{ .URL | relURL }}" style="text-decoration: none;">{{ .Name }}</a>
+      {{ end }}
+    {{ end }}
 
-
-    <div class="darkmode-toggle hidden md:flex">
-      <label for="darkmode-toggle" class="btn ghost cursor-pointer" title="Alternar tema">
-        <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only" aria-label="Alternar tema">
-        <span class="icon-sun">{{ partial "icon.html" "brightness-down" }}</span>
-        <span class="icon-moon">{{ partial "icon.html" "moon-stars" }}</span>
-      </label>
-    </div>
-  </div>
+    <label for="darkmode-toggle" class="btn ghost" style="cursor: pointer;" title="Alternar tema">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" style="position: absolute; opacity: 0; pointer-events: none;" aria-label="Alternar tema">
+      <span class="icon-sun" style="display: inline-flex;">{{ partial "icon.html" "brightness-down" }}</span>
+      <span class="icon-moon" style="display: none;">{{ partial "icon.html" "moon-stars" }}</span>
+    </label>
+  </nav>
 </div>

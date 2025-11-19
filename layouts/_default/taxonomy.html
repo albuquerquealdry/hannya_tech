@@ -1,0 +1,22 @@
+{{ define "title" }}{{ .Title }} :: {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<div class="hannya-container">
+  <header style="text-align: center; margin-bottom: 2.5rem;">
+    <h1 class="hannya-title">{{ .Title }}</h1>
+    <p class="hannya-subtitle">{{ .Pages | len }} {{ if eq (.Pages | len) 1 }}item{{ else }}itens{{ end }}</p>
+  </header>
+
+  <div class="grid">
+    {{ range .Pages }}
+      <article class="card" style="cursor: pointer;" onclick="window.location.href='{{ .RelPermalink }}'">
+        <div class="card-header">
+          <h2>{{ .Title }}</h2>
+        </div>
+        {{ with .Summary }}
+          <p class="muted" style="line-height: 1.6;">{{ . }}</p>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

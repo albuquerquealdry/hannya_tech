@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://albuquerquealdry.github.io/hannya_tech/'
 languageCode = 'pt-br'
 title = 'Hannya Tech'
 theme = 'tailwind'

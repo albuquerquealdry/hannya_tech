@@ -1,16 +1,92 @@
 {{ define "title" }}{{ .Site.Title }}{{ end }}
 {{ define "main" }}
-<section class="hero w-full">
-  <div class="hannya-container">
-    <h1 class="title">Hannya Tech</h1>
-    <p class="hannya-subtitle" style="max-width: 720px; margin: 0 auto;">
+<section class="hero w-full" style="position: relative; overflow: hidden;">
+  <!-- Background decorativo -->
+  <div style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(124, 58, 237, 0.15), transparent); border-radius: 50%; filter: blur(80px); pointer-events: none;"></div>
+  <div style="position: absolute; bottom: -30%; left: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(167, 139, 250, 0.15), transparent); border-radius: 50%; filter: blur(80px); pointer-events: none;"></div>
+  
+  <div class="hannya-container" style="max-width: 1000px; position: relative; z-index: 1;">
+    <div style="margin-bottom: 1.5rem; animation: fadeInDown 0.6s ease-out;">
+      <span style="display: inline-block; padding: 0.5rem 1.25rem; background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(167, 139, 250, 0.15)); border: 1px solid var(--accent-2); border-radius: 999px; font-size: 0.95rem; font-weight: 600; color: var(--accent); backdrop-filter: blur(10px);">
+        ✨ Pesquisas Técnicas & Whitepapers
+      </span>
+    </div>
+    
+    <h1 class="title" style="margin-bottom: 1rem; animation: fadeInUp 0.6s ease-out 0.1s both;">Hannya Tech</h1>
+    
+    <p class="hannya-subtitle" style="max-width: 720px; margin: 0 auto 2.5rem; font-size: clamp(1.1rem, 2.5vw, 1.35rem); line-height: 1.7; color: var(--muted); animation: fadeInUp 0.6s ease-out 0.2s both;">
       {{ T "hero.subtitle" }}
     </p>
-    <div class="actions">
-      <a class="btn primary" href="/pesquisa/">{{ T "hero.cta_pesquisas" }}</a>
-      <a class="btn ghost" href="/sobre/">{{ T "hero.cta_sobre" }}</a>
+    
+    <div class="actions" style="animation: fadeInUp 0.6s ease-out 0.3s both;">
+      <a class="btn primary" href="{{ "pesquisa/" | relURL }}" style="font-size: 1.05rem; padding: 1.1rem 2.25rem; box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4); text-decoration: none;">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        {{ T "hero.cta_pesquisas" }}
+      </a>
+      <a class="btn ghost" href="{{ "sobre/" | relURL }}" style="font-size: 1.05rem; padding: 1.1rem 2.25rem; text-decoration: none;">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        {{ T "hero.cta_sobre" }}
+      </a>
+    </div>
+
+    <div style="margin-top: 5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; max-width: 900px; margin-left: auto; margin-right: auto; animation: fadeInUp 0.6s ease-out 0.4s both;">
+      <div class="feature-card" style="text-align: center; padding: 2rem 1.5rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; transition: all 0.3s ease; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2));"></div>
+        <div style="font-size: 3rem; margin-bottom: 1rem; filter: drop-shadow(0 4px 8px rgba(124, 58, 237, 0.2));">🔬</div>
+        <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text);">Pesquisas</h3>
+        <p style="font-size: 0.95rem; color: var(--muted); line-height: 1.6;">Projetos estruturados com checkpoints e acompanhamento de progresso</p>
+      </div>
+      
+      <div class="feature-card" style="text-align: center; padding: 2rem 1.5rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; transition: all 0.3s ease; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2));"></div>
+        <div style="font-size: 3rem; margin-bottom: 1rem; filter: drop-shadow(0 4px 8px rgba(124, 58, 237, 0.2));">📄</div>
+        <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text);">Whitepapers</h3>
+        <p style="font-size: 0.95rem; color: var(--muted); line-height: 1.6;">Documentos técnicos detalhados com análises e testes práticos</p>
+      </div>
+      
+      <div class="feature-card" style="text-align: center; padding: 2rem 1.5rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; transition: all 0.3s ease; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2));"></div>
+        <div style="font-size: 3rem; margin-bottom: 1rem; filter: drop-shadow(0 4px 8px rgba(124, 58, 237, 0.2));">📊</div>
+        <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text);">Acompanhamento</h3>
+        <p style="font-size: 0.95rem; color: var(--muted); line-height: 1.6;">Visualização clara do progresso e status de cada projeto</p>
+      </div>
     </div>
   </div>
-  
 </section>
+
+<style>
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.15);
+  border-color: var(--accent-2);
+}
+</style>
 {{ end }}

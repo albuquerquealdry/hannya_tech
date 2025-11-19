@@ -1,8 +1,10 @@
 {{ define "title" }}{{ T "pesquisa.title" }} :: {{ .Site.Title }}{{ end }}
 {{ define "main" }}
 <div class="hannya-container">
-  <h1 class="hannya-title">{{ T "pesquisa.title" }}</h1>
-  <p class="hannya-subtitle">{{ T "pesquisa.subtitle" }}</p>
+  <header style="text-align: center; margin-bottom: 2.5rem;">
+    <h1 class="hannya-title">{{ T "pesquisa.title" }}</h1>
+    <p class="hannya-subtitle" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">{{ T "pesquisa.subtitle" }}</p>
+  </header>
 
   <div class="grid">
     {{ range .Pages }}
@@ -13,23 +15,29 @@
         {{ $percent = div (mul $done 100) $total }}
       {{ end }}
 
-      <a class="card" href="{{ .RelPermalink }}">
+      <article class="card" style="cursor: pointer;" onclick="window.location.href='{{ .RelPermalink }}'">
         <div class="card-header">
           <h2>{{ .Title }}</h2>
           {{ $status := default "em progresso" .Params.status }}
           <span class="badge {{ if eq $status "concluído" }}success{{ else if eq $status "rascunho" }}warn{{ end }}">{{ $status }}</span>
         </div>
 
-        <p class="muted">{{ or .Params.summary .Summary }}</p>
+        <p class="muted" style="line-height: 1.6; margin-bottom: 1rem;">{{ or .Params.summary .Summary }}</p>
 
-        <div class="progress"><div class="progress__bar" style="width: {{ $percent }}%;"></div></div>
-        <div class="progress-meta">
-          <span>{{ $done }}/{{ $total }} checkpoints</span>
-          <span>{{ $percent }}%</span>
+        {{ if .Params.tags }}
+        <div class="chips" style="margin-bottom: 1rem;">
+          {{ range first 3 .Params.tags }}<span class="chip">{{ . }}</span>{{ end }}
         </div>
+        {{ end }}
 
-        {{/* Chips de checkpoints e subpesquisas removidos conforme solicitação */}}
-      </a>
+        <div style="margin-top: auto;">
+          <div class="progress"><div class="progress__bar" style="width: {{ $percent }}%;"></div></div>
+          <div class="progress-meta">
+            <span style="font-weight: 600;">{{ $done }}/{{ $total }} checkpoints</span>
+            <span style="font-weight: 700; color: var(--accent);">{{ $percent }}%</span>
+          </div>
+        </div>
+      </article>
     {{ end }}
   </div>
 </div>

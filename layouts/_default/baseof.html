@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ .Site.Params.description | default .Site.Title }}">
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ "css/hannya.css" | relURL }}">
+  
+  <!-- Favicon -->
+  {{ with .Site.Params.favicon }}
+  <link rel="icon" href="{{ . | relURL }}">
+  {{ end }}
+  
+  {{ partial "custom_head.html" . }}
+</head>
+<body class="{{ if .IsHome }}homepage{{ end }}">
+  <header>
+    {{ partial "header.html" . }}
+  </header>
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer style="text-align: center; padding: 2rem 1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 4rem;">
+    <div class="hannya-container">
+      <p>&copy; {{ now.Year }} {{ .Site.Title }}. Feito com <a href="https://gohugo.io/" target="_blank" rel="noopener" style="color: var(--accent);">Hugo</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Dark mode toggle script -->
+  <script>
+    const toggle = document.getElementById('darkmode-toggle');
+    const html = document.documentElement;
+    
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      html.classList.add('dark');
+      if (toggle) toggle.checked = true;
+    }
+    
+    if (toggle) {
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
