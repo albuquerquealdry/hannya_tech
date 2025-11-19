@@ -1,0 +1,21 @@
+{{/* Wrapper para centralizar logo e manter toggle de tema do tema */}}
+{{ $logo := "logo.svg" | relURL }}
+<div class="hannya-container flex items-center justify-between w-full px-4 py-3">
+  <a href="/" aria-label="Home" class="flex items-center gap-3">
+    <img src="{{ $logo }}" alt="Hannya Tech" style="height:48px;width:auto;"/>
+    <span class="font-extrabold text-slate-900 dark:text-slate-100 text-lg md:text-xl">{{ .Site.Title }}</span>
+  </a>
+
+  <div class="flex items-center gap-2">
+    {{ partial "menu.html" . }}
+
+
+    <div class="darkmode-toggle hidden md:flex">
+      <label for="darkmode-toggle" class="btn ghost cursor-pointer" title="Alternar tema">
+        <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only" aria-label="Alternar tema">
+        <span class="icon-sun">{{ partial "icon.html" "brightness-down" }}</span>
+        <span class="icon-moon">{{ partial "icon.html" "moon-stars" }}</span>
+      </label>
+    </div>
+  </div>
+</div>

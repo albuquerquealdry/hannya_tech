@@ -1,0 +1,8 @@
+{{/* Menu principal padronizado com botões consistentes */}}
+<nav class="main-menu hidden md:flex items-center gap-2">
+  {{ with .Site.Menus.main }}
+    {{ range . }}
+      <a class="btn ghost" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+    {{ end }}
+  {{ end }}
+</nav>

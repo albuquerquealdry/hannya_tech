@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tails on Hannya Tech</title>
+    <link>http://localhost:1415/tags/tails/</link>
+    <description>Recent content in Tails on Hannya Tech</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1415/tags/tails/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Análise Prática de Anonimato Digital: Um Estudo Comparativo de Técnicas de Ofuscação e Evasão à Vigilância</title>
+      <link>http://localhost:1415/pesquisa/anonimato/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1415/pesquisa/anonimato/</guid>
+      <description>Esta pesquisa investiga e compara, através de um estudo experimental, o nível de anonimato e privacidade de um ambiente de usuário padrão (Cenário A) contra um ambiente &amp;lsquo;hardened&amp;rsquo; (Cenário B) com ferramentas de ofuscação, focando na evasão à vigilância de big techs.</description>
+    </item>
+  </channel>
+</rss>

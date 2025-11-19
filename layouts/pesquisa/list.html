@@ -1,0 +1,36 @@
+{{ define "title" }}{{ T "pesquisa.title" }} :: {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<div class="hannya-container">
+  <h1 class="hannya-title">{{ T "pesquisa.title" }}</h1>
+  <p class="hannya-subtitle">{{ T "pesquisa.subtitle" }}</p>
+
+  <div class="grid">
+    {{ range .Pages }}
+      {{ $total := len .Params.checkpoints }}
+      {{ $done := len (where .Params.checkpoints "done" true) }}
+      {{ $percent := 0 }}
+      {{ if gt $total 0 }}
+        {{ $percent = div (mul $done 100) $total }}
+      {{ end }}
+
+      <a class="card" href="{{ .RelPermalink }}">
+        <div class="card-header">
+          <h2>{{ .Title }}</h2>
+          {{ $status := default "em progresso" .Params.status }}
+          <span class="badge {{ if eq $status "concluído" }}success{{ else if eq $status "rascunho" }}warn{{ end }}">{{ $status }}</span>
+        </div>
+
+        <p class="muted">{{ or .Params.summary .Summary }}</p>
+
+        <div class="progress"><div class="progress__bar" style="width: {{ $percent }}%;"></div></div>
+        <div class="progress-meta">
+          <span>{{ $done }}/{{ $total }} checkpoints</span>
+          <span>{{ $percent }}%</span>
+        </div>
+
+        {{/* Chips de checkpoints e subpesquisas removidos conforme solicitação */}}
+      </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1415&amp;path=livereload" data-no-instant defer></script>
+   :: Hannya Tech
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="title: &ldquo;Subpesquisa 1: O Baseline de Vigilância (Cenário A)&rdquo; summary: &ldquo;Quantificar o &rsquo;não anonimato&rsquo; no ambiente Controle e registrar vazamentos de dados, fingerprints e tráfego.&rdquo; status: &ldquo;em progresso&rdquo; tags: [&ldquo;anonimato&rdquo;, &ldquo;controle&rdquo;, &ldquo;baseline&rdquo;] parent_path: &ldquo;pesquisa/anonimato&rdquo; Objetivo Estabelecer o baseline de vigilância de um usuário comum (Cenário A), medindo vazamentos de identidade (IP, DNS, WebRTC), fingerprinting de navegador e indicadores de rastreamento. Produzir evidências replicáveis e comparáveis contra o Cenário B.
+Escopo Sistema operacional padrão (Windows/Ubuntu) com navegador comum (Chrome/Firefox). Sem ferramentas de anonimato ou ofuscação ativas. Navegação em sites populares e páginas de teste de vazamento. Ambiente VM Controle: CPU 2–4 vCPUs, RAM 4–8GB, rede NAT. Ferramentas: Wireshark para captura de pacotes. Páginas de teste: https://browserleaks.com/, https://ipleak.net/, https://coveryourtracks.eff.org/. Extensões desativadas (usar perfil limpo). Procedimento Passo a Passo Preparação
+"
+/>
+<meta
+  name="keywords"
+  content="hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
+/>
+<meta name="robots" content="noodp" /><link rel="manifest" href="/manifest.json" /><meta property="og:url" content="http://localhost:1415/subpesquisa/baseline-de-vigilancia-cenario-a/">
+  <meta property="og:site_name" content="Hannya Tech">
+  <meta property="og:title" content="Hannya Tech">
+  <meta property="og:description" content="title: “Subpesquisa 1: O Baseline de Vigilância (Cenário A)” summary: “Quantificar o ’não anonimato’ no ambiente Controle e registrar vazamentos de dados, fingerprints e tráfego.” status: “em progresso” tags: [“anonimato”, “controle”, “baseline”] parent_path: “pesquisa/anonimato” Objetivo Estabelecer o baseline de vigilância de um usuário comum (Cenário A), medindo vazamentos de identidade (IP, DNS, WebRTC), fingerprinting de navegador e indicadores de rastreamento. Produzir evidências replicáveis e comparáveis contra o Cenário B.
+Escopo Sistema operacional padrão (Windows/Ubuntu) com navegador comum (Chrome/Firefox). Sem ferramentas de anonimato ou ofuscação ativas. Navegação em sites populares e páginas de teste de vazamento. Ambiente VM Controle: CPU 2–4 vCPUs, RAM 4–8GB, rede NAT. Ferramentas: Wireshark para captura de pacotes. Páginas de teste: https://browserleaks.com/, https://ipleak.net/, https://coveryourtracks.eff.org/. Extensões desativadas (usar perfil limpo). Procedimento Passo a Passo Preparação">
+  <meta property="og:locale" content="pt">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="subpesquisa">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hannya Tech">
+  <meta name="twitter:description" content="title: “Subpesquisa 1: O Baseline de Vigilância (Cenário A)” summary: “Quantificar o ’não anonimato’ no ambiente Controle e registrar vazamentos de dados, fingerprints e tráfego.” status: “em progresso” tags: [“anonimato”, “controle”, “baseline”] parent_path: “pesquisa/anonimato” Objetivo Estabelecer o baseline de vigilância de um usuário comum (Cenário A), medindo vazamentos de identidade (IP, DNS, WebRTC), fingerprinting de navegador e indicadores de rastreamento. Produzir evidências replicáveis e comparáveis contra o Cenário B.
+Escopo Sistema operacional padrão (Windows/Ubuntu) com navegador comum (Chrome/Firefox). Sem ferramentas de anonimato ou ofuscação ativas. Navegação em sites populares e páginas de teste de vazamento. Ambiente VM Controle: CPU 2–4 vCPUs, RAM 4–8GB, rede NAT. Ferramentas: Wireshark para captura de pacotes. Páginas de teste: https://browserleaks.com/, https://ipleak.net/, https://coveryourtracks.eff.org/. Extensões desativadas (usar perfil limpo). Procedimento Passo a Passo Preparação">
+      <meta name="twitter:site" content="@#">
+
+
+<link rel="canonical" href="http://localhost:1415/subpesquisa/baseline-de-vigilancia-cenario-a/" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/css/index.d6c3044e2ccd17f959e01250645c77d28de7db3e6614a18e762198e9bf30fb5b.css">
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/hannya.css">
+  
+</head>
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
+    
+<div class="fixed right-0 top-0 z-50 flex items-center justify-center bg-gray-200 p-2 text-sm uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200">
+  <span class="block sm:hidden">all</span>
+  <span class="hidden sm:block md:hidden">sm</span>
+  <span class="hidden md:block lg:hidden">md</span>
+  <span class="hidden lg:block xl:hidden">lg</span>
+  <span class="hidden xl:block 2xl:hidden">xl</span>
+  <span class="hidden 2xl:block">2xl</span>
+</div>
+
+  <header class="flex flex-none justify-center z-10">
+    
+
+<div class="hannya-container flex items-center justify-between w-full px-4 py-3">
+  <a href="/" aria-label="Home" class="flex items-center gap-3">
+    <img src="/logo.svg" alt="Hannya Tech" style="height:48px;width:auto;"/>
+    <span class="font-extrabold text-slate-900 dark:text-slate-100 text-lg md:text-xl">Hannya Tech</span>
+  </a>
+
+  <div class="flex items-center gap-2">
+    
+<nav class="main-menu hidden md:flex items-center gap-2">
+  
+    
+      <a class="btn ghost" href="/pesquisa/">Pesquisas</a>
+    
+      <a class="btn ghost" href="/sobre/">Sobre</a>
+    
+  
+</nav>
+
+
+    <div class="darkmode-toggle hidden md:flex">
+      <label for="darkmode-toggle" class="btn ghost cursor-pointer" title="Alternar tema">
+        <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only" aria-label="Alternar tema">
+        <span class="icon-sun"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+   <path d="M12 5l0 .01"></path>
+   <path d="M17 7l0 .01"></path>
+   <path d="M19 12l0 .01"></path>
+   <path d="M17 17l0 .01"></path>
+   <path d="M12 19l0 .01"></path>
+   <path d="M7 17l0 .01"></path>
+   <path d="M5 12l0 .01"></path>
+   <path d="M7 7l0 .01"></path>
+</svg>
+</span>
+        <span class="icon-moon"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+   <path d="M19 11h2m-1 -1v2"></path>
+</svg>
+</span>
+      </label>
+    </div>
+  </div>
+</div>
+  </header>
+  <main class="flex flex-auto justify-center">
+    
+  <div class="hannya-container">
+    <article class="content box">
+      <h2 id="parent_path-pesquisaanonimato">title: &ldquo;Subpesquisa 1: O Baseline de Vigilância (Cenário A)&rdquo;
+summary: &ldquo;Quantificar o &rsquo;não anonimato&rsquo; no ambiente Controle e registrar vazamentos de dados, fingerprints e tráfego.&rdquo;
+status: &ldquo;em progresso&rdquo;
+tags: [&ldquo;anonimato&rdquo;, &ldquo;controle&rdquo;, &ldquo;baseline&rdquo;]
+parent_path: &ldquo;pesquisa/anonimato&rdquo;</h2>
+<h2 id="objetivo">Objetivo</h2>
+<p>Estabelecer o baseline de vigilância de um usuário comum (Cenário A), medindo vazamentos de identidade (IP, DNS, WebRTC), fingerprinting de navegador e indicadores de rastreamento. Produzir evidências replicáveis e comparáveis contra o Cenário B.</p>
+<h2 id="escopo">Escopo</h2>
+<ul>
+<li>Sistema operacional padrão (Windows/Ubuntu) com navegador comum (Chrome/Firefox).</li>
+<li>Sem ferramentas de anonimato ou ofuscação ativas.</li>
+<li>Navegação em sites populares e páginas de teste de vazamento.</li>
+</ul>
+<h2 id="ambiente">Ambiente</h2>
+<ul>
+<li>VM Controle: CPU 2–4 vCPUs, RAM 4–8GB, rede NAT.</li>
+<li>Ferramentas:
+<ul>
+<li><code>Wireshark</code> para captura de pacotes.</li>
+<li>Páginas de teste: <code>https://browserleaks.com/</code>, <code>https://ipleak.net/</code>, <code>https://coveryourtracks.eff.org/</code>.</li>
+<li>Extensões desativadas (usar perfil limpo).</li>
+</ul>
+</li>
+</ul>
+<h2 id="procedimento-passo-a-passo">Procedimento Passo a Passo</h2>
+<ol>
+<li>
+<p>Preparação</p>
+<ul>
+<li>Criar VM Controle limpa e atualizar sistema.</li>
+<li>Instalar <code>Wireshark</code> e habilitar captura na interface da VM (NAT/bridge conforme aplicável).</li>
+</ul>
+</li>
+<li>
+<p>Capturas de rede</p>
+<ul>
+<li>Iniciar <code>Wireshark</code> e marcar filtros úteis:
+<ul>
+<li><code>dns</code> (consultas/respostas)</li>
+<li><code>http or tls</code> (tráfego web)</li>
+<li><code>stun or turn</code> (WebRTC)</li>
+</ul>
+</li>
+<li>Registrar <code>IP externo</code>, <code>resolução DNS</code>, presença de <code>SNI</code> em TLS.</li>
+</ul>
+</li>
+<li>
+<p>Testes de vazamento</p>
+<ul>
+<li>Acessar <code>ipleak.net</code> e capturar resultados: IP, DNS resolvers, WebRTC addresses.</li>
+<li>Acessar <code>browserleaks.com</code> (Canvas, WebGL, AudioContext, Fonts) e salvar fingerprints.</li>
+<li>Acessar <code>coveryourtracks.eff.org</code> e registrar o score (único/não único).</li>
+</ul>
+</li>
+<li>
+<p>Fingerprinting e rastreamento</p>
+<ul>
+<li>Registrar: <code>UA</code>, <code>platform</code>, <code>plugins</code>, <code>doNotTrack</code>, <code>timezone</code>, <code>screen</code>, <code>languages</code>, <code>fonts</code>.</li>
+<li>Checar cookies de terceiros e storage acessível (localStorage, IndexedDB).</li>
+</ul>
+</li>
+<li>
+<p>Evidências e artefatos</p>
+<ul>
+<li>Exportar <code>.pcap</code> da sessão.</li>
+<li>Salvar <code>screenshots</code> dos resultados.</li>
+<li>Exportar JSON (quando disponível) das páginas de teste.</li>
+</ul>
+</li>
+</ol>
+<h2 id="métricas">Métricas</h2>
+<ul>
+<li>IP/DNS/WebRTC: número de vazamentos detectados (contagem e detalhes).</li>
+<li>Fingerprint: unicidade (score), número de atributos coletados.</li>
+<li>Tráfego: domínios contatados, presença de trackers (via listas públicas, ex.: EasyList/EasyPrivacy).</li>
+</ul>
+<h2 id="resultados-esperados">Resultados Esperados</h2>
+<ul>
+<li>Evidências claras de exposição de IP, DNS e possíveis endpoints WebRTC.</li>
+<li>Fingerprint com alto grau de unicidade no Cenário A.</li>
+<li>Presença de trackers/domínios de telemetria comuns.</li>
+</ul>
+<h2 id="riscos-e-limitações">Riscos e Limitações</h2>
+<ul>
+<li>Variações por versão do navegador/SO.</li>
+<li>Diferenças de provedores de DNS/ISP.</li>
+</ul>
+<h2 id="artefatos-entregues">Artefatos Entregues</h2>
+<ul>
+<li><code>baseline-controle.pcap</code></li>
+<li><code>baseline-controle.md</code> (resumo dos achados)</li>
+<li><code>screenshots/</code> com resultados das páginas de teste</li>
+</ul>
+
+    </article>
+  </div>
+
+  </main>
+  <footer class="flex flex-none justify-center">
+    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row">
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+  <div class="grow"></div>
+  <div class="flex flex-row">
+    
+    
+  </div>
+  
+  <div class="flex flex-row">
+    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-slate-300 dark:border-slate-400">
+      
+    </span>
+  </div>
+  
+</section>
+
+  </footer>
+  <script src="/main.js"></script>
+
+
+
+
+</body>
+</html>

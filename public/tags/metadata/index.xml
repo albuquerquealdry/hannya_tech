@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Metadata on Hannya Tech</title>
+    <link>http://localhost:1412/tags/metadata/</link>
+    <description>Recent content in Metadata on Hannya Tech</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <atom:link href="http://localhost:1412/tags/metadata/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mixnets and Latency</title>
+      <link>http://localhost:1412/en/subpesquisa/mixnets-and-latency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/en/subpesquisa/mixnets-and-latency/</guid>
+      <description>How mixing networks protect metadata and their latency costs.</description>
+    </item>
+  </channel>
+</rss>

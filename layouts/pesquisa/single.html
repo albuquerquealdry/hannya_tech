@@ -1,0 +1,102 @@
+{{ define "title" }}{{ .Title }} :: {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+  {{ $total := len .Params.checkpoints }}
+  {{ $done := len (where .Params.checkpoints "done" true) }}
+  {{ $percent := 0 }}
+  {{ if gt $total 0 }}
+    {{ $percent = div (mul $done 100) $total }}
+  {{ end }}
+
+  <div class="hannya-container wide">
+    <header>
+      <h1 class="hannya-title">{{ .Title }}</h1>
+      <p class="hannya-subtitle">{{ or .Params.summary .Summary }}</p>
+      <div class="chips">
+        {{ range .Params.tags }}<span class="chip">{{ . }}</span>{{ end }}
+        {{ $status := default "em progresso" .Params.status }}
+        <a class="badge {{ if eq $status "concluído" }}success{{ else if eq $status "rascunho" }}warn{{ end }}" href="{{ (printf "/status/%s" (urlize $status)) | relLangURL }}">{{ $status }}</a>
+      </div>
+    </header>
+
+    <!-- Resumo compacto com progresso destacado no topo -->
+    <section class="summary box">
+      <div class="summary-row">
+        <div class="summary-title">{{ T "pesquisa.progresso" }}</div>
+        <div class="summary-progress">
+          <div class="progress"><div class="progress__bar" style="width: {{ $percent }}%;"></div></div>
+        </div>
+        <div class="summary-kpis">
+          <span>{{ $done }}/{{ $total }} checkpoints</span>
+          <span>{{ $percent }}%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout em duas colunas: Visão Geral à esquerda; Subpesquisas + Progresso à direita -->
+    <section class="layout-2col" style="margin-top: 1rem;">
+      <article class="content box">
+        {{ .Content }}
+      </article>
+
+      <div class="stack-column">
+        <section class="box">
+          <h2>{{ T "pesquisa.subpesquisas" }}</h2>
+          {{ $parentPath := trim .File.Dir "/" }}
+          {{ $subs := where .Site.RegularPages "Params.parent_path" "eq" $parentPath }}
+          {{ if gt (len $subs) 0 }}
+            <div class="sub-grid">
+              {{ range $subs }}
+                <a id="subpesquisa-{{ .File.BaseFileName }}" class="card" style="padding:0.75rem;" href="{{ .RelPermalink }}">
+                  <div class="card-header"><h3>{{ .Title }}</h3></div>
+                  {{ with .Params.summary }}<p class="muted">{{ . }}</p>{{ end }}
+                </a>
+              {{ end }}
+            </div>
+          {{ else if .Params.subpesquisas }}
+            <div class="sub-grid">
+              {{ range .Params.subpesquisas }}
+                {{ $item := . }}
+                {{ $slug := cond (isset $item "slug") (urlize $item.slug) (urlize $item.title) }}
+                {{ $sub := .Site.GetPage "page" (printf "subpesquisa/%s" $slug) }}
+                {{ $href := cond $sub $sub.RelPermalink (relURL (printf "/subpesquisa/%s/" $slug)) }}
+                <a id="subpesquisa-{{ $slug }}" class="card" style="padding:0.75rem;" href="{{ $href }}">
+                  <div class="card-header"><h3>{{ $item.title }}</h3></div>
+                  {{ with $item.summary }}<p class="muted">{{ . }}</p>{{ end }}
+                  <p class="muted" style="margin-top:0.5rem;">Clique para abrir</p>
+                </a>
+              {{ end }}
+            </div>
+          {{ else }}
+            <p class="muted">{{ T "pesquisa.sem_sub" }}</p>
+          {{ end }}
+        </section>
+
+        <section class="box">
+          <h2>{{ T "pesquisa.progresso" }}</h2>
+      <div class="timeline" style="margin-top: 0.5rem;">
+        {{ range .Params.checkpoints }}
+          <div id="checkpoint-{{ urlize .title }}" class="checkpoint {{ if .done }}done{{ end }}">
+            <div class="dot"></div>
+            <div>
+              <div class="title">{{ .title }}</div>
+              {{ with .notes }}<div class="notes">{{ . }}</div>{{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+      </section>
+
+        {{ with .Params.tecnologias }}
+        <section class="box">
+          <h2>{{ T "pesquisa.tecnologias" }}</h2>
+          <div class="tech-logos">
+            {{ range . }}
+              {{ if .logo }}<img src="{{ .logo }}" alt="{{ .name }}" title="{{ .name }}">{{ else }}<span class="chip">{{ .name }}</span>{{ end }}
+            {{ end }}
+          </div>
+        </section>
+        {{ end }}
+      </div>
+    </section>
+  </div>
+{{ end }}

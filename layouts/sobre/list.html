@@ -1,0 +1,48 @@
+{{ define "main" }}
+<section class="hannya-container">
+  <header class="about-hero">
+    <h1 class="hannya-title">{{ .Title }}</h1>
+    {{ with .Params.summary }}<p class="hannya-subtitle">{{ . }}</p>{{ end }}
+  </header>
+
+  {{ $photo := .Params.photo }}
+  {{ if not $photo }}{{ $photo = .Site.Params.about.photo }}{{ end }}
+  {{ $fallback := "/logo.svg" }}
+  {{ if $photo }}
+    {{ $fsPath := printf "static%s" $photo }}
+    {{ if not (fileExists $fsPath) }}{{ $photo = $fallback }}{{ end }}
+  {{ else }}
+    {{ $photo = $fallback }}
+  {{ end }}
+
+  <div class="content box about-layout">
+    <aside class="profile box">
+      <img class="avatar" src="{{ $photo | replace " " "%20" | safeURL }}" alt="Foto de perfil" />
+
+      <section class="about-side about-hannya">
+        <h2>Sobre o Hannya Tech</h2>
+        {{- with .Params.sidebar_hannya -}}
+          <p>{{ . }}</p>
+        {{- else -}}
+          <p>{{ .Content | plainify | truncate 300 }}</p>
+        {{- end -}}
+      </section>
+
+      <section class="about-side about-me">
+        <h2>Sobre mim</h2>
+        {{- with .Params.bio -}}
+          <p>{{ . }}</p>
+        {{- else -}}
+          <p>Escreva um breve resumo sobre você aqui: interesses, área de pesquisa e objetivos.</p>
+        {{- end -}}
+      </section>
+    </aside>
+
+    <article class="about-content">
+      <div class="content">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+</section>
+{{ end }}

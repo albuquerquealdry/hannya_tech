@@ -1,0 +1,24 @@
+[hero.subtitle]
+other = "Research blog with checkpoints and sub-research. Track progress and dive deep."
+[hero.cta_pesquisas]
+other = "View Research"
+[hero.cta_sobre]
+other = "About"
+[pesquisa.title]
+other = "Research"
+[pesquisa.subtitle]
+other = "Follow research with checkpoints and sub-research."
+[pesquisa.progresso]
+other = "Progress"
+[pesquisa.subpesquisas]
+other = "Sub-Research"
+[pesquisa.tecnologias]
+other = "Technologies"
+[pesquisa.sem_sub]
+other = "No sub-research added yet."
+[search.type_pesquisa]
+other = "Research"
+[search.type_sub]
+other = "Sub-Research"
+[search.of]
+other = "of"

@@ -1,0 +1,16 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<section class="hero w-full">
+  <div class="hannya-container">
+    <h1 class="title">Hannya Tech</h1>
+    <p class="hannya-subtitle" style="max-width: 720px; margin: 0 auto;">
+      {{ T "hero.subtitle" }}
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="/pesquisa/">{{ T "hero.cta_pesquisas" }}</a>
+      <a class="btn ghost" href="/sobre/">{{ T "hero.cta_sobre" }}</a>
+    </div>
+  </div>
+  
+</section>
+{{ end }}

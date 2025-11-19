@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Produtividade on Hannya Tech</title>
+    <link>http://localhost:1415/tags/produtividade/</link>
+    <description>Recent content in Produtividade on Hannya Tech</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1415/tags/produtividade/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Framework para Pesquisa Técnica Prática</title>
+      <link>http://localhost:1415/pesquisa/anonimato/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1415/pesquisa/anonimato/</guid>
+      <description>Um workflow estruturado de 5 fases para organizar e executar pesquisas técnicas focadas em aplicabilidade, reprodutibilidade e compartilhamento de conhecimento.</description>
+    </item>
+  </channel>
+</rss>

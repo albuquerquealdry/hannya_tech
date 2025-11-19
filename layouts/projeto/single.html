@@ -1,0 +1,47 @@
+{{ define "title" }}{{ .Title }} :: {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<div class="hannya-container">
+  <header>
+    <h1 class="hannya-title">{{ .Title }}</h1>
+    <p class="hannya-subtitle">{{ or .Params.summary .Summary }}</p>
+    <div class="chips">
+      {{ range .Params.tags }}<span class="chip">{{ . }}</span>{{ end }}
+      {{ $status := default "em progresso" .Params.status }}
+      <a class="badge {{ if eq $status "concluído" }}success{{ else if eq $status "rascunho" }}warn{{ end }}" href="{{ (printf "/status/%s" (urlize $status)) | relLangURL }}">{{ $status }}</a>
+    </div>
+  </header>
+
+  <section class="layout-2col" style="margin-top: 1rem;">
+    <article class="content box">
+      {{ .Content }}
+    </article>
+
+    <div class="stack-column">
+      {{ with .Params.tecnologias }}
+      <section class="box">
+        <h2>Tecnologias</h2>
+        <div class="tech-logos">
+          {{ range . }}
+            {{ if .logo }}<img src="{{ .logo }}" alt="{{ .name }}" title="{{ .name }}">{{ else }}<span class="chip">{{ .name }}</span>{{ end }}
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+
+      {{ with .Params.links }}
+      <section class="box">
+        <h2>Links</h2>
+        <div class="sub-grid">
+          {{ range . }}
+            <a class="card" style="padding:0.75rem;" href="{{ .url }}" target="_blank" rel="noopener">
+              <div class="card-header"><h3>{{ .title }}</h3></div>
+              {{ with .summary }}<p class="muted">{{ . }}</p>{{ end }}
+            </a>
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}

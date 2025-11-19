@@ -1,0 +1,21 @@
+{{ define "title" }}Projetos :: {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+<div class="hannya-container">
+  <h1 class="hannya-title">Projetos</h1>
+  {{ with .Params.summary }}<p class="hannya-subtitle">{{ . }}</p>{{ end }}
+
+  <div class="grid">
+    {{ range .Pages }}
+      <a class="card" href="{{ .RelPermalink }}">
+        <div class="card-header">
+          <h2>{{ .Title }}</h2>
+          {{ $status := default "em progresso" .Params.status }}
+          <span class="badge {{ if eq $status "concluído" }}success{{ else if eq $status "rascunho" }}warn{{ end }}">{{ $status }}</span>
+        </div>
+
+        <p class="muted">{{ or .Params.summary .Summary }}</p>
+      </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

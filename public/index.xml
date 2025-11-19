@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hannya Tech</title>
+    <link>http://localhost:1412/</link>
+    <description>Recent content on Hannya Tech</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <managingEditor>user@example.com (Hugo Author)</managingEditor>
+    <webMaster>user@example.com (Hugo Author)</webMaster>
+    <lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1412/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arquitetura de Análise de Malware Automatizada e Assistida por IA (Dual-Stack)</title>
+      <link>http://localhost:1412/pesquisa/malware/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/pesquisa/malware/</guid>
+      <description>Desenvolvimento e validação de um ambiente de análise de malware que utiliza uma arquitetura de máquina virtual dupla (Alvo e Auxiliar), orquestração moderna (N8N) e Co-Inteligência Artificial (Gemini) para entregar veredictos com alta acurácia (&amp;gt;95%) e relatórios superiores e acessíveis.</description>
+    </item>
+    <item>
+      <title>Análise Prática de Anonimato Digital: Um Estudo Comparativo de Técnicas de Ofuscação e Evasão à Vigilância</title>
+      <link>http://localhost:1412/pesquisa/anonimato/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/pesquisa/anonimato/</guid>
+      <description>Esta pesquisa investiga e compara, através de um estudo experimental, o nível de anonimato e privacidade de um ambiente de usuário padrão (Cenário A) contra um ambiente &amp;lsquo;hardened&amp;rsquo; (Cenário B) com ferramentas de ofuscação, focando na evasão à vigilância de big techs.</description>
+    </item>
+    <item>
+      <title>Anonymity in the Digital Age</title>
+      <link>http://localhost:1412/en/pesquisa/anonimato/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/en/pesquisa/anonimato/</guid>
+      <description>Overview of techniques, risks, and ethical implications of online anonymity.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1412/manifest.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/manifest.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1412/search/_index.de/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/search/_index.de/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1412/search/_index.en/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/search/_index.en/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1412/search/_index.es/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/search/_index.es/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1412/search/_index.fr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/search/_index.fr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1412/search/_index.hi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/search/_index.hi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1412/search/_index.jp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/search/_index.jp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1412/search/_index.nl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/search/_index.nl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1412/search/_index.pl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/search/_index.pl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1412/search/_index.ru/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/search/_index.ru/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1412/search/_index.zh-cn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/search/_index.zh-cn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1412/subpesquisa/arquitetura-ambiente-hardened-cenario-b/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/subpesquisa/arquitetura-ambiente-hardened-cenario-b/</guid>
+      <description>&lt;h2 id=&#34;parent_path-pesquisaanonimato&#34;&gt;title: &amp;ldquo;Subpesquisa 2: Arquitetura do Ambiente Hardened (Cenário B)&amp;rdquo;&#xA;summary: &amp;ldquo;Construção do ambiente de alto anonimato, seleção e justificativa de ferramentas (Whonix, Tails, Tor+VPN).&amp;rdquo;&#xA;status: &amp;ldquo;em progresso&amp;rdquo;&#xA;tags: [&amp;ldquo;anonimato&amp;rdquo;, &amp;ldquo;hardened&amp;rdquo;, &amp;ldquo;cenário-b&amp;rdquo;]&#xA;parent_path: &amp;ldquo;pesquisa/anonimato&amp;rdquo;&lt;/h2&gt;&#xA;&lt;h2 id=&#34;objetivo&#34;&gt;Objetivo&lt;/h2&gt;&#xA;&lt;p&gt;Projetar, implementar e validar um ambiente Hardened (Cenário B) que minimize vazamentos de identidade e reduza a unicidade de fingerprint, mantendo navegabilidade e segurança operacional.&lt;/p&gt;&#xA;&lt;h2 id=&#34;princípios&#34;&gt;Princípios&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Isolamento por VM e segmentação de rede.&lt;/li&gt;&#xA;&lt;li&gt;Minimização de superfície de ataque e telemetria.&lt;/li&gt;&#xA;&lt;li&gt;Uso criterioso de Tor e, se necessário, VPN (ordem e riscos).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;arquitetura&#34;&gt;Arquitetura&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;VM Experimental (Hardened):&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Opção A: &lt;code&gt;Tails&lt;/code&gt; (live, amnésico, uso pontual).&lt;/li&gt;&#xA;&lt;li&gt;Opção B: &lt;code&gt;Whonix&lt;/code&gt; (Gateway + Workstation, persistência controlada).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Rede:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;Whonix-Gateway&lt;/code&gt;: roteia todo tráfego via Tor.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;Whonix-Workstation&lt;/code&gt;: único caminho de saída é o Gateway.&lt;/li&gt;&#xA;&lt;li&gt;Sem DNS externo; bloquear WebRTC STUN/ICE.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;controles-técnicos&#34;&gt;Controles Técnicos&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Navegador:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Usar &lt;code&gt;Tor Browser&lt;/code&gt; (no Whonix) ou navegador endurecido sem WebRTC.&lt;/li&gt;&#xA;&lt;li&gt;Desativar canvas e APIs de fingerprint quando possível; reduzir fontes personalizadas.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Sistema:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Desativar serviços de telemetria, sincronizações, atualizações automáticas em background.&lt;/li&gt;&#xA;&lt;li&gt;Limitar armazenamento persistente; limpar caches e storage.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Rede:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Firewall bloqueando UDP/STUN; forçar tráfego TCP via Tor.&lt;/li&gt;&#xA;&lt;li&gt;Evitar &lt;code&gt;Tor over VPN&lt;/code&gt; sem justificativa; preferir &lt;code&gt;VPN over Tor&lt;/code&gt; apenas para destinos específicos e ciente dos riscos.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;procedimento-passo-a-passo&#34;&gt;Procedimento Passo a Passo&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Provisionamento&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1412/subpesquisa/baseline-de-vigilancia-cenario-a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/subpesquisa/baseline-de-vigilancia-cenario-a/</guid>
+      <description>&lt;h2 id=&#34;parent_path-pesquisaanonimato&#34;&gt;title: &amp;ldquo;Subpesquisa 1: O Baseline de Vigilância (Cenário A)&amp;rdquo;&#xA;summary: &amp;ldquo;Quantificar o &amp;rsquo;não anonimato&amp;rsquo; no ambiente Controle e registrar vazamentos de dados, fingerprints e tráfego.&amp;rdquo;&#xA;status: &amp;ldquo;em progresso&amp;rdquo;&#xA;tags: [&amp;ldquo;anonimato&amp;rdquo;, &amp;ldquo;controle&amp;rdquo;, &amp;ldquo;baseline&amp;rdquo;]&#xA;parent_path: &amp;ldquo;pesquisa/anonimato&amp;rdquo;&lt;/h2&gt;&#xA;&lt;h2 id=&#34;objetivo&#34;&gt;Objetivo&lt;/h2&gt;&#xA;&lt;p&gt;Estabelecer o baseline de vigilância de um usuário comum (Cenário A), medindo vazamentos de identidade (IP, DNS, WebRTC), fingerprinting de navegador e indicadores de rastreamento. Produzir evidências replicáveis e comparáveis contra o Cenário B.&lt;/p&gt;&#xA;&lt;h2 id=&#34;escopo&#34;&gt;Escopo&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sistema operacional padrão (Windows/Ubuntu) com navegador comum (Chrome/Firefox).&lt;/li&gt;&#xA;&lt;li&gt;Sem ferramentas de anonimato ou ofuscação ativas.&lt;/li&gt;&#xA;&lt;li&gt;Navegação em sites populares e páginas de teste de vazamento.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;ambiente&#34;&gt;Ambiente&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;VM Controle: CPU 2–4 vCPUs, RAM 4–8GB, rede NAT.&lt;/li&gt;&#xA;&lt;li&gt;Ferramentas:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;Wireshark&lt;/code&gt; para captura de pacotes.&lt;/li&gt;&#xA;&lt;li&gt;Páginas de teste: &lt;code&gt;https://browserleaks.com/&lt;/code&gt;, &lt;code&gt;https://ipleak.net/&lt;/code&gt;, &lt;code&gt;https://coveryourtracks.eff.org/&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Extensões desativadas (usar perfil limpo).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;procedimento-passo-a-passo&#34;&gt;Procedimento Passo a Passo&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Preparação&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Browser Fingerprinting</title>
+      <link>http://localhost:1412/en/subpesquisa/browser-fingerprinting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/en/subpesquisa/browser-fingerprinting/</guid>
+      <description>Techniques to identify devices via browser characteristics.</description>
+    </item>
+    <item>
+      <title>Fingerprinting de Navegador</title>
+      <link>http://localhost:1412/subpesquisa/fingerprinting-de-navegador/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/subpesquisa/fingerprinting-de-navegador/</guid>
+      <description>Técnicas para identificar dispositivos via características do browser.</description>
+    </item>
+    <item>
+      <title>Meu Novo Projeto</title>
+      <link>http://localhost:1412/projeto/meu-novo-projeto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/projeto/meu-novo-projeto/</guid>
+      <description>Descrição curta do objetivo e escopo.</description>
+    </item>
+    <item>
+      <title>Mixnets and Latency</title>
+      <link>http://localhost:1412/en/subpesquisa/mixnets-and-latency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/en/subpesquisa/mixnets-and-latency/</guid>
+      <description>How mixing networks protect metadata and their latency costs.</description>
+    </item>
+    <item>
+      <title>Mixnets e Latência</title>
+      <link>http://localhost:1412/subpesquisa/mixnets-e-latencia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/subpesquisa/mixnets-e-latencia/</guid>
+      <description>Como redes de mixagem protegem metadados e seu custo de latência.</description>
+    </item>
+    <item>
+      <title>OPSEC for Journalists</title>
+      <link>http://localhost:1412/en/subpesquisa/opsec-for-journalists/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/en/subpesquisa/opsec-for-journalists/</guid>
+      <description>Practical protocols for sources and communicators in hostile environments.</description>
+    </item>
+    <item>
+      <title>OPSEC para Jornalistas</title>
+      <link>http://localhost:1412/subpesquisa/opsec-para-jornalistas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/subpesquisa/opsec-para-jornalistas/</guid>
+      <description>Protocolos práticos para fontes e comunicadores em ambientes hostis.</description>
+    </item>
+    <item>
+      <title>Subpesquisa 1: Prompt Engineering para Co-Inteligência de Malware</title>
+      <link>http://localhost:1412/subpesquisa/prompt-engineering-malware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/subpesquisa/prompt-engineering-malware/</guid>
+      <description>Otimizar prompts do Gemini para interpretar logs (Sysmon/Frida) e gerar vereditos e referências de Threat Intelligence com alta precisão.</description>
+    </item>
+    <item>
+      <title>Subpesquisa 2: Engenharia Reversa Assistida: Tradução de Código Malicioso</title>
+      <link>http://localhost:1412/subpesquisa/engenharia-reversa-assistida/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/subpesquisa/engenharia-reversa-assistida/</guid>
+      <description>Avaliar o uso de LLMs para traduzir trechos de código malicioso (baixo nível) em pseudo-código legível, apoiando a engenharia reversa.</description>
+    </item>
+    <item>
+      <title>Subpesquisa 3: Prova de Conceito de Pontes Tor</title>
+      <link>http://localhost:1412/subpesquisa/prova-de-conceito-pontes-tor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/subpesquisa/prova-de-conceito-pontes-tor/</guid>
+      <description>Testes de Pontes Tor Meek, OBFS4 e Snowflake e validação de eficácia.</description>
+    </item>
+    <item>
+      <title>Subpesquisa 4: Navegação e Ofuscação Avançada</title>
+      <link>http://localhost:1412/subpesquisa/navegacao-e-ofuscacao-avancada/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>user@example.com (Hugo Author)</author>
+      <guid>http://localhost:1412/subpesquisa/navegacao-e-ofuscacao-avancada/</guid>
+      <description>Demonstrar uso prático de redes de anonimato (Tor, I2P) e técnicas de ofuscação (pluggable transports).</description>
+    </item>
+  </channel>
+</rss>

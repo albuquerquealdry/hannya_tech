@@ -1,0 +1,37 @@
+baseURL = 'https://example.org/'
+languageCode = 'pt-br'
+title = 'Hannya Tech'
+theme = 'tailwind'
+
+[params]
+  [params.about]
+    photo = "/logo.svg"
+  [params.social]
+    github = "#"
+    linkedin = "#"
+    twitter = "#"
+    instagram = "#"
+    youtube = "#"
+
+[menu]
+  [[menu.main]]
+  name = "Pesquisas"
+  url = "/pesquisa/"
+  weight = 10
+  [[menu.main]]
+  name = "Sobre"
+  url = "/sobre/"
+  weight = 20
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  status = "status"
+
+defaultContentLanguage = "pt"
+
+[languages]
+  [languages.pt]
+    languageName = "Português"
+    weight = 1
+    title = "Hannya Tech"

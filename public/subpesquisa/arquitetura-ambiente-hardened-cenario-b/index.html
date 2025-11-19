@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1412&amp;path=livereload" data-no-instant defer></script>
+   :: Hannya Tech
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="title: &ldquo;Subpesquisa 2: Arquitetura do Ambiente Hardened (Cenário B)&rdquo; summary: &ldquo;Construção do ambiente de alto anonimato, seleção e justificativa de ferramentas (Whonix, Tails, Tor&#43;VPN).&rdquo; status: &ldquo;em progresso&rdquo; tags: [&ldquo;anonimato&rdquo;, &ldquo;hardened&rdquo;, &ldquo;cenário-b&rdquo;] parent_path: &ldquo;pesquisa/anonimato&rdquo; Objetivo Projetar, implementar e validar um ambiente Hardened (Cenário B) que minimize vazamentos de identidade e reduza a unicidade de fingerprint, mantendo navegabilidade e segurança operacional.
+Princípios Isolamento por VM e segmentação de rede. Minimização de superfície de ataque e telemetria. Uso criterioso de Tor e, se necessário, VPN (ordem e riscos). Arquitetura VM Experimental (Hardened): Opção A: Tails (live, amnésico, uso pontual). Opção B: Whonix (Gateway &#43; Workstation, persistência controlada). Rede: Whonix-Gateway: roteia todo tráfego via Tor. Whonix-Workstation: único caminho de saída é o Gateway. Sem DNS externo; bloquear WebRTC STUN/ICE. Controles Técnicos Navegador: Usar Tor Browser (no Whonix) ou navegador endurecido sem WebRTC. Desativar canvas e APIs de fingerprint quando possível; reduzir fontes personalizadas. Sistema: Desativar serviços de telemetria, sincronizações, atualizações automáticas em background. Limitar armazenamento persistente; limpar caches e storage. Rede: Firewall bloqueando UDP/STUN; forçar tráfego TCP via Tor. Evitar Tor over VPN sem justificativa; preferir VPN over Tor apenas para destinos específicos e ciente dos riscos. Procedimento Passo a Passo Provisionamento
+"
+/>
+<meta
+  name="keywords"
+  content="hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
+/>
+<meta name="robots" content="noodp" /><link rel="manifest" href="/manifest.json" /><meta property="og:url" content="http://localhost:1412/subpesquisa/arquitetura-ambiente-hardened-cenario-b/">
+  <meta property="og:site_name" content="Hannya Tech">
+  <meta property="og:title" content="Hannya Tech">
+  <meta property="og:description" content="title: “Subpesquisa 2: Arquitetura do Ambiente Hardened (Cenário B)” summary: “Construção do ambiente de alto anonimato, seleção e justificativa de ferramentas (Whonix, Tails, Tor&#43;VPN).” status: “em progresso” tags: [“anonimato”, “hardened”, “cenário-b”] parent_path: “pesquisa/anonimato” Objetivo Projetar, implementar e validar um ambiente Hardened (Cenário B) que minimize vazamentos de identidade e reduza a unicidade de fingerprint, mantendo navegabilidade e segurança operacional.
+Princípios Isolamento por VM e segmentação de rede. Minimização de superfície de ataque e telemetria. Uso criterioso de Tor e, se necessário, VPN (ordem e riscos). Arquitetura VM Experimental (Hardened): Opção A: Tails (live, amnésico, uso pontual). Opção B: Whonix (Gateway &#43; Workstation, persistência controlada). Rede: Whonix-Gateway: roteia todo tráfego via Tor. Whonix-Workstation: único caminho de saída é o Gateway. Sem DNS externo; bloquear WebRTC STUN/ICE. Controles Técnicos Navegador: Usar Tor Browser (no Whonix) ou navegador endurecido sem WebRTC. Desativar canvas e APIs de fingerprint quando possível; reduzir fontes personalizadas. Sistema: Desativar serviços de telemetria, sincronizações, atualizações automáticas em background. Limitar armazenamento persistente; limpar caches e storage. Rede: Firewall bloqueando UDP/STUN; forçar tráfego TCP via Tor. Evitar Tor over VPN sem justificativa; preferir VPN over Tor apenas para destinos específicos e ciente dos riscos. Procedimento Passo a Passo Provisionamento">
+  <meta property="og:locale" content="pt">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="subpesquisa">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hannya Tech">
+  <meta name="twitter:description" content="title: “Subpesquisa 2: Arquitetura do Ambiente Hardened (Cenário B)” summary: “Construção do ambiente de alto anonimato, seleção e justificativa de ferramentas (Whonix, Tails, Tor&#43;VPN).” status: “em progresso” tags: [“anonimato”, “hardened”, “cenário-b”] parent_path: “pesquisa/anonimato” Objetivo Projetar, implementar e validar um ambiente Hardened (Cenário B) que minimize vazamentos de identidade e reduza a unicidade de fingerprint, mantendo navegabilidade e segurança operacional.
+Princípios Isolamento por VM e segmentação de rede. Minimização de superfície de ataque e telemetria. Uso criterioso de Tor e, se necessário, VPN (ordem e riscos). Arquitetura VM Experimental (Hardened): Opção A: Tails (live, amnésico, uso pontual). Opção B: Whonix (Gateway &#43; Workstation, persistência controlada). Rede: Whonix-Gateway: roteia todo tráfego via Tor. Whonix-Workstation: único caminho de saída é o Gateway. Sem DNS externo; bloquear WebRTC STUN/ICE. Controles Técnicos Navegador: Usar Tor Browser (no Whonix) ou navegador endurecido sem WebRTC. Desativar canvas e APIs de fingerprint quando possível; reduzir fontes personalizadas. Sistema: Desativar serviços de telemetria, sincronizações, atualizações automáticas em background. Limitar armazenamento persistente; limpar caches e storage. Rede: Firewall bloqueando UDP/STUN; forçar tráfego TCP via Tor. Evitar Tor over VPN sem justificativa; preferir VPN over Tor apenas para destinos específicos e ciente dos riscos. Procedimento Passo a Passo Provisionamento">
+      <meta name="twitter:site" content="@#">
+
+
+<link rel="canonical" href="http://localhost:1412/subpesquisa/arquitetura-ambiente-hardened-cenario-b/" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/css/index.d6c3044e2ccd17f959e01250645c77d28de7db3e6614a18e762198e9bf30fb5b.css">
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/hannya.css">
+  
+</head>
+<body class="flex flex-col min-h-screen w-full bg-slate-50 dark:bg-gray-800">
+    
+<div class="fixed right-0 top-0 z-50 flex items-center justify-center bg-gray-200 p-2 text-sm uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200">
+  <span class="block sm:hidden">all</span>
+  <span class="hidden sm:block md:hidden">sm</span>
+  <span class="hidden md:block lg:hidden">md</span>
+  <span class="hidden lg:block xl:hidden">lg</span>
+  <span class="hidden xl:block 2xl:hidden">xl</span>
+  <span class="hidden 2xl:block">2xl</span>
+</div>
+
+  <header class="flex flex-none justify-center z-10">
+    
+
+<div class="hannya-container flex items-center justify-between w-full px-4 py-3">
+  <a href="/" aria-label="Home" class="flex items-center gap-3">
+    <img src="/logo.svg" alt="Hannya Tech" style="height:48px;width:auto;"/>
+    <span class="font-extrabold text-slate-900 dark:text-slate-100 text-lg md:text-xl">Hannya Tech</span>
+  </a>
+
+  <div class="flex items-center gap-2">
+    
+<nav class="main-menu hidden md:flex items-center gap-2">
+  
+    
+      <a class="btn ghost" href="/pesquisa/">Pesquisas</a>
+    
+      <a class="btn ghost" href="/sobre/">Sobre</a>
+    
+  
+</nav>
+
+
+    <div class="darkmode-toggle hidden md:flex">
+      <label for="darkmode-toggle" class="btn ghost cursor-pointer" title="Alternar tema">
+        <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only" aria-label="Alternar tema">
+        <span class="icon-sun"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-down" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+   <path d="M12 5l0 .01"></path>
+   <path d="M17 7l0 .01"></path>
+   <path d="M19 12l0 .01"></path>
+   <path d="M17 17l0 .01"></path>
+   <path d="M12 19l0 .01"></path>
+   <path d="M7 17l0 .01"></path>
+   <path d="M5 12l0 .01"></path>
+   <path d="M7 7l0 .01"></path>
+</svg>
+</span>
+        <span class="icon-moon"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+   <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"></path>
+   <path d="M19 11h2m-1 -1v2"></path>
+</svg>
+</span>
+      </label>
+    </div>
+  </div>
+</div>
+  </header>
+  <main class="flex flex-auto justify-center">
+    
+  <div class="hannya-container">
+    <article class="content box">
+      <h2 id="parent_path-pesquisaanonimato">title: &ldquo;Subpesquisa 2: Arquitetura do Ambiente Hardened (Cenário B)&rdquo;
+summary: &ldquo;Construção do ambiente de alto anonimato, seleção e justificativa de ferramentas (Whonix, Tails, Tor+VPN).&rdquo;
+status: &ldquo;em progresso&rdquo;
+tags: [&ldquo;anonimato&rdquo;, &ldquo;hardened&rdquo;, &ldquo;cenário-b&rdquo;]
+parent_path: &ldquo;pesquisa/anonimato&rdquo;</h2>
+<h2 id="objetivo">Objetivo</h2>
+<p>Projetar, implementar e validar um ambiente Hardened (Cenário B) que minimize vazamentos de identidade e reduza a unicidade de fingerprint, mantendo navegabilidade e segurança operacional.</p>
+<h2 id="princípios">Princípios</h2>
+<ul>
+<li>Isolamento por VM e segmentação de rede.</li>
+<li>Minimização de superfície de ataque e telemetria.</li>
+<li>Uso criterioso de Tor e, se necessário, VPN (ordem e riscos).</li>
+</ul>
+<h2 id="arquitetura">Arquitetura</h2>
+<ul>
+<li>VM Experimental (Hardened):
+<ul>
+<li>Opção A: <code>Tails</code> (live, amnésico, uso pontual).</li>
+<li>Opção B: <code>Whonix</code> (Gateway + Workstation, persistência controlada).</li>
+</ul>
+</li>
+<li>Rede:
+<ul>
+<li><code>Whonix-Gateway</code>: roteia todo tráfego via Tor.</li>
+<li><code>Whonix-Workstation</code>: único caminho de saída é o Gateway.</li>
+<li>Sem DNS externo; bloquear WebRTC STUN/ICE.</li>
+</ul>
+</li>
+</ul>
+<h2 id="controles-técnicos">Controles Técnicos</h2>
+<ul>
+<li>Navegador:
+<ul>
+<li>Usar <code>Tor Browser</code> (no Whonix) ou navegador endurecido sem WebRTC.</li>
+<li>Desativar canvas e APIs de fingerprint quando possível; reduzir fontes personalizadas.</li>
+</ul>
+</li>
+<li>Sistema:
+<ul>
+<li>Desativar serviços de telemetria, sincronizações, atualizações automáticas em background.</li>
+<li>Limitar armazenamento persistente; limpar caches e storage.</li>
+</ul>
+</li>
+<li>Rede:
+<ul>
+<li>Firewall bloqueando UDP/STUN; forçar tráfego TCP via Tor.</li>
+<li>Evitar <code>Tor over VPN</code> sem justificativa; preferir <code>VPN over Tor</code> apenas para destinos específicos e ciente dos riscos.</li>
+</ul>
+</li>
+</ul>
+<h2 id="procedimento-passo-a-passo">Procedimento Passo a Passo</h2>
+<ol>
+<li>
+<p>Provisionamento</p>
+<ul>
+<li>Criar <code>Whonix-Gateway</code> e <code>Whonix-Workstation</code> segundo documentação oficial.</li>
+<li>Validar que a Workstation não acessa internet sem o Gateway.</li>
+</ul>
+</li>
+<li>
+<p>Endurecimento de Navegador</p>
+<ul>
+<li>Configurar <code>Tor Browser</code> em modo padrão ou <code>safest</code> conforme necessidade.</li>
+<li>Verificar WebRTC (deve estar bloqueado) e fingerprint reduzido.</li>
+</ul>
+</li>
+<li>
+<p>Endurecimento de Sistema</p>
+<ul>
+<li>Revisar serviços em execução; desativar telemetria.</li>
+<li>Configurar limpeza automática de storage (scripts simples/cron, se aplicável).</li>
+</ul>
+</li>
+<li>
+<p>Testes de Vazamento</p>
+<ul>
+<li>Repetir testes da Subpesquisa 1 (IP/DNS/WebRTC, fingerprint pages) dentro do Cenário B.</li>
+<li>Registrar <code>pcap</code>, screenshots e resultados comparáveis.</li>
+</ul>
+</li>
+</ol>
+<h2 id="métricas">Métricas</h2>
+<ul>
+<li>IP/DNS/WebRTC: ausência/redução de vazamentos.</li>
+<li>Fingerprint: menor unicidade (mais comum/menos único).</li>
+<li>Tráfego: menor exposição a domínios de telemetria e trackers.</li>
+</ul>
+<h2 id="validação">Validação</h2>
+<ul>
+<li>Reprodutibilidade: scripts/playbooks para replicar ambiente.</li>
+<li>Comparação direta com artefatos do Cenário A.</li>
+</ul>
+<h2 id="artefatos-entregues">Artefatos Entregues</h2>
+<ul>
+<li><code>hardened-experimental.pcap</code></li>
+<li><code>hardened-experimental.md</code> (resumo dos controles e achados)</li>
+<li><code>scripts/</code> de provisionamento/configuração (se aplicável)</li>
+</ul>
+
+    </article>
+  </div>
+
+  </main>
+  <footer class="flex flex-none justify-center">
+    <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
+  <div class="flex flex-row">
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+  <div class="grow"></div>
+  <div class="flex flex-row">
+    
+    
+  </div>
+  
+  <div class="flex flex-row">
+    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-slate-300 dark:border-slate-400">
+      
+    </span>
+  </div>
+  
+</section>
+
+  </footer>
+  <script src="/main.js"></script>
+
+
+
+
+</body>
+</html>

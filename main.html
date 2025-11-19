@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Risco & BIA - Fintech</title>
+    <style>
+        /* --- Reset & Fontes --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #212529;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- Estrutura & Navegação --- */
+        .container {
+            max-width: 1400px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #0056b3;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin: 5px 0 0 0;
+        }
+
+        nav.tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            background: #e9ecef;
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        nav.tabs a {
+            padding: 12px 25px;
+            text-decoration: none;
+            color: #495057;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        nav.tabs a:hover, nav.tabs a.active {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+        /* --- Seções de Visão --- */
+        .view-section {
+            display: none; /* Oculto por padrão */
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .view-section.active {
+            display: block; /* Visível quando ativo */
+        }
+
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: #17a2b8;
+            font-size: 1.5rem;
+            margin-top: 25px;
+        }
+        
+        h4 {
+            color: #343a40;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* --- Classes de Risco --- */
+        .risk-critical { color: #d73a49; font-weight: bold; }
+        .risk-high { color: #f58634; font-weight: bold; }
+        .risk-medium { color: #ffc107; font-weight: bold; }
+        .risk-low { color: #28a745; font-weight: bold; }
+        .bg-critical { background-color: #d73a49; color: white; }
+        .bg-high { background-color: #f58634; color: white; }
+        .bg-medium { background-color: #ffc107; color: black; }
+        .bg-low { background-color: #28a745; color: white; }
+
+        /* --- Tabelas --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f3f5;
+            color: #343a40;
+            font-weight: 600;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tbody tr:hover {
+            background-color: #e9ecef;
+        }
+
+        table.bia-table th:first-child,
+        table.bia-table td:first-child {
+            width: 25%;
+            font-weight: 600;
+        }
+
+        /* --- Gráfico de Barras (RTO/MTTR) --- */
+        .chart-container {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fdfdfd;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+        }
+        .chart-title {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 25px;
+        }
+        .chart-bar {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        .chart-label {
+            font-weight: 600;
+            padding-right: 15px;
+            text-align: right;
+            color: #343a40;
+        }
+        .bar-group {
+            display: flex;
+            align-items: center;
+            height: 30px;
+            position: relative;
+        }
+        .bar {
+            height: 100%;
+            border-radius: 0 4px 4px 0;
+        }
+        .bar-rto {
+            background-color: #28a745;
+            z-index: 2;
+        }
+        .bar-mttr {
+            background-color: #d73a49;
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.9;
+        }
+        .bar-label {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: white;
+            padding-left: 8px;
+            white-space: nowrap;
+        }
+        .bar-label-gap {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #d73a49;
+            margin-left: 10px;
+        }
+        .chart-legend {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            margin-right: 8px;
+            border-radius: 3px;
+        }
+
+        /* --- KPI Cards --- */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .kpi-card {
+            background: #ffffff;
+            border: 1px solid #dee2e6;
+            border-left: 5px solid #0056b3;
+            border-radius: 6px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .kpi-card h4 {
+            margin: 0 0 10px 0;
+            color: #0056b3;
+            font-size: 1.1rem;
+        }
+        .kpi-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #495057;
+        }
+
+        /* --- Visão Técnica (Collapsibles) --- */
+        details {
+            background: #fdfdfd;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        details[open] {
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+        summary {
+            padding: 15px 20px;
+            font-weight: 600;
+            font-size: 1.15rem;
+            cursor: pointer;
+            color: #0056b3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary:hover {
+            background: #f8f9fa;
+        }
+        summary::after {
+            content: '▼';
+            font-size: 0.8rem;
+            transition: transform 0.2s;
+        }
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+        .mock-content {
+            padding: 0px 20px 20px 20px;
+        }
+        .dual-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        /* --- Matriz OWASP --- */
+        .owasp-matrix {
+            font-size: 0.9rem;
+        }
+        .owasp-matrix th {
+            width: 25%;
+            font-weight: 600;
+        }
+        .owasp-matrix td {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* --- Responsividade --- */
+        @media (max-width: 768px) {
+            .dual-column {
+                grid-template-columns: 1fr;
+            }
+            nav.tabs {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            nav.tabs a {
+                text-align: center;
+            }
+            .chart-bar {
+                grid-template-columns: 1fr;
+            }
+            .chart-label {
+                text-align: left;
+                margin-bottom: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>Relatório Consolidado de Análise de Risco & BIA</h1>
+            <p>Cliente: Fintech Digital | Foco: Continuidade de Negócio e GRC</p>
+        </header>
+
+        <nav class="tabs">
+            <a href="#governance" class="tab-link active">Visão Governança (Executiva)</a>
+            <a href="#technical" class="tab-link">Visão Tática + Técnica</a>
+            <a href="#summary" class="tab-link">Resumo (Apresentação)</a>
+        </nav>
+
+        <section id="governance" class="view-section active">
+            <h2>Visão Governança (Executiva)</h2>
+            
+            <h3>Resumo Executivo: O Gap de Continuidade</h3>
+            <p>Nossa análise consolidada de 5 ativos críticos (orquestração financeira, liquidação, reconciliação, autenticação e mensageria) revela um **risco sistêmico à continuidade do negócio**. O problema central é o desalinhamento crítico entre as expectativas do negócio e a realidade operacional: nosso **Tempo Médio de Recuperação (MTTR) é, em média, 470% maior que o Tempo de Tolerância à Indisponibilidade (RTO)**.</p>
+            <p>Em termos simples: o negócio exige que sistemas caiam por no máximo 15 minutos, mas a equipe leva, em média, 1h 20min para recuperá-los. Essa lacuna de mais de uma hora por incidente em ativos críticos expõe a Fintech a **perdas financeiras diretas, sanções regulatórias (BACEN, LGPD) e danos irreparáveis à reputação**.</p>
+            <p>A causa raiz deste gap é a falta de maturidade em processos-chave: **detecção (MTTD), automação de resposta e patching**. Investimentos em automação, monitoramento e segurança em esteira (SecDevOps) são necessários para reduzir o MTTR e alinhar a tecnologia à resiliência exigida pelo negócio.</p>
+
+            <div class="chart-container">
+                <div class="chart-title">Análise de GAP: RTO (Meta) vs. MTTR (Real)</div>
+                <div class="chart-legend">
+                    <div class="legend-item"><span class="legend-color" style="background-color: #28a745;"></span> RTO (Tolerância do Negócio)</div>
+                    <div class="legend-item"><span class="legend-color" style="background-color: #d73a49;"></span> MTTR (Tempo Real de Recuperação)</div>
+                </div>
+                
+                <div class="chart-bar">
+                    <div class="chart-label">AUTH-PROD (JWT)</div>
+                    <div class="bar-group">
+                        <div class="bar bar-rto" style="width: calc(5 / 130 * 100%);"><span class="bar-label">5 min</span></div>
+                        <div class="bar bar-mttr" style="width: calc(40 / 130 * 100%);"><span class="bar-label" style="padding-left: 55px;">40 min</span></div>
+                        <span class="bar-label-gap">GAP: 35 min</span>
+                    </div>
+                </div>
+
+                <div class="chart-bar">
+                    <div class="chart-label">FIN-LIQ-PROD-API (SQL-I)</div>
+                    <div class="bar-group">
+                        <div class="bar bar-rto" style="width: calc(10 / 130 * 100%);"><span class="bar-label">10 min</span></div>
+                        <div class="bar bar-mttr" style="width: calc(55 / 130 * 100%);"><span class="bar-label" style="padding-left: 90px;">55 min</span></div>
+                        <span class="bar-label-gap">GAP: 45 min</span>
+                    </div>
+                </div>
+                
+                <div class="chart-bar">
+                    <div class="chart-label">APP-PROD-02 (RDP)</div>
+                    <div class="bar-group">
+                        <div class="bar bar-rto" style="width: calc(15 / 130 * 100%);"><span class="bar-label">15 min</span></div>
+                        <div class="bar bar-mttr" style="width: calc(80 / 130 * 100%);"><span class="bar-label" style="padding-left: 125px;">1h 20min</span></div>
+                        <span class="bar-label-gap">GAP: 1h 05min</span>
+                    </div>
+                </div>
+
+                <div class="chart-bar">
+                    <div class="chart-label">MSG-BUS-PROD (AMQP)</div>
+                    <div class="bar-group">
+                        <div class="bar bar-rto" style="width: calc(20 / 130 * 100%);"><span class="bar-label">20 min</span></div>
+                        <div class="bar bar-mttr" style="width: calc(105 / 130 * 100%);"><span class="bar-label" style="padding-left: 165px;">1h 45min</span></div>
+                        <span class="bar-label-gap">GAP: 1h 25min</span>
+                    </div>
+                </div>
+
+                <div class="chart-bar">
+                    <div class="chart-label">RECONCILIATION-SVC (RCE)</div>
+                    <div class="bar-group">
+                        <div class="bar bar-rto" style="width: calc(30 / 130 * 100%);"><span class="bar-label">30 min</span></div>
+                        <div class="bar bar-mttr" style="width: calc(130 / 130 * 100%);"><span class="bar-label" style="padding-left: 235px;">2h 10min</span></div>
+                        <span class="bar-label-gap">GAP: 1h 40min</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <h3>Impacto na Receita e Maturidade de Segurança</h3>
+            <p>As vulnerabilidades identificadas não são apenas falhas técnicas; são vetores diretos de impacto no negócio:</p>
+            <ul>
+                <li><strong>Ameaça à Receita:</strong> Cada minuto de indisponibilidade em serviços como <code>AUTH-PROD</code> (RTO 5min) ou <code>FIN-LIQ-PROD-API</code> (RTO 10min) representa perda de transações, quebra de liquidez e, em última análise, perda de receita e clientes.</li>
+                <li><strong>Risco Regulatório (Compliance):</strong> Falhas como RCE, SQL Injection e RDP exposto são violações diretas de conformidade (PCI-DSS, Resoluções BACEN, LGPD). A falha no <code>MSG-BUS-PROD</code> (mensageria sem criptografia) é uma não-conformidade grave, expondo a Fintech a multas e auditorias severas.</li>
+                <li><strong>Maturidade de Segurança:</strong> A análise dos GAPs históricos (processos manuais, patching lento, falta de detecção) indica uma maturidade de segurança reativa. A Fintech está presa em "apagar incêndios" (MTTR alto) em vez de "prevenir incêndios" (MTTD baixo, patching automatizado). Para escalar o negócio, é mandatório migrar para um modelo proativo (NIST RMF: Monitorar e Avaliar continuamente).</li>
+            </ul>
+
+            <h3>Recomendação de KPIs de Negócio (Foco Gerencial)</h3>
+            <div class="kpi-grid">
+                <div class="kpi-card" style="border-left-color: #d73a49;">
+                    <h4>Redução do GAP de Continuidade (RTO vs MTTR)</h4>
+                    <p><strong>Meta:</strong> Reduzir o MTTR médio de ativos críticos em 50% nos próximos 6 meses.
+                    <strong>Justificativa:</strong> Alinhar a capacidade de resposta operacional com a tolerância do negócio, garantindo a continuidade da receita.</p>
+                </div>
+                <div class="kpi-card" style="border-left-color: #f58634;">
+                    <h4>Redução do Tempo de Detecção (MTTD)</h4>
+                    <p><strong>Meta:</strong> Implementar detecção de IoAs (Indicadores de Ataque) para ativos críticos, visando um MTTD < 10 minutos.
+                    <strong>Justificativa:</strong> Detectar o ataque *antes* que ele cause impacto, saindo da postura reativa.</p>
+                </div>
+                <div class="kpi-card" style="border-left-color: #17a2b8;">
+                    <h4>Aderência a "Secure-by-Design"</h4>
+                    <p><strong>Meta:</strong> 100% de cobertura de SAST/DAST no pipeline CI/CD para APIs financeiras.
+                    <strong>Justificativa:</strong> Parar de introduzir vulnerabilidades (como SQL-I e JWT falho) em produção, reduzindo o custo de correção.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="technical" class="view-section">
+            <h2>Visão Tática + Técnica</h2>
+            <p>Abaixo está a análise detalhada de cada vulnerabilidade identificada, incluindo a pontuação CVSS v3.1, a análise de risco OWASP e os planos de ação recomendados. A análise se enquadra nas etapas **Assess (Avaliar)** e **Monitor (Monitorar)** do NIST RMF.</p>
+
+            <details>
+                <summary>Mock 1: RDP Exposto (APP-PROD-02) <span class="risk-critical">RISCO CRÍTICO</span></summary>
+                <div class="mock-content">
+                    <h4>Análise Detalhada</h4>
+                    <div class="dual-column">
+                        <div>
+                            <table>
+                                <tr><th>1. Risco (OWASP)</th><td class="risk-critical">Crítico</td></tr>
+                                <tr><th>2. Criticidade (CVSS)</th><td class="risk-critical">Crítica (9.8)</td></tr>
+                                <tr><th>3. Problema Mensurado</th><td>Porta RDP (3389) exposta à internet sem MFA.</td></tr>
+                                <tr><th>4. Impacto</th><td>Controle total do servidor (RCE), roubo de chaves de sessão, pivô para a rede interna (Scope: Changed), ransomware, fraude financeira.</td></tr>
+                                <tr><th>5. Contorno (Curto Prazo)</th><td><strong>Imediato:</strong> Bloquear a porta 3389 no firewall para todos os IPs externos, exceto ranges de VPN/Bastion controlados.</td></tr>
+                                <tr><th>6. Solução Definitiva</th><td>Implementar acesso "Zero Trust" via Bastion Host (ex: Teleport, PAM) com MFA obrigatório e rotação de credenciais. Desabilitar acesso RDP direto.</td></tr>
+                            </table>
+                        </div>
+                        <div>
+                            <h4>Justificativa CVSS v3.1</h4>
+                            <table>
+                                <tr><td>Vetor de Ataque (AV)</td><td>Rede (N)</td></tr>
+                                <tr><td>Complexidade (AC)</td><td>Baixa (L)</td></tr>
+                                <tr><td>Privilégios (PR)</td><td>Nenhum (N)</td></tr>
+                                <tr><td>Interação (UI)</td><td>Nenhuma (N)</td></tr>
+                                <tr><td>Escopo (S)</td><td>Mudou (C)</td></tr>
+                                <tr><td>Confidencialidade (C)</td><td>Alta (H)</td></tr>
+                                <tr><td>Integridade (I)</td><td>Alta (H)</td></tr>
+                                <tr><td>Disponibilidade (A)</td><td>Alta (H)</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Mock 2: SQL Injection (FIN-LIQ-PROD-API) <span class="risk-critical">RISCO CRÍTICO</span></summary>
+                <div class="mock-content">
+                    <h4>Análise Detalhada</h4>
+                    <div class="dual-column">
+                        <div>
+                            <table>
+                                <tr><th>1. Risco (OWASP)</th><td class="risk-critical">Crítico</td></tr>
+                                <tr><th>2. Criticidade (CVSS)</th><td class="risk-critical">Crítica (9.8)</td></tr>
+                                <tr><th>3. Problema Mensurado</th><td>SQL Injection no endpoint /liquidacao/create.</td></tr>
+                                <tr><th>4. Impacto</th><td>Exfiltração de dados bancários sensíveis (LGPD), manipulação de transações, bypass de lógica de negócio, indisponibilidade do banco.</td></tr>
+                                <tr><th>5. Contorno (Curto Prazo)</th><td>Implementar regra de WAF (Web Application Firewall) para bloquear padrões de SQL-I (ex: UNION, '1'='1') no endpoint específico.</td></tr>
+                                <tr><th>6. Solução Definitiva</th><td>Refatorar o código para usar <strong>Prepared Statements (Query Parametrizada)</strong>. Implementar SAST/DAST no pipeline CI/CD para bloquear código vulnerável.</td></tr>
+                            </table>
+                        </div>
+                        <div>
+                            <h4>Justificativa CVSS v3.1</h4>
+                            <table>
+                                <tr><td>Vetor de Ataque (AV)</td><td>Rede (N)</td></tr>
+                                <tr><td>Complexidade (AC)</td><td>Baixa (L)</td></tr>
+                                <tr><td>Privilégios (PR)</td><td>Nenhum (N)</td></tr>
+                                <tr><td>Interação (UI)</td><td>Nenhuma (N)</td></tr>
+                                <tr><td>Escopo (S)</td><td>Não Mudou (U)</td></tr>
+                                <tr><td>Confidencialidade (C)</td><td>Alta (H)</td></tr>
+                                <tr><td>Integridade (I)</td><td>Alta (H)</td></tr>
+                                <tr><td>Disponibilidade (A)</td><td>Alta (H)</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </details>
+            
+            <details>
+                <summary>Mock 3: RCE Apache Struts (RECONCILIATION-SVC) <span class="risk-critical">RISCO CRÍTICO</span></summary>
+                <div class="mock-content">
+                    <h4>Análise Detalhada</h4>
+                    <div class="dual-column">
+                        <div>
+                            <table>
+                                <tr><th>1. Risco (OWASP)</th><td class="risk-critical">Crítico</td></tr>
+                                <tr><th>2. Criticidade (CVSS)</th><td class="risk-critical">Crítica (10.0)</td></tr>
+                                <tr><th>3. Problema Mensurado</th><td>RCE (Remote Code Execution) em biblioteca Apache Struts desatualizada.</td></tr>
+                                <tr><th>4. Impacto</th><td>Controle total do servidor, comprometimento da rede interna (pivô), roubo de dados de reconciliação, fraude, indisponibilidade.</td></tr>
+                                <tr><th>5. Contorno (Curto Prazo)</th><td>Isolar o servidor da rede (se possível). Se não, aplicar "virtual patching" via WAF/IPS para bloquear o payload de RCE conhecido.</td></tr>
+                                <tr><th>6. Solução Definitiva</th><td><strong>Atualização imediata da biblioteca (patching)</strong>. Implementar SCA (Software Composition Analysis) no pipeline para detectar e bloquear bibliotecas vulneráveis.</td></tr>
+                            </table>
+                        </div>
+                        <div>
+                            <h4>Justificativa CVSS v3.1</h4>
+                            <table>
+                                <tr><td>Vetor de Ataque (AV)</td><td>Rede (N)</td></tr>
+                                <tr><td>Complexidade (AC)</td><td>Baixa (L)</td></tr>
+                                <tr><td>Privilégios (PR)</td><td>Nenhum (N)</td></tr>
+                                <tr><td>Interação (UI)</td><td>Nenhuma (N)</td></tr>
+                                <tr><td>Escopo (S)</td><td>Mudou (C)</td></tr>
+                                <tr><td>Confidencialidade (C)</td><td>Alta (H)</td></tr>
+                                <tr><td>Integridade (I)</td><td>Alta (H)</td></tr>
+                                <tr><td>Disponibilidade (A)</td><td>Alta (H)</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Mock 4: Token JWT Forjado (AUTH-PROD) <span class="risk-critical">RISCO CRÍTICO</span></summary>
+                <div class="mock-content">
+                    <h4>Análise Detalhada</h4>
+                    <div class="dual-column">
+                        <div>
+                            <table>
+                                <tr><th>1. Risco (OWASP)</th><td class="risk-critical">Crítico</td></tr>
+                                <tr><th>2. Criticidade (CVSS)</th><td class="risk-high">Alta (8.7)</td></tr>
+                                <tr><th>3. Problema Mensurado</th><td>Serviço aceita algoritmo "none" em tokens JWT, permitindo bypass de assinatura.</td></tr>
+                                <tr><th>4. Impacto</th><td>Bypass de autenticação, escalação de privilégios, impersonação de qualquer usuário (incluindo admins), fraude financeira total.</td></tr>
+                                <tr><th>5. Contorno (Curto Prazo)</th><td>Deploy de hotfix na API de autenticação para <strong>rejeitar explicitamente</strong> o algoritmo "none" e obrigar algoritmos fortes (ex: RS256).</td></tr>
+                                <tr><th>6. Solução Definitiva</th><td>Revisão completa da lógica de autenticação. Implementar rotação de chaves (KMS), validar o "alg" contra uma lista de permissão (allow-list) e usar bibliotecas padrão e atualizadas.</td></tr>
+                            </table>
+                        </div>
+                        <div>
+                            <h4>Justificativa CVSS v3.1</h4>
+                            <table>
+                                <tr><td>Vetor de Ataque (AV)</td><td>Rede (N)</td></tr>
+                                <tr><td>Complexidade (AC)</td><td>Baixa (L)</td></tr>
+                                <tr><td>Privilégios (PR)</td><td>Nenhum (N)</td></tr>
+                                <tr><td>Interação (UI)</td><td>Nenhuma (N)</td></tr>
+                                <tr><td>Escopo (S)</td><td>Mudou (C)</td></tr>
+                                <tr><td>Confidencialidade (C)</td><td>Alta (H)</td></tr>
+                                <tr><td>Integridade (I)</td><td>Alta (H)</td></tr>
+                                <tr><td>Disponibilidade (A)</td><td>Nenhuma (N)</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>Mock 5: Mensageria sem Criptografia (MSG-BUS-PROD) <span class="risk-high">RISCO ALTO</span></summary>
+                <div class="mock-content">
+                    <h4>Análise Detalhada</h4>
+                    <div class="dual-column">
+                        <div>
+                            <table>
+                                <tr><th>1. Risco (OWASP)</th><td class="risk-critical">Crítico</td></tr>
+                                <tr><th>2. Criticidade (CVSS)</th><td class="risk-high">Alta (7.4)</td></tr>
+                                <tr><th>3. Problema Mensurado</th><td>Mensageria AMQP entre microserviços não exige TLS (tráfego em plaintext).</td></tr>
+                                <tr><th>4. Impacto</th><td>Interceptação (Man-in-the-Middle) de transações financeiras, manipulação de mensagens (fraude), violação de sigilo bancário (LGPD, BACEN).</td></tr>
+                                <tr><th>5. Contorno (Curto Prazo)</th><td>Habilitar "require_ssl=true" (ou equivalente) no broker de mensageria e reiniciar os clientes (microserviços) para forçar a conexão segura.</td></tr>
+                                <tr><th>6. Solução Definitiva</th><td>Implementar mTLS (Mutual TLS) entre todos os serviços. Utilizar Service Mesh (ex: Istio, Linkerd) para forçar e gerenciar a criptografia de todo o tráfego Leste-Oeste.</td></tr>
+                            </table>
+                        </div>
+                        <div>
+                            <h4>Justificativa CVSS v3.1</h4>
+                            <table>
+                                <tr><td>Vetor de Ataque (AV)</td><td>Adjacente (A)</td></tr>
+                                <tr><td>Complexidade (AC)</td><td>Alta (H)</td></tr>
+                                <tr><td>Privilégios (PR)</td><td>Nenhum (N)</td></tr>
+                                <tr><td>Interação (UI)</td><td>Nenhuma (N)</td></tr>
+                                <tr><td>Escopo (S)</td><td>Não Mudou (U)</td></tr>
+                                <tr><td>Confidencialidade (C)</td><td>Alta (H)</td></tr>
+                                <tr><td>Integridade (I)</td><td>Alta (H)</td></tr>
+                                <tr><td>Disponibilidade (A)</td><td>Nenhuma (N)</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+        </section>
+
+        <section id="summary" class="view-section">
+            <h2>Resumo (Material de Apresentação)</h2>
+            <p>Esta seção contém os artefatos consolidados para a montagem da apresentação executiva e tática, focando nas lacunas de detecção e resposta (RTO vs MTTR) e nos indicadores de ataque (IoAs).</p>
+
+            <h3>3.1. Planilha BIA Consolidada (Ativos Críticos)</h3>
+            <table class="bia-table">
+                <thead>
+                    <tr>
+                        <th>Ativo (HVA/Crítico)</th>
+                        <th>Criticidade Negócio</th>
+                        <th>Nível de Risco (OWASP)</th>
+                        <th>RTO (Meta)</th>
+                        <th>RPO (Meta)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>AUTH-PROD</strong> (Serviço de Autenticação)</td>
+                        <td class="risk-critical">Crítico</td>
+                        <td class="risk-critical">Crítico</td>
+                        <td>5 minutos</td>
+                        <td>0 (N/A)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FIN-LIQ-PROD-API</strong> (API de Liquidação)</td>
+                        <td class="risk-critical">Crítico</td>
+                        <td class="risk-critical">Crítico</td>
+                        <td>10 minutos</td>
+                        <td>0 (N/A - transacional)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>APP-PROD-02</strong> (Servidor de Orquestração)</td>
+                        <td class="risk-critical">Crítico</td>
+                        <td class="risk-critical">Crítico</td>
+                        <td>15 minutos</td>
+                        <td>0 (N/A - state)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>MSG-BUS-PROD</strong> (Mensageria Interna)</td>
+                        <td class="risk-critical">Crítico</td>
+                        <td class="risk-critical">Crítico</td>
+                        <td>20 minutos</td>
+                        <td>~1 min (replay)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RECONCILIATION-SVC</strong> (Serviço de Reconciliação)</td>
+                        <td class="risk-high">Alto</td>
+                        <td class="risk-critical">Crítico</td>
+                        <td>30 minutos</td>
+                        <td>~5 min (batch)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.2. Gaps de Detecção (RTO Desejado vs MTTR Atual)</h3>
+            <p>A maior lacuna de continuidade não está apenas na correção, mas na **detecção (MTTD)**. Os GAPs históricos (logs insuficientes, falta de alertas) mostram que o MTTR é alto porque o MTTD também é. O atacante tem tempo de agir antes de ser percebido.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ativo</th>
+                        <th>RTO (Meta)</th>
+                        <th>MTTR (Histórico Real)</th>
+                        <th class="bg-critical">GAP de Continuidade (MTTR - RTO)</th>
+                        <th>GAPs de Resposta (Causa Raiz)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AUTH-PROD (JWT)</td>
+                        <td>5 min</td>
+                        <td>40 min</td>
+                        <td class="risk-critical"><strong>35 minutos</strong></td>
+                        <td>Falta de alertas de anomalia de token; falta de rotação de chaves.</td>
+                    </tr>
+                    <tr>
+                        <td>FIN-LIQ-PROD-API (SQL-I)</td>
+                        <td>10 min</td>
+                        <td>55 min</td>
+                        <td class="risk-critical"><strong>45 minutos</strong></td>
+                        <td>Logs insuficientes; Pipeline CI/CD não bloqueia vulnerabilidades.</td>
+                    </tr>
+                    <tr>
+                        <td>APP-PROD-02 (RDP)</td>
+                        <td>15 min</td>
+                        <td>1h 20min (80 min)</td>
+                        <td class="risk-critical"><strong>1h 05min</strong></td>
+                        <td>Falta de detecção de acesso indevido; dependência de especialista manual.</td>
+                    </tr>
+                    <tr>
+                        <td>MSG-BUS-PROD (AMQP)</td>
+                        <td>20 min</td>
+                        <td>1h 45min (105 min)</td>
+                        <td class="risk-critical"><strong>1h 25min</strong></td>
+                        <td>Documentação de dependências incompleta; configurações não padronizadas.</td>
+                    </tr>
+                    <tr>
+                        <td>RECONCILIATION-SVC (RCE)</td>
+                        <td>30 min</td>
+                        <td>2h 10min (130 min)</td>
+                        <td class="risk-critical"><strong>1h 40min</strong></td>
+                        <td>Processo de patching manual e lento; falta de sandbox para validação.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.3. Mapeamento de IoC e IoA (Foco em Detecção Proativa)</h3>
+            <p>Para reduzir o MTTD e, consequentemente, o MTTR, devemos parar de focar apenas em Indicadores de Comprometimento (IoC - "a foto do crime") e focar em **Indicadores de Ataque (IoA - "o vídeo do ataque em tempo real")**. Abaixo estão os IoAs prioritários para implementar.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ativo (Vulnerabilidade)</th>
+                        <th>Indicador de Comprometimento (IoC) - Reativo</th>
+                        <th>Indicador de Ataque (IoA) - Proativo</th>
+                        <th>Fonte de Detecção (SIEM/EDR)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>APP-PROD-02 (RDP)</td>
+                        <td>Logs de Evento 4625 (Falha de Logon) em massa.</td>
+                        <td><strong>Evento 4624 (Logon OK) de um IP/Geolocalização atípica (Viagem Impossível).</strong></td>
+                        <td>Logs do Windows (Active Directory), Logs de Firewall/VPN.</td>
+                    </tr>
+                    <tr>
+                        <td>FIN-LIQ-PROD-API (SQL-I)</td>
+                        <td>Logs de API com erro de sintaxe SQL.</td>
+                        <td><strong>Processo do Web Server (ex: 'java') tentando executar comandos no S.O. (ex: 'cmd.exe', '/bin/sh').</strong></td>
+                        <td>Logs de Endpoint (EDR), Logs de Banco de Dados.</td>
+                    </tr>
+                    <tr>
+                        <td>RECONCILIATION-SVC (RCE)</td>
+                        <td>Hash de Webshell conhecido no disco.</td>
+                        <td><strong>Criação de processo filho suspeito (Pai: 'java' -> Filho: 'powershell.exe' ou 'curl').</strong></td>
+                        <td>Logs de Endpoint (EDR), Sysmon (Evento 1).</td>
+                    </tr>
+                    <tr>
+                        <td>AUTH-PROD (JWT)</td>
+                        <td>Log de API com `alg: "none"`.</td>
+                        <td><strong>Pico de Eventos de "Viagem Impossível" ou "Password Spraying" (várias contas, 1 IP).</strong></td>
+                        <td>Logs de API Gateway, Logs do Provedor de Identidade (IdP).</td>
+                    </tr>
+                    <tr>
+                        <td>MSG-BUS-PROD (AMQP)</td>
+                        <td>Tráfego AMQP (5672) em plaintext capturado.</td>
+                        <td><strong>Anomalia de rede: host não-aplicação (ex: workstation) tentando se conectar ao 'MSG-BUS' (Reconhecimento Interno).</strong></td>
+                        <td>Logs de Rede (NetFlow/Zeek), Logs do Broker.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </div>
+
+    <script>
+        // Script simples para alternar as abas de visualização
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const viewSections = document.querySelectorAll('.view-section');
+
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove 'active' de todos
+                    tabLinks.forEach(l => l.classList.remove('active'));
+                    viewSections.forEach(s => s.classList.remove('active'));
+
+                    // Adiciona 'active' ao clicado
+                    this.classList.add('active');
+                    const targetSection = document.querySelector(this.getAttribute('href'));
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

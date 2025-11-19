@@ -1,0 +1,24 @@
+[hero.subtitle]
+other = "Blog de pesquisas com checkpoints e subpesquisas. Acompanhe o andamento e mergulhe nos temas."
+[hero.cta_pesquisas]
+other = "Ver Pesquisas"
+[hero.cta_sobre]
+other = "Sobre"
+[pesquisa.title]
+other = "Pesquisas"
+[pesquisa.subtitle]
+other = "Acompanhe pesquisas com checkpoints e subpesquisas."
+[pesquisa.progresso]
+other = "Progresso"
+[pesquisa.subpesquisas]
+other = "Subpesquisas"
+[pesquisa.tecnologias]
+other = "Tecnologias"
+[pesquisa.sem_sub]
+other = "Sem subpesquisas cadastradas ainda."
+[search.type_pesquisa]
+other = "Pesquisa"
+[search.type_sub]
+other = "Subpesquisa"
+[search.of]
+other = "de"
