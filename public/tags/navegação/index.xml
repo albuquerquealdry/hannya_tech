@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Navegação on Hannya Tech</title>
-    <link>https://albuquerquealdry.github.io/tags/navega%C3%A7%C3%A3o/</link>
+    <link>https://albuquerquealdry.github.io/hannya_tech/tags/navega%C3%A7%C3%A3o/</link>
     <description>Recent content in Navegação on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <atom:link href="https://albuquerquealdry.github.io/tags/navega%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/tags/navega%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Subpesquisa 4: Navegação e Ofuscação Avançada</title>
-      <link>https://albuquerquealdry.github.io/subpesquisa/navegacao-e-ofuscacao-avancada/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/navegacao-e-ofuscacao-avancada/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/subpesquisa/navegacao-e-ofuscacao-avancada/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/navegacao-e-ofuscacao-avancada/</guid>
       <description>Demonstrar uso prático de redes de anonimato (Tor, I2P) e técnicas de ofuscação (pluggable transports).</description>
     </item>
   </channel>

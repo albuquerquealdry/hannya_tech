@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Em Progresso on Hannya Tech</title>
-    <link>https://albuquerquealdry.github.io/status/em-progresso/</link>
+    <link>https://albuquerquealdry.github.io/hannya_tech/status/em-progresso/</link>
     <description>Recent content in Em Progresso on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://albuquerquealdry.github.io/status/em-progresso/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/status/em-progresso/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Arquitetura de Análise de Malware Automatizada e Assistida por IA (Dual-Stack)</title>
-      <link>https://albuquerquealdry.github.io/pesquisa/malware/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/pesquisa/malware/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/pesquisa/malware/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/pesquisa/malware/</guid>
       <description>Desenvolvimento e validação de um ambiente de análise de malware que utiliza uma arquitetura de máquina virtual dupla (Alvo e Auxiliar), orquestração moderna (N8N) e Co-Inteligência Artificial (Gemini) para entregar veredictos com alta acurácia (&amp;gt;95%) e relatórios superiores e acessíveis.</description>
     </item>
     <item>
       <title>Análise Prática de Anonimato Digital: Um Estudo Comparativo de Técnicas de Ofuscação e Evasão à Vigilância</title>
-      <link>https://albuquerquealdry.github.io/pesquisa/anonimato/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/pesquisa/anonimato/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/pesquisa/anonimato/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/pesquisa/anonimato/</guid>
       <description>Esta pesquisa investiga e compara, através de um estudo experimental, o nível de anonimato e privacidade de um ambiente de usuário padrão (Cenário A) contra um ambiente &amp;lsquo;hardened&amp;rsquo; (Cenário B) com ferramentas de ofuscação, focando na evasão à vigilância de big techs.</description>
     </item>
     <item>
       <title>Meu Novo Projeto</title>
-      <link>https://albuquerquealdry.github.io/projeto/meu-novo-projeto/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/projeto/meu-novo-projeto/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/projeto/meu-novo-projeto/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/projeto/meu-novo-projeto/</guid>
       <description>Descrição curta do objetivo e escopo.</description>
     </item>
     <item>
       <title>OPSEC para Jornalistas</title>
-      <link>https://albuquerquealdry.github.io/subpesquisa/opsec-para-jornalistas/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/opsec-para-jornalistas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/subpesquisa/opsec-para-jornalistas/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/opsec-para-jornalistas/</guid>
       <description>Protocolos práticos para fontes e comunicadores em ambientes hostis.</description>
     </item>
     <item>
       <title>Subpesquisa 1: Prompt Engineering para Co-Inteligência de Malware</title>
-      <link>https://albuquerquealdry.github.io/subpesquisa/prompt-engineering-malware/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/prompt-engineering-malware/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/subpesquisa/prompt-engineering-malware/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/prompt-engineering-malware/</guid>
       <description>Otimizar prompts do Gemini para interpretar logs (Sysmon/Frida) e gerar vereditos e referências de Threat Intelligence com alta precisão.</description>
     </item>
     <item>
       <title>Subpesquisa 2: Engenharia Reversa Assistida: Tradução de Código Malicioso</title>
-      <link>https://albuquerquealdry.github.io/subpesquisa/engenharia-reversa-assistida/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/engenharia-reversa-assistida/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/subpesquisa/engenharia-reversa-assistida/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/engenharia-reversa-assistida/</guid>
       <description>Avaliar o uso de LLMs para traduzir trechos de código malicioso (baixo nível) em pseudo-código legível, apoiando a engenharia reversa.</description>
     </item>
     <item>
       <title>Subpesquisa 3: Prova de Conceito de Pontes Tor</title>
-      <link>https://albuquerquealdry.github.io/subpesquisa/prova-de-conceito-pontes-tor/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/prova-de-conceito-pontes-tor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/subpesquisa/prova-de-conceito-pontes-tor/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/prova-de-conceito-pontes-tor/</guid>
       <description>Testes de Pontes Tor Meek, OBFS4 e Snowflake e validação de eficácia.</description>
     </item>
     <item>
       <title>Subpesquisa 4: Navegação e Ofuscação Avançada</title>
-      <link>https://albuquerquealdry.github.io/subpesquisa/navegacao-e-ofuscacao-avancada/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/navegacao-e-ofuscacao-avancada/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/subpesquisa/navegacao-e-ofuscacao-avancada/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/subpesquisa/navegacao-e-ofuscacao-avancada/</guid>
       <description>Demonstrar uso prático de redes de anonimato (Tor, I2P) e técnicas de ofuscação (pluggable transports).</description>
     </item>
   </channel>

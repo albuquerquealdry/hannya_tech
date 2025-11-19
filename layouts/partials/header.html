@@ -1,7 +1,7 @@
 {{/* Header com navegação responsiva */}}
 {{ $logo := "logo.svg" | relURL }}
 <div class="hannya-container" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem;">
-  <a href="{{ "/" | relURL }}" aria-label="Home" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+  <a href="{{ relLangURL "" }}" aria-label="Home" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
     <img src="{{ $logo }}" alt="Hannya Tech" style="height: 40px; width: auto;"/>
     <span style="font-weight: 800; font-size: 1.25rem; color: var(--text);">{{ .Site.Title }}</span>
   </a>

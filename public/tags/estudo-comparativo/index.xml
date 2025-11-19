@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Estudo Comparativo on Hannya Tech</title>
-    <link>https://albuquerquealdry.github.io/tags/estudo-comparativo/</link>
+    <link>https://albuquerquealdry.github.io/hannya_tech/tags/estudo-comparativo/</link>
     <description>Recent content in Estudo Comparativo on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://albuquerquealdry.github.io/tags/estudo-comparativo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/tags/estudo-comparativo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Análise Prática de Anonimato Digital: Um Estudo Comparativo de Técnicas de Ofuscação e Evasão à Vigilância</title>
-      <link>https://albuquerquealdry.github.io/pesquisa/anonimato/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/pesquisa/anonimato/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/pesquisa/anonimato/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/pesquisa/anonimato/</guid>
       <description>Esta pesquisa investiga e compara, através de um estudo experimental, o nível de anonimato e privacidade de um ambiente de usuário padrão (Cenário A) contra um ambiente &amp;lsquo;hardened&amp;rsquo; (Cenário B) com ferramentas de ofuscação, focando na evasão à vigilância de big techs.</description>
     </item>
   </channel>
