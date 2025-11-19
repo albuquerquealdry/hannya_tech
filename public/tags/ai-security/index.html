@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=33021&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Hannya Tech">
   <title>Ai-Security :: Hannya Tech</title>
   
   
-  <link rel="stylesheet" href="/hannya_tech/css/hannya.css">
+  <link rel="stylesheet" href="/css/hannya.css">
   
   
   
@@ -15,30 +15,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/hannya_tech/css/hannya.css">
+<link rel="stylesheet" href="/css/hannya.css">
 </head>
 <body class="">
   <header>
     
 
-<div class="hannya-container" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem;">
-  <a href="/hannya_tech/" aria-label="Home" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
-    <img src="/hannya_tech/logo.svg" alt="Hannya Tech" style="height: 40px; width: auto;"/>
-    <span style="font-weight: 800; font-size: 1.25rem; color: var(--text);">Hannya Tech</span>
+<div class="hannya-container flex items-center justify-between w-full px-4 py-3">
+  <a href="/" aria-label="Home" class="flex items-center gap-3">
+    <img src="/logo.svg" alt="Hannya Tech" style="height:48px;width:auto;"/>
+    <span class="font-extrabold text-slate-900 dark:text-slate-100 text-lg md:text-xl">Hannya Tech</span>
   </a>
 
-  <nav style="display: flex; align-items: center; gap: 0.5rem;">
+  <div class="flex items-center gap-2">
     
-      
-        <a class="btn ghost" href="/hannya_tech/pesquisa/" style="text-decoration: none;">Pesquisas</a>
-      
-        <a class="btn ghost" href="/hannya_tech/sobre/" style="text-decoration: none;">Sobre</a>
-      
+<nav class="main-menu hidden md:flex items-center gap-2">
+  
     
+      <a class="btn ghost" href="/pesquisa/">Pesquisas</a>
+    
+      <a class="btn ghost" href="/sobre/">Sobre</a>
+    
+  
+</nav>
 
-    <label for="darkmode-toggle" class="btn ghost" style="cursor: pointer;" title="Alternar tema">
-      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" style="position: absolute; opacity: 0; pointer-events: none;" aria-label="Alternar tema">
-      <span class="icon-sun" style="display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+    <div class="darkmode-toggle hidden md:flex">
+      <label for="darkmode-toggle" class="btn ghost cursor-pointer" title="Alternar tema">
+        <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only" aria-label="Alternar tema">
+        <span class="icon-sun"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="12" cy="12" r="4"></circle>
   <path d="M12 2v2"></path>
   <path d="M12 20v2"></path>
@@ -49,13 +54,14 @@
   <path d="m6.34 17.66-1.41 1.41"></path>
   <path d="m19.07 4.93-1.41 1.41"></path>
 </svg></span>
-      <span class="icon-moon" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <span class="icon-moon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
   <path d="M19 3v4"></path>
   <path d="M21 5h-4"></path>
 </svg></span>
-    </label>
-  </nav>
+      </label>
+    </div>
+  </div>
 </div>
   </header>
 
@@ -69,7 +75,7 @@
 
   <div class="grid">
     
-      <article class="card" style="cursor: pointer;" onclick="window.location.href='\/hannya_tech\/pesquisa\/malware\/'">
+      <article class="card" style="cursor: pointer;" onclick="window.location.href='\/pesquisa\/malware\/'">
         <div class="card-header">
           <h2>Arquitetura de Análise de Malware Automatizada e Assistida por IA (Dual-Stack)</h2>
         </div>

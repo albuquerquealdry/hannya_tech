@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=33021&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Hannya Tech">
   <title> :: Hannya Tech</title>
   
   
-  <link rel="stylesheet" href="/hannya_tech/css/hannya.css">
+  <link rel="stylesheet" href="/css/hannya.css">
   
   
   
@@ -15,30 +15,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/hannya_tech/css/hannya.css">
+<link rel="stylesheet" href="/css/hannya.css">
 </head>
 <body class="">
   <header>
     
 
-<div class="hannya-container" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem;">
-  <a href="/hannya_tech/" aria-label="Home" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
-    <img src="/hannya_tech/logo.svg" alt="Hannya Tech" style="height: 40px; width: auto;"/>
-    <span style="font-weight: 800; font-size: 1.25rem; color: var(--text);">Hannya Tech</span>
+<div class="hannya-container flex items-center justify-between w-full px-4 py-3">
+  <a href="/" aria-label="Home" class="flex items-center gap-3">
+    <img src="/logo.svg" alt="Hannya Tech" style="height:48px;width:auto;"/>
+    <span class="font-extrabold text-slate-900 dark:text-slate-100 text-lg md:text-xl">Hannya Tech</span>
   </a>
 
-  <nav style="display: flex; align-items: center; gap: 0.5rem;">
+  <div class="flex items-center gap-2">
     
-      
-        <a class="btn ghost" href="/hannya_tech/pesquisa/" style="text-decoration: none;">Pesquisas</a>
-      
-        <a class="btn ghost" href="/hannya_tech/sobre/" style="text-decoration: none;">Sobre</a>
-      
+<nav class="main-menu hidden md:flex items-center gap-2">
+  
     
+      <a class="btn ghost" href="/pesquisa/">Pesquisas</a>
+    
+      <a class="btn ghost" href="/sobre/">Sobre</a>
+    
+  
+</nav>
 
-    <label for="darkmode-toggle" class="btn ghost" style="cursor: pointer;" title="Alternar tema">
-      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" style="position: absolute; opacity: 0; pointer-events: none;" aria-label="Alternar tema">
-      <span class="icon-sun" style="display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+    <div class="darkmode-toggle hidden md:flex">
+      <label for="darkmode-toggle" class="btn ghost cursor-pointer" title="Alternar tema">
+        <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only" aria-label="Alternar tema">
+        <span class="icon-sun"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="12" cy="12" r="4"></circle>
   <path d="M12 2v2"></path>
   <path d="M12 20v2"></path>
@@ -49,55 +54,33 @@
   <path d="m6.34 17.66-1.41 1.41"></path>
   <path d="m19.07 4.93-1.41 1.41"></path>
 </svg></span>
-      <span class="icon-moon" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <span class="icon-moon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
   <path d="M19 3v4"></path>
   <path d="M21 5h-4"></path>
 </svg></span>
-    </label>
-  </nav>
+      </label>
+    </div>
+  </div>
 </div>
   </header>
 
   <main>
     
-  <div class="hannya-container" style="max-width: 1300px; padding-left: clamp(1rem, 4vw, 2.5rem); padding-right: clamp(1rem, 4vw, 2.5rem);">
-    
-    <nav style="margin-bottom: clamp(1.5rem, 3vh, 2rem);">
-      <a href="/hannya_tech/pesquisa/" style="color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: gap 0.2s ease;">
-        <span>←</span> Voltar para Pesquisas
-      </a>
-    </nav>
-
-    
-    
-    <header style="margin-bottom: clamp(2rem, 4vh, 3rem); text-align: center;">
-      <h1 class="hannya-title" style="margin-bottom: 1rem; font-size: clamp(2.5rem, 5vw, 3.5rem);"></h1>
+  <div class="hannya-container">
+    <header style="margin-bottom: 2rem;">
+      <nav style="margin-bottom: 1rem;">
+        <a href="/pesquisa/" style="color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+          <span>←</span> Voltar para Pesquisas
+        </a>
+      </nav>
+      <h1 class="hannya-title" style="margin-bottom: 0.75rem;"></h1>
+      
       
     </header>
-    
 
-    
-    <div style="display: flex; flex-wrap: wrap; gap: clamp(0.75rem, 2vw, 1rem); align-items: center; justify-content: center; margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1rem, 2.5vw, 1.5rem); background: var(--card-bg); border: 1px solid var(--border); border-radius: clamp(12px, 2vw, 16px);">
-      
-      
-      
-    </div>
-
-    
-    <article class="whitepaper-content" style="max-width: 1100px; margin: 0 auto; width: 100%;">
-      
-      
-      
-
-      
-      <section class="box" style="margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem);">
-        <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 2px solid var(--border); padding-bottom: 0.75rem;">
-          <span style="font-size: 1.5rem;">🎯</span>
-          Introdução
-        </h2>
-        <div class="content" style="line-height: 1.8;">
-          <h2 id="parent_path-pesquisaanonimato">title: &ldquo;Subpesquisa 2: Arquitetura do Ambiente Hardened (Cenário B)&rdquo;
+    <article class="content box" style="max-width: 800px; margin: 0 auto;">
+      <h2 id="parent_path-pesquisaanonimato">title: &ldquo;Subpesquisa 2: Arquitetura do Ambiente Hardened (Cenário B)&rdquo;
 summary: &ldquo;Construção do ambiente de alto anonimato, seleção e justificativa de ferramentas (Whonix, Tails, Tor+VPN).&rdquo;
 status: &ldquo;em progresso&rdquo;
 tags: [&ldquo;anonimato&rdquo;, &ldquo;hardened&rdquo;, &ldquo;cenário-b&rdquo;]
@@ -196,183 +179,10 @@ parent_path: &ldquo;pesquisa/anonimato&rdquo;</h2>
 <li><code>scripts/</code> de provisionamento/configuração (se aplicável)</li>
 </ul>
 
-        </div>
-      </section>
-
-      
-      
-
-      
-      
-
-      
-      
-
-      
-      
     </article>
 
     
-    
   </div>
-
-<style>
-.whitepaper-content h3 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: var(--text);
-}
-
-.whitepaper-content h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  color: var(--text);
-}
-
-.whitepaper-content p {
-  margin-bottom: 1.25rem;
-  line-height: 1.8;
-  max-width: 85ch;
-}
-
-.whitepaper-content ul,
-.whitepaper-content ol {
-  margin-left: 1.5rem;
-  margin-bottom: 1.25rem;
-  line-height: 1.8;
-}
-
-.whitepaper-content li {
-  margin-bottom: 0.5rem;
-}
-
-.whitepaper-content code {
-  background: rgba(124, 58, 237, 0.1);
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.9em;
-  font-family: 'Courier New', monospace;
-}
-
-.whitepaper-content pre {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.5rem;
-  overflow-x: auto;
-  margin-bottom: 1.5rem;
-}
-
-.whitepaper-content blockquote {
-  border-left: 4px solid var(--accent);
-  padding-left: 1.5rem;
-  margin: 1.5rem 0;
-  font-style: italic;
-  color: var(--muted);
-}
-
-.whitepaper-content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin: 2rem 0;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.1);
-}
-
-.whitepaper-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-}
-
-.whitepaper-content th,
-.whitepaper-content td {
-  padding: 0.75rem;
-  border: 1px solid var(--border);
-  text-align: left;
-}
-
-.whitepaper-content th {
-  background: var(--card-bg);
-  font-weight: 700;
-}
-
-@media (max-width: 1200px) {
-  .whitepaper-content {
-    max-width: 100%;
-  }
-  
-  .whitepaper-content p {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .hannya-container {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
-  }
-  
-  .whitepaper-content {
-    padding: 0;
-  }
-  
-  .box {
-    padding: 1.25rem !important;
-    border-radius: 12px !important;
-  }
-  
-  .whitepaper-content h2 {
-    font-size: 1.5rem !important;
-  }
-  
-  .whitepaper-content h3 {
-    font-size: 1.25rem !important;
-  }
-  
-  .whitepaper-content table {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hannya-container {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-  
-  .box {
-    padding: 1rem !important;
-  }
-  
-  .whitepaper-content h2 {
-    font-size: 1.35rem !important;
-  }
-  
-  .whitepaper-content h3 {
-    font-size: 1.15rem !important;
-  }
-  
-  .whitepaper-content h4 {
-    font-size: 1.05rem !important;
-  }
-  
-  .whitepaper-content table {
-    font-size: 0.85rem;
-    display: block;
-    overflow-x: auto;
-  }
-  
-  .whitepaper-content pre {
-    font-size: 0.85rem;
-    padding: 1rem !important;
-  }
-}
-</style>
 
   </main>
 
