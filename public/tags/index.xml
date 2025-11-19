@@ -2,248 +2,255 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hannya Tech</title>
-    <link>http://localhost:33021/tags/</link>
+    <link>https://albuquerquealdry.github.io/hannya_tech/tags/</link>
     <description>Recent content in Tags on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:33021/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Ai-Security</title>
-      <link>http://localhost:33021/tags/ai-security/</link>
-      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/ai-security/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ansible</title>
-      <link>http://localhost:33021/tags/ansible/</link>
-      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/ansible/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Automation</title>
-      <link>http://localhost:33021/tags/automation/</link>
-      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/automation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Dual-Stack</title>
-      <link>http://localhost:33021/tags/dual-stack/</link>
-      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/dual-stack/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Malware-Analysis</title>
-      <link>http://localhost:33021/tags/malware-analysis/</link>
-      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/malware-analysis/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Proxmox</title>
-      <link>http://localhost:33021/tags/proxmox/</link>
-      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/proxmox/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate>Wed, 19 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Anonimato</title>
-      <link>http://localhost:33021/tags/anonimato/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/anonimato/</guid>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/anonimato/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/anonimato/</guid>
       <description></description>
     </item>
     <item>
-      <title>Estudo Comparativo</title>
-      <link>http://localhost:33021/tags/estudo-comparativo/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/estudo-comparativo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Network</title>
-      <link>http://localhost:33021/tags/network/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/network/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ofuscação</title>
-      <link>http://localhost:33021/tags/ofusca%C3%A7%C3%A3o/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/ofusca%C3%A7%C3%A3o/</guid>
+      <title>Browser</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/browser/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/browser/</guid>
       <description></description>
     </item>
     <item>
       <title>Privacidade</title>
-      <link>http://localhost:33021/tags/privacidade/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/privacidade/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Privacy</title>
-      <link>http://localhost:33021/tags/privacy/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/privacy/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rede</title>
-      <link>http://localhost:33021/tags/rede/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/rede/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Security</title>
-      <link>http://localhost:33021/tags/security/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/security/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Segurança</title>
-      <link>http://localhost:33021/tags/seguran%C3%A7a/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/seguran%C3%A7a/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tails</title>
-      <link>http://localhost:33021/tags/tails/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/tails/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tor</title>
-      <link>http://localhost:33021/tags/tor/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/tor/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Vigilância</title>
-      <link>http://localhost:33021/tags/vigil%C3%A2ncia/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/vigil%C3%A2ncia/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Whonix</title>
-      <link>http://localhost:33021/tags/whonix/</link>
-      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/whonix/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Bridges</title>
-      <link>http://localhost:33021/tags/bridges/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/bridges/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Engenharia-Reversa</title>
-      <link>http://localhost:33021/tags/engenharia-reversa/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/engenharia-reversa/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Gemini</title>
-      <link>http://localhost:33021/tags/gemini/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/gemini/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Go</title>
-      <link>http://localhost:33021/tags/go/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/go/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Llm</title>
-      <link>http://localhost:33021/tags/llm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/llm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Logs</title>
-      <link>http://localhost:33021/tags/logs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/logs/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Malware</title>
-      <link>http://localhost:33021/tags/malware/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/malware/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Metadados</title>
-      <link>http://localhost:33021/tags/metadados/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/metadados/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Metadata</title>
-      <link>http://localhost:33021/tags/metadata/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/metadata/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Navegação</title>
-      <link>http://localhost:33021/tags/navega%C3%A7%C3%A3o/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/navega%C3%A7%C3%A3o/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Opsec</title>
-      <link>http://localhost:33021/tags/opsec/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/opsec/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Prompt-Engineering</title>
-      <link>http://localhost:33021/tags/prompt-engineering/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/prompt-engineering/</guid>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/privacidade/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/privacidade/</guid>
       <description></description>
     </item>
     <item>
       <title>Rastreamento</title>
-      <link>http://localhost:33021/tags/rastreamento/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/rastreamento/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/rastreamento/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Segurança</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/seguran%C3%A7a/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/seguran%C3%A7a/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ai-Security</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/ai-security/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/ai-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ansible</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/ansible/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/ansible/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/automation/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dual-Stack</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/dual-stack/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/dual-stack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Malware-Analysis</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/malware-analysis/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/malware-analysis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proxmox</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/proxmox/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/proxmox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Estudo Comparativo</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/estudo-comparativo/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/estudo-comparativo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/network/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ofuscação</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/ofusca%C3%A7%C3%A3o/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/ofusca%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Privacy</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/privacy/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/privacy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rede</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/rede/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/rede/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/security/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tails</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/tails/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/tails/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tor</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/tor/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/tor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vigilância</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/vigil%C3%A2ncia/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/vigil%C3%A2ncia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Whonix</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/whonix/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/whonix/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bridges</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/bridges/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/rastreamento/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/bridges/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Engenharia-Reversa</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/engenharia-reversa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/engenharia-reversa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gemini</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/gemini/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/gemini/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Llm</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/llm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Logs</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/logs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/logs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Malware</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/malware/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/malware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Metadados</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/metadados/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/metadados/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Metadata</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/metadata/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/metadata/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Navegação</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/navega%C3%A7%C3%A3o/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/navega%C3%A7%C3%A3o/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Opsec</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/opsec/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/opsec/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prompt-Engineering</title>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/prompt-engineering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/prompt-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Tracking</title>
-      <link>http://localhost:33021/tags/tracking/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/tracking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/tracking/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/tracking/</guid>
       <description></description>
     </item>
     <item>
       <title>Web</title>
-      <link>http://localhost:33021/tags/web/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/tags/web/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:33021/tags/web/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/tags/web/</guid>
       <description></description>
     </item>
   </channel>

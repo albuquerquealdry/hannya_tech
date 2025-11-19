@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pesquisas on Hannya Tech</title>
-    <link>http://localhost:1313/pesquisa/</link>
+    <link>https://albuquerquealdry.github.io/hannya_tech/pesquisa/</link>
     <description>Recent content in Pesquisas on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/pesquisa/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/pesquisa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Arquitetura de Análise de Malware Automatizada e Assistida por IA (Dual-Stack)</title>
-      <link>http://localhost:1313/pesquisa/malware/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/pesquisa/malware/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pesquisa/malware/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/pesquisa/malware/</guid>
       <description>Desenvolvimento e validação de um ambiente de análise de malware que utiliza uma arquitetura de máquina virtual dupla (Alvo e Auxiliar), orquestração moderna (N8N) e Co-Inteligência Artificial (Gemini) para entregar veredictos com alta acurácia (&amp;gt;95%) e relatórios superiores e acessíveis.</description>
     </item>
     <item>
       <title>Análise Prática de Anonimato Digital: Um Estudo Comparativo de Técnicas de Ofuscação e Evasão à Vigilância</title>
-      <link>http://localhost:1313/pesquisa/anonimato/</link>
+      <link>https://albuquerquealdry.github.io/hannya_tech/pesquisa/anonimato/</link>
       <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pesquisa/anonimato/</guid>
+      <guid>https://albuquerquealdry.github.io/hannya_tech/pesquisa/anonimato/</guid>
       <description>Esta pesquisa investiga e compara, através de um estudo experimental, o nível de anonimato e privacidade de um ambiente de usuário padrão (Cenário A) contra um ambiente &amp;lsquo;hardened&amp;rsquo; (Cenário B) com ferramentas de ofuscação, focando na evasão à vigilância de big techs.</description>
     </item>
   </channel>
