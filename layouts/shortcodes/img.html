@@ -1,0 +1,5 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $class := .Get "class" | default "" -}}
+{{- $norm := cond (hasPrefix $src "/") (relURL (substr $src 1)) (relURL $src) -}}
+<img src="{{ $norm }}" alt="{{ $alt }}" class="{{ $class }}" />

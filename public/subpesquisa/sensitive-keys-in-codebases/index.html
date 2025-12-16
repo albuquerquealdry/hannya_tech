@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head><script src="/hannya_tech/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hannya_tech/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hannya Tech">
+  <title>Sensitive keys in codebases :: Hannya Tech</title>
+  
+  
+  <link rel="stylesheet" href="/hannya_tech/css/hannya.css">
+  
+  
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/hannya_tech/css/hannya.css">
+</head>
+<body class="">
+  <header>
+    
+
+<div class="hannya-container" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem;">
+  <a href="http://localhost:1313/hannya_tech/" aria-label="Home" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+    <img src="/hannya_tech/logo.svg" alt="Hannya Tech" style="height: 40px; width: auto;"/>
+    <span style="font-weight: 800; font-size: 1.25rem; color: var(--text);">Hannya Tech</span>
+  </a>
+
+  <nav style="display: flex; align-items: center; gap: 0.5rem;">
+    
+      
+        <a class="btn ghost" href="/hannya_tech/pesquisa/" style="text-decoration: none;">Pesquisas</a>
+      
+        <a class="btn ghost" href="/hannya_tech/sobre/" style="text-decoration: none;">Sobre</a>
+      
+    
+
+    <label for="darkmode-toggle" class="btn ghost" style="cursor: pointer;" title="Alternar tema">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" style="position: absolute; opacity: 0; pointer-events: none;" aria-label="Alternar tema">
+      <span class="icon-sun" style="display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="4"></circle>
+  <path d="M12 2v2"></path>
+  <path d="M12 20v2"></path>
+  <path d="m4.93 4.93 1.41 1.41"></path>
+  <path d="m17.66 17.66 1.41 1.41"></path>
+  <path d="M2 12h2"></path>
+  <path d="M20 12h2"></path>
+  <path d="m6.34 17.66-1.41 1.41"></path>
+  <path d="m19.07 4.93-1.41 1.41"></path>
+</svg></span>
+      <span class="icon-moon" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+  <path d="M19 3v4"></path>
+  <path d="M21 5h-4"></path>
+</svg></span>
+    </label>
+  </nav>
+</div>
+
+  </header>
+
+  <main>
+    
+  <div class="hannya-container" style="max-width: 1300px; padding-left: clamp(1rem, 4vw, 2.5rem); padding-right: clamp(1rem, 4vw, 2.5rem);">
+    
+    <nav style="margin-bottom: clamp(1.5rem, 3vh, 2rem);">
+      <a href="/hannya_tech/pesquisa/" style="color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: gap 0.2s ease;">
+        <span>←</span> Voltar para Pesquisas
+      </a>
+    </nav>
+
+    
+    
+    
+    
+    <div style="width: 100%; height: clamp(250px, 40vh, 400px); border-radius: clamp(12px, 2vw, 20px); overflow: hidden; margin-bottom: clamp(1.5rem, 3vh, 2rem); position: relative; box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12);">
+      <img src="/hannya_tech/images/subpesquisa/kubegoat/keys.png" alt="Sensitive keys in codebases" style="width: 100%; height: 100%; object-fit: cover;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.7)); display: flex; align-items: flex-end; padding: clamp(1.25rem, 3vw, 2rem);">
+        <div>
+          <h1 style="color: white; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">Sensitive keys in codebases</h1>
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div style="display: flex; flex-wrap: wrap; gap: clamp(0.75rem, 2vw, 1rem); align-items: center; justify-content: center; margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1rem, 2.5vw, 1.5rem); background: var(--card-bg); border: 1px solid var(--border); border-radius: clamp(12px, 2vw, 16px);">
+      
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="chip">kubernetes</span><span class="chip">security</span><span class="chip">git-exposure</span><span class="chip">osint</span><span class="chip">aws-leak</span>
+      </div>
+      
+      
+      
+      <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--muted);">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>15/12/2025</span>
+      </div>
+      
+    </div>
+
+    
+    <article class="whitepaper-content" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+      
+      
+      
+
+      
+      <section class="box" style="margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem);">
+        <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 2px solid var(--border); padding-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">🎯</span>
+          Introdução
+        </h2>
+        <div class="content" style="line-height: 1.8;">
+          <h2 id="introdução">Introdução</h2>
+<p>Nesta subpesquisa, investigamos o cenário onde uma aplicação containerizada expõe inadvertidamente seu sistema de controle de versão. A exposição do diretório <code>.git</code> em ambientes de produção é uma falha crítica que permite a reconstrução completa do código-fonte e do histórico de alterações, frequentemente revelando segredos hardcoded que deveriam ser privados.</p>
+<h2 id="objetivos">Objetivos</h2>
+<ol>
+<li>Identificar serviços web com diretórios sensíveis expostos.</li>
+<li>Explorar a falha para reconstruir o repositório localmente.</li>
+<li>Realizar mineração de dados no histórico de commits (<code>git log</code>) para encontrar credenciais.</li>
+<li>Propor barreiras de defesa no nível de CI/CD e configuração de servidor.</li>
+</ol>
+<h2 id="-metodologia-de-ataque-red-team">🛠 Metodologia de Ataque (Red Team)</h2>
+<p>A execução seguiu a cadeia de ataque (Kill Chain) baseada em reconhecimento e exploração de má configuração web.</p>
+<h3 id="1-reconhecimento">1. Reconhecimento</h3>
+<p>Inicialmente, foi realizado um <em>port-forward</em> no serviço <code>build-code-service</code>. Com o acesso garantido, iniciamos a enumeração de diretórios utilizando a ferramenta <code>dirsearch</code> na porta alvo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 dirsearch.py -u http://10.0.0.60:31607/
+</span></span></code></pre></div><img src="/hannya_tech/images/subpesquisa/kubegoat/sensitive-keys-in-codebases-1.png" alt="dirsearch confirma /.git exposto" class="evidencia" />
+
+<p><strong>Resultado:</strong> O scanner retornou código <strong>200 OK</strong> para caminhos críticos, confirmando a exposição de arquivos internos do Git:</p>
+<ul>
+<li><code>/git/HEAD</code></li>
+<li><code>/.git/config</code></li>
+<li><code>/git/COMMIT_EDITMSG</code></li>
+</ul>
+<p>Os mesmos poderiam ser acessados de via browser, permitindo a exfiltração de dados para ataques:</p>
+<img src="/hannya_tech/images/subpesquisa/kubegoat/sensitive-keys-in-codebases-2.png" alt="acesso ao .git via browser" class="evidencia" />
+
+<img src="/hannya_tech/images/subpesquisa/kubegoat/sensitive-keys-in-codebases-3.png" alt="acesso ao .git via browser" class="evidencia" />
+
+<h3 id="2-exploração-dump-do-repositório">2. Exploração (Dump do Repositório)</h3>
+<p>Para explorar essa vulnerabilidade, utilizamos a ferramenta <code>git-dumper</code>. Essa ferramenta baixa recursivamente os objetos e referências do git exposto para recriar o repositório na máquina do atacante.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git-dumper http://10.0.0.60:31607/.git output_repo
+</span></span></code></pre></div><img src="/hannya_tech/images/subpesquisa/kubegoat/sensitive-keys-in-codebases-4.png" alt="acesso ao .git via browser" class="evidencia" />
+
+<h3 id="3-análise-forense">3. Análise Forense</h3>
+<p>Com o repositório clonado localmente, analisamos o histórico de alterações. O comando <code>git log</code> revelou commits realizados pelo autor &ldquo;Madhu Akula&rdquo;, especificamente um commit suspeito com a mensagem &ldquo;Included custom environmental variables&rdquo;.</p>
+<img src="/hannya_tech/images/subpesquisa/kubegoat/sensitive-keys-in-codebases-5.png" alt="acesso ao .git via browser" class="evidencia" />
+
+<p>Ao inspecionar as diferenças desse commit específico com o comando <code>git log -p</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git log -p
+</span></span></code></pre></div><img src="/hannya_tech/images/subpesquisa/kubegoat/sensitive-keys-in-codebases-6.png" alt="acesso ao .git via browser" class="evidencia" />
+
+<p>Identificamos a criação de um arquivo <code>.env</code> contendo credenciais de nuvem ativas e flags do desafio:</p>
+<ul>
+<li><strong>AWS Access Key ID:</strong> <code>AKIWSHD6243HZ2G1KEDC</code></li>
+<li><strong>K8s Goat Flag:</strong> <code>k8s-goat-81bc7833...</code></li>
+</ul>
+<h2 id="-análise-de-impacto-e-mitigação-blue-team">🛡 Análise de Impacto e Mitigação (Blue Team)</h2>
+<p>A facilidade com que as chaves da AWS foram recuperadas (aproximadamente 15 minutos) demonstra um risco de severidade <strong>Crítica</strong>. Um atacante com essas chaves poderia comprometer toda a infraestrutura de nuvem, não apenas o cluster Kubernetes.</p>
+<h3 id="como-corrigir-remediação-imediata">Como Corrigir (Remediação Imediata)</h3>
+<ol>
+<li><strong>Bloqueio no Web Server:</strong> Reconfigure o servidor web (Nginx, Apache, ou o código da aplicação Go/Node) para negar acesso a qualquer diretório oculto (iniciados por <code>.</code>).
+<ul>
+<li><em>Exemplo Nginx:</em> <code>location ~ /\.git { deny all; }</code></li>
+</ul>
+</li>
+<li><strong>Limpeza do Histórico:</strong> As chaves vazadas devem ser <strong>revogadas imediatamente</strong> na AWS. Apenas apagar o arquivo no commit atual não resolve, pois ele permanece no histórico. É necessário usar ferramentas como <code>BFG Repo-Cleaner</code> ou <code>git filter-branch</code> para remover os dados permanentemente.</li>
+</ol>
+<h3 id="como-prevenir-boas-práticas-de-engenharia">Como Prevenir (Boas Práticas de Engenharia)</h3>
+<p>Para evitar que isso ocorra novamente, recomendamos a implementação de camadas de defesa em profundidade:</p>
+<ul>
+<li><strong>Pré-Commit Hooks:</strong> Utilize ferramentas como <strong>Talisman</strong> ou <strong>pre-commit</strong> com hooks de detecção de segredos. Isso impede que o desenvolvedor faça o commit de chaves AWS ou arquivos <code>.env</code> localmente.</li>
+<li><strong>Secret Management:</strong> Jamais use arquivos <code>.env</code> dentro da imagem Docker. Utilize <strong>Kubernetes Secrets</strong> ou soluções de cofre como <strong>HashiCorp Vault</strong>. Os segredos devem ser injetados apenas em tempo de execução.</li>
+<li><strong>Container Build:</strong> Certifique-se de que o arquivo <code>.dockerignore</code> inclua o diretório <code>.git</code>. Isso previne que a pasta de versionamento seja copiada para dentro da imagem final, eliminando o vetor de ataque pela raiz.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span># .dockerignore
+</span></span><span style="display:flex;"><span>.git
+</span></span><span style="display:flex;"><span>.env
+</span></span></code></pre></div><ul>
+<li><strong>CI/CD Scanning:</strong> Implemente passos no pipeline (ex: GitHub Actions, GitLab CI) que rodem o <strong>TruffleHog</strong> ou <strong>Gitleaks</strong> para escanear o código antes do build.</li>
+</ul>
+
+        </div>
+      </section>
+
+      
+
+      
+      
+
+      
+      
+
+      
+      
+
+      
+      
+    </article>
+
+    
+    
+    <div style="margin-top: clamp(3rem, 5vh, 4rem); text-align: center; padding: clamp(1.5rem, 3vw, 2rem); background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(167, 139, 250, 0.05)); border-radius: clamp(12px, 2vw, 16px);">
+      
+      
+      
+      <p style="color: var(--muted); margin-bottom: 1rem;">Este whitepaper faz parte de:</p>
+      <a href="/hannya_tech/pesquisa/kubegoat/" class="btn primary" style="text-decoration: none; font-size: 1.05rem;">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Exploração e Mitigação de Vulnerabilidades em Kubernetes: Estudo com Kubegoat
+      </a>
+      
+    </div>
+    
+  </div>
+
+<style>
+.whitepaper-content h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.whitepaper-content h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.whitepaper-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  max-width: 85ch;
+}
+
+.whitepaper-content ul,
+.whitepaper-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
+.whitepaper-content li {
+  margin-bottom: 0.5rem;
+}
+
+.whitepaper-content code {
+  background: rgba(124, 58, 237, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: 'Courier New', monospace;
+}
+
+.whitepaper-content pre {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.whitepaper-content blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.whitepaper-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.1);
+}
+
+.whitepaper-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.whitepaper-content th,
+.whitepaper-content td {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.whitepaper-content th {
+  background: var(--card-bg);
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .whitepaper-content {
+    max-width: 100%;
+  }
+  
+  .whitepaper-content p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hannya-container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  
+  .whitepaper-content {
+    padding: 0;
+  }
+  
+  .box {
+    padding: 1.25rem !important;
+    border-radius: 12px !important;
+  }
+  
+  .whitepaper-content h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .whitepaper-content h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  .whitepaper-content table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hannya-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .box {
+    padding: 1rem !important;
+  }
+  
+  .whitepaper-content h2 {
+    font-size: 1.35rem !important;
+  }
+  
+  .whitepaper-content h3 {
+    font-size: 1.15rem !important;
+  }
+  
+  .whitepaper-content h4 {
+    font-size: 1.05rem !important;
+  }
+  
+  .whitepaper-content table {
+    font-size: 0.85rem;
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .whitepaper-content pre {
+    font-size: 0.85rem;
+    padding: 1rem !important;
+  }
+}
+</style>
+
+  </main>
+
+  <footer style="text-align: center; padding: 2rem 1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 4rem;">
+    <div class="hannya-container">
+      <p>&copy; 2025 Hannya Tech. Feito com <a href="https://gohugo.io/" target="_blank" rel="noopener" style="color: var(--accent);">Hugo</a>.</p>
+    </div>
+  </footer>
+
+  
+  <script>
+    const toggle = document.getElementById('darkmode-toggle');
+    const html = document.documentElement;
+    
+    
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      html.classList.add('dark');
+      if (toggle) toggle.checked = true;
+    }
+    
+    if (toggle) {
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

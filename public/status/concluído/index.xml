@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Concluído on Hannya Tech</title>
+    <link>http://localhost:1313/hannya_tech/status/conclu%C3%ADdo/</link>
+    <description>Recent content in Concluído on Hannya Tech</description>
+    <generator>Hugo</generator>
+    <language>pt</language>
+    <lastBuildDate>Mon, 15 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/hannya_tech/status/conclu%C3%ADdo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sensitive keys in codebases</title>
+      <link>http://localhost:1313/hannya_tech/subpesquisa/sensitive-keys-in-codebases/</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hannya_tech/subpesquisa/sensitive-keys-in-codebases/</guid>
+      <description>Exploração de diretório &lt;code&gt;.git&lt;/code&gt; exposto via servidor web, resultando na extração de credenciais AWS e Flags através da análise de histórico de commits.</description>
+    </item>
+  </channel>
+</rss>

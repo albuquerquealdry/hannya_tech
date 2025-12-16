@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Metadata on Hannya Tech</title>
-    <link>https://albuquerquealdry.github.io/hannya_tech/tags/metadata/</link>
+    <link>http://localhost:1313/hannya_tech/tags/metadata/</link>
     <description>Recent content in Metadata on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <atom:link href="https://albuquerquealdry.github.io/hannya_tech/tags/metadata/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/hannya_tech/tags/metadata/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mixnets and Latency</title>
-      <link>https://albuquerquealdry.github.io/hannya_tech/en/subpesquisa/mixnets-and-latency/</link>
+      <link>http://localhost:1313/hannya_tech/en/subpesquisa/mixnets-and-latency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://albuquerquealdry.github.io/hannya_tech/en/subpesquisa/mixnets-and-latency/</guid>
+      <guid>http://localhost:1313/hannya_tech/en/subpesquisa/mixnets-and-latency/</guid>
       <description>How mixing networks protect metadata and their latency costs.</description>
     </item>
   </channel>

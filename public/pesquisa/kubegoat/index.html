@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head><script src="/hannya_tech/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hannya_tech/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hannya Tech">
+  <title>Exploração e Mitigação de Vulnerabilidades em Kubernetes: Estudo com Kubegoat :: Hannya Tech</title>
+  
+  
+  <link rel="stylesheet" href="/hannya_tech/css/hannya.css">
+  
+  
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/hannya_tech/css/hannya.css">
+</head>
+<body class="">
+  <header>
+    
+
+<div class="hannya-container" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem;">
+  <a href="http://localhost:1313/hannya_tech/" aria-label="Home" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+    <img src="/hannya_tech/logo.svg" alt="Hannya Tech" style="height: 40px; width: auto;"/>
+    <span style="font-weight: 800; font-size: 1.25rem; color: var(--text);">Hannya Tech</span>
+  </a>
+
+  <nav style="display: flex; align-items: center; gap: 0.5rem;">
+    
+      
+        <a class="btn ghost" href="/hannya_tech/pesquisa/" style="text-decoration: none;">Pesquisas</a>
+      
+        <a class="btn ghost" href="/hannya_tech/sobre/" style="text-decoration: none;">Sobre</a>
+      
+    
+
+    <label for="darkmode-toggle" class="btn ghost" style="cursor: pointer;" title="Alternar tema">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" style="position: absolute; opacity: 0; pointer-events: none;" aria-label="Alternar tema">
+      <span class="icon-sun" style="display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="4"></circle>
+  <path d="M12 2v2"></path>
+  <path d="M12 20v2"></path>
+  <path d="m4.93 4.93 1.41 1.41"></path>
+  <path d="m17.66 17.66 1.41 1.41"></path>
+  <path d="M2 12h2"></path>
+  <path d="M20 12h2"></path>
+  <path d="m6.34 17.66-1.41 1.41"></path>
+  <path d="m19.07 4.93-1.41 1.41"></path>
+</svg></span>
+      <span class="icon-moon" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+  <path d="M19 3v4"></path>
+  <path d="M21 5h-4"></path>
+</svg></span>
+    </label>
+  </nav>
+</div>
+
+  </header>
+
+  <main>
+    
+  
+  
+  
+  
+  
+    
+  
+
+  <div class="hannya-container" style="max-width: 1400px;">
+    
+    
+    <div class="hero-cover" style="width: 100%; height: clamp(220px, 35vw, 380px); border-radius: 16px; overflow: hidden; margin: 0 auto 1.5rem; box-shadow: 0 8px 28px rgba(0,0,0,.25);">
+      <img src="/hannya_tech/images/pesquisa/kube.png" alt="capa" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+    
+    <header style="margin-bottom: 2.5rem; max-width: 1100px; margin-left: auto; margin-right: auto;">
+      <h1 class="hannya-title" style="margin-bottom: 1rem; font-size: clamp(2rem, 4vw, 2.75rem);">Exploração e Mitigação de Vulnerabilidades em Kubernetes: Estudo com Kubegoat</h1>
+      <p class="hannya-subtitle" style="font-size: clamp(1rem, 2vw, 1.2rem); line-height: 1.7; margin-bottom: 1.25rem; max-width: 900px;">Pesquisa prática focada na exploração de vetores de ataque em clusters Kubernetes utilizando o ambiente vulnerável Kubegoat, seguida pela análise de impacto e proposição de medidas de mitigação e defesa.</p>
+      <div class="chips" style="align-items: center; gap: 0.5rem;">
+        <span class="chip">kubernetes</span><span class="chip">security</span><span class="chip">pentest</span><span class="chip">kubegoat</span><span class="chip">hardening</span><span class="chip">purple-team</span>
+        
+        <a class="badge " href="/status/em-progresso" style="text-decoration: none;">em progresso</a>
+      </div>
+    </header>
+
+    
+    <section class="summary box" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(167, 139, 250, 0.08)); max-width: 1100px; margin: 0 auto 2rem; border: 2px solid var(--accent-2); box-shadow: 0 4px 20px rgba(124, 58, 237, 0.1);">
+      <div class="summary-row" style="gap: 1.5rem;">
+        <div class="summary-title" style="font-size: 1.1rem; font-weight: 700;">Progresso</div>
+        <div class="summary-progress" style="flex: 1 1 300px;">
+          <div class="progress" style="height: 12px; border-radius: 999px;"><div class="progress__bar" style="width: 60%;"></div></div>
+        </div>
+        <div class="summary-kpis" style="font-weight: 700; gap: 1rem;">
+          <span style="font-size: 1rem;">3/5 checkpoints</span>
+          <span style="color: var(--accent); font-size: 1.3rem;">60%</span>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="layout-2col" style="gap: 2rem; max-width: 1400px; margin: 0 auto;">
+      <article class="content box" style="padding: 2rem;">
+        <h2 id="-visão-geral">🧭 Visão Geral</h2>
+<p>Esta pesquisa conduz um estudo aprofundado de segurança em orquestração de containers, utilizando a metodologia de <strong>Purple Teaming</strong> (Ataque e Defesa simultâneos).</p>
+<p><strong>Objetivo Central:</strong> Demonstrar empiricamente vulnerabilidades críticas em ambientes Kubernetes e validar a eficácia de ferramentas modernas de segurança na mitigação desses riscos.</p>
+<p><strong>Metodologia:</strong>
+A pesquisa segue um ciclo iterativo para cada subpesquisa listada:</p>
+<ol>
+<li><strong>Exploração (Red Team):</strong> Executar o cenário de ataque proposto pelo Kubegoat, documentando o vetor de entrada, os comandos utilizados e o nível de acesso obtido.</li>
+<li><strong>Análise:</strong> Avaliar o impacto do comprometimento (confidencialidade, integridade ou disponibilidade).</li>
+<li><strong>Mitigação (Blue Team):</strong> Implementar correções (Network Policies, SecurityContexts, RBAC restritivo) ou ferramentas de detecção (Falco, Kyverno) para neutralizar a falha.</li>
+</ol>
+<p><strong>Escopo:</strong>
+O estudo cobre desde falhas de configuração estática (arquivos yaml, imagens docker) até ataques em tempo de execução (runtime escapes, manipulação de syscalls). Todas as atividades são restritas ao ambiente isolado do Kubegoat.</p>
+<p><strong>Critérios de Sucesso:</strong></p>
+<ul>
+<li>Reprodução bem-sucedida dos cenários de ataque.</li>
+<li>Documentação clara do &ldquo;Kill Chain&rdquo; de cada vulnerabilidade.</li>
+<li>Demonstração de que a aplicação das medidas defensivas impede ou detecta o ataque realizado.</li>
+</ul>
+<hr>
+<h2 id="-considerações-éticas">⚖️ Considerações Éticas</h2>
+<ul>
+<li><strong>Ambiente Controlado:</strong> Todos os testes serão realizados estritamente dentro do ambiente de laboratório (Kubegoat) isolado da internet pública ou redes corporativas.</li>
+<li><strong>Propósito Educacional:</strong> A documentação gerada visa capacitar profissionais de segurança e administradores de sistemas a protegerem suas infraestruturas, e não incentivar atividades maliciosas.</li>
+<li><strong>Responsabilidade:</strong> O pesquisador reconhece os riscos de ferramentas de exploração e garante que nenhuma técnica será direcionada a alvos não autorizados.</li>
+</ul>
+<hr>
+<h2 id="-próximos-passos">🚀 Próximos Passos</h2>
+<ul>
+<li><strong>Setup:</strong> Garantir que o <code>Kubegoat</code> esteja rodando e acessível (<code>bash setup-kubernetes-goat.sh</code>).</li>
+<li><strong>Validação Inicial:</strong> Rodar um scan básico para confirmar que o cluster está &ldquo;vulnerável&rdquo; conforme esperado.</li>
+<li><strong>Iniciar Subpesquisa 01:</strong> Começar pela análise de chaves sensíveis no código (&ldquo;Sensitive keys in codebases&rdquo;).</li>
+<li><strong>Registro:</strong> Para cada cenário concluído, criar um log detalhado contendo: <em>Descrição do Problema</em>, <em>Prova de Conceito (PoC)</em> e <em>Solução Recomendada</em>.</li>
+</ul>
+<hr>
+<h2 id="-referências">📚 Referências</h2>
+<ul>
+<li><a href="https://madhuakula.com/kubernetes-goat/">Kubernetes Goat - Official Documentation</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/security/">Kubernetes Security - Official Docs</a></li>
+<li><a href="https://www.cisecurity.org/benchmark/kubernetes">CIS Benchmarks for Kubernetes</a></li>
+<li><a href="https://falco.org/docs/">Falco Documentation</a></li>
+<li><a href="https://kyverno.io/docs/">Kyverno Documentation</a></li>
+<li><a href="https://attack.mitre.org/matrices/enterprise/containers/">MITRE ATT&amp;CK for Containers</a></li>
+</ul>
+
+      </article>
+
+      <div class="stack-column">
+        <section class="box">
+          <h2 style="font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 1.25rem;">🔍</span>
+            Subpesquisas
+          </h2>
+          
+          
+          <div class="sub-grid">
+            
+            
+              
+                
+                
+                
+                
+                  
+                    <a id="subpesquisa-sensitive-keys-in-codebases" class="card" style="padding: 1rem; text-decoration: none;" href="/hannya_tech/subpesquisa/sensitive-keys-in-codebases/">
+                      <div class="card-header"><h3 style="font-size: 1.1rem;">Sensitive keys in codebases</h3></div>
+                      <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Identificação e exploração de segredos hardcoded em repositórios e configurações.</p>
+                    </a>
+                  
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-dind-docker-in-docker-exploitation" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">DIND (docker-in-docker) exploitation</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Exploração de privilégios em containers rodando Docker socket exposto.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-ssrf-in-the-kubernetes-k8s-world" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">SSRF in the Kubernetes (K8S) world</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Ataques de Server-Side Request Forgery para acessar metadados da nuvem ou serviços internos.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-container-escape-to-the-host-system" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Container escape to the host system</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Técnicas de quebra de isolamento para ganhar acesso ao nó (host) subjacente.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-docker-cis-benchmarks-analysis" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Docker CIS benchmarks analysis</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Avaliação de conformidade do runtime Docker contra padrões CIS.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-kubernetes-cis-benchmarks-analysis" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Kubernetes CIS benchmarks analysis</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Avaliação de conformidade dos componentes do cluster (ETCD, API Server, Kubelet) contra padrões CIS.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-attacking-private-registry" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Attacking private registry</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Exploração de más configurações e credenciais em registros de container privados.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-nodeport-exposed-services" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">NodePort exposed services</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Identificação e ataque a serviços expostos indevidamente via NodePort.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-helm-v2-tiller-to-pwn-the-cluster" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Helm v2 tiller to PwN the cluster</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Exploração de versões legadas do Helm (Tiller) para escalação de privilégios.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-analyzing-crypto-miner-container" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Analyzing crypto miner container</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Detecção e análise forense de containers comprometidos rodando mineração de criptomoedas.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-kubernetes-namespaces-bypass" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Kubernetes namespaces bypass</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Técnicas para contornar a segregação lógica de namespaces.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-gaining-environment-information" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Gaining environment information</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Enumeração e reconhecimento de variáveis de ambiente e configurações do cluster.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-dos-the-memory/cpu-resources" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">DoS the Memory/CPU resources</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Ataques de exaustão de recursos devido à falta de Limits/Requests.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-hacker-container-preview" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Hacker container preview</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Análise de containers maliciosos pré-configurados para pentest.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-hidden-in-layers" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Hidden in layers</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Extração de informações sensíveis ocultas em camadas antigas de imagens Docker.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-rbac-least-privileges-misconfiguration" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">RBAC least privileges misconfiguration</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Exploração de permissões excessivas (Role/ClusterRole) para escalação lateral ou vertical.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-kubeaudit-audit-kubernetes-clusters" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">KubeAudit - Audit Kubernetes clusters</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Uso do KubeAudit para identificar falhas de segurança nos recursos do cluster.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-falco-runtime-security-monitoring-detection" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Falco - Runtime security monitoring &amp; detection</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Implementação de regras no Falco para detectar comportamentos anômalos em tempo real.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-popeye-a-kubernetes-cluster-sanitizer" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Popeye - A Kubernetes cluster sanitizer</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Varredura do cluster com Popeye para reportar más práticas e problemas de recursos.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-secure-network-boundaries-using-nsp" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Secure Network Boundaries using NSP</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Definição e teste de Network Policies para segmentação de rede.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-cilium-tetragon-ebpf-based-security-observability" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Cilium Tetragon - eBPF-based Security Observability</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Uso de eBPF com Tetragon para observabilidade profunda e enforcement de segurança.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+                
+                
+                
+                
+                  <div id="subpesquisa-securing-kubernetes-clusters-using-kyverno-policy-engine" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
+                    <div class="card-header"><h3 style="font-size: 1.1rem;">Securing Kubernetes Clusters using Kyverno Policy Engine</h3></div>
+                    <p class="muted" style="font-size: 0.9rem; line-height: 1.5;">Criação de políticas de admissão com Kyverno para bloquear configurações inseguras.</p>
+                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
+                  </div>
+                
+              
+            
+            
+          </div>
+        </section>
+
+        <section class="box">
+          <h2 style="font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 1.25rem;">📋</span>
+            Progresso
+          </h2>
+      <div class="timeline" style="margin-top: 0.5rem;">
+        
+          <div id="checkpoint-fase-1-prepara%C3%A7%C3%A3o-do-ambiente" class="checkpoint done">
+            <div class="dot"></div>
+            <div>
+              <div class="title">Fase 1: Preparação do Ambiente</div>
+              <div class="notes">Deploy do cluster (Kind/Minikube), instalação do Kubegoat e configuração das ferramentas de ataque (Kali/Kubectl).</div>
+            </div>
+          </div>
+        
+          <div id="checkpoint-fase-2-execu%C3%A7%C3%A3o-de-cen%C3%A1rios-ofensivos" class="checkpoint done">
+            <div class="dot"></div>
+            <div>
+              <div class="title">Fase 2: Execução de Cenários Ofensivos</div>
+              <div class="notes">Exploração sistemática das vulnerabilidades listadas (Subpesquisas 1-16).</div>
+            </div>
+          </div>
+        
+          <div id="checkpoint-fase-3-auditoria-e-postura" class="checkpoint done">
+            <div class="dot"></div>
+            <div>
+              <div class="title">Fase 3: Auditoria e Postura</div>
+              <div class="notes">Aplicação de benchmarks e ferramentas de saneamento (Subpesquisas 17, 19).</div>
+            </div>
+          </div>
+        
+          <div id="checkpoint-fase-4-implementa%C3%A7%C3%A3o-de-defesas-e-runtime" class="checkpoint ">
+            <div class="dot"></div>
+            <div>
+              <div class="title">Fase 4: Implementação de Defesas e Runtime</div>
+              <div class="notes">Configuração de monitoramento e políticas de segurança (Subpesquisas 18, 20-22).</div>
+            </div>
+          </div>
+        
+          <div id="checkpoint-fase-5-documenta%C3%A7%C3%A3o-final" class="checkpoint ">
+            <div class="dot"></div>
+            <div>
+              <div class="title">Fase 5: Documentação Final</div>
+              <div class="notes">Consolidação dos relatórios técnicos: Ataque, Impacto e Correção.</div>
+            </div>
+          </div>
+        
+      </div>
+      </section>
+
+        
+        <section class="box">
+          <h2>Tecnologias</h2>
+          <div class="tech-logos">
+            
+              <img src="https://raw.githubusercontent.com/madhuakula/kubernetes-goat/master/images/logo.png" alt="Kubegoat" title="Kubegoat">
+            
+              <img src="https://kubernetes.io/images/favicon.png" alt="Kubernetes" title="Kubernetes">
+            
+              <img src="https://falco.org/img/falco-logo.svg" alt="Falco" title="Falco">
+            
+              <img src="https://kyverno.io/images/kyverno-logo.png" alt="Kyverno" title="Kyverno">
+            
+              <img src="https://cilium.io/static/cilium-logo-color.svg" alt="Cilium Tetragon" title="Cilium Tetragon">
+            
+          </div>
+        </section>
+        
+      </div>
+    </section>
+  </div>
+
+  </main>
+
+  <footer style="text-align: center; padding: 2rem 1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 4rem;">
+    <div class="hannya-container">
+      <p>&copy; 2025 Hannya Tech. Feito com <a href="https://gohugo.io/" target="_blank" rel="noopener" style="color: var(--accent);">Hugo</a>.</p>
+    </div>
+  </footer>
+
+  
+  <script>
+    const toggle = document.getElementById('darkmode-toggle');
+    const html = document.documentElement;
+    
+    
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      html.classList.add('dark');
+      if (toggle) toggle.checked = true;
+    }
+    
+    if (toggle) {
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
