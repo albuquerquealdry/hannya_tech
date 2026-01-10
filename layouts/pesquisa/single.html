@@ -55,7 +55,7 @@
           {{ $subs := where .Site.RegularPages "Params.parent_path" "eq" $parentPath }}
           <div class="sub-grid">
             {{ range $subs }}
-              {{ if eq .File.BaseFileName "sensitive-keys-in-codebases" }}
+              {{ if or (eq .File.BaseFileName "sensitive-keys-in-codebases") (eq .File.BaseFileName "dind-docker-in-docker-exploitation") }}
                 <a id="subpesquisa-{{ .File.BaseFileName }}" class="card" style="padding: 1rem; text-decoration: none;" href="{{ .RelPermalink }}">
                   <div class="card-header"><h3 style="font-size: 1.1rem;">{{ .Title }}</h3></div>
                   {{ with .Params.summary }}<p class="muted" style="font-size: 0.9rem; line-height: 1.5;">{{ . }}</p>{{ end }}
@@ -73,7 +73,7 @@
                 {{ $item := . }}
                 {{ $slug := cond (isset $item "slug") (urlize $item.slug) (urlize $item.title) }}
                 {{ $existing := $.Site.GetPage "page" (printf "subpesquisa/%s" $slug) }}
-                {{ if eq $slug "sensitive-keys-in-codebases" }}
+                {{ if or (eq $slug "sensitive-keys-in-codebases") (eq $slug "dind-docker-in-docker-exploitation") }}
                   {{ if $existing }}
                     <a id="subpesquisa-{{ $slug }}" class="card" style="padding: 1rem; text-decoration: none;" href="{{ $existing.RelPermalink }}">
                       <div class="card-header"><h3 style="font-size: 1.1rem;">{{ $item.title }}</h3></div>
@@ -121,10 +121,20 @@
 
         {{ with .Params.tecnologias }}
         <section class="box">
-          <h2>{{ T "pesquisa.tecnologias" }}</h2>
+          <h2 style="font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 1.25rem;">🛠️</span>
+            {{ T "pesquisa.tecnologias" }}
+          </h2>
           <div class="tech-logos">
             {{ range . }}
-              {{ if .logo }}<img src="{{ .logo }}" alt="{{ .name }}" title="{{ .name }}">{{ else }}<span class="chip">{{ .name }}</span>{{ end }}
+              <div class="tech-logo-item">
+                {{ if .logo }}
+                  <img src="{{ .logo }}" alt="{{ .name }}" title="{{ .name }}">
+                  <span class="tech-name">{{ .name }}</span>
+                {{ else }}
+                  <span class="chip">{{ .name }}</span>
+                {{ end }}
+              </div>
             {{ end }}
           </div>
         </section>

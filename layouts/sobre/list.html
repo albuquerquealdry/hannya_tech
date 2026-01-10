@@ -17,17 +17,9 @@
   {{ else }}
     {{ $photo = $fallback }}
   {{ end }}
+  {{ $photo = $photo | relURL }}
 
   <div class="about-main-content" style="margin-top: clamp(1.5rem, 3vh, 2rem);">
-    <!-- Foto Mock Centralizada -->
-    <div class="about-profile-section" style="text-align: center; margin-bottom: 3rem;">
-      <div class="avatar-container" style="position: relative; width: 220px; height: 220px; margin: 0 auto;">
-        <img class="avatar glitch-avatar" src="https://via.placeholder.com/220/7c3aed/ffffff?text=HANNYA+TECH" alt="Hannya Tech" style="box-shadow: 0 10px 30px rgba(124, 58, 237, 0.2);" />
-        <img class="avatar glitch-avatar-layer" src="https://via.placeholder.com/220/7c3aed/ffffff?text=HANNYA+TECH" alt="" aria-hidden="true" />
-        <img class="avatar glitch-avatar-layer" src="https://via.placeholder.com/220/7c3aed/ffffff?text=HANNYA+TECH" alt="" aria-hidden="true" />
-      </div>
-    </div>
-
     <!-- Grid de Informações -->
     <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
       

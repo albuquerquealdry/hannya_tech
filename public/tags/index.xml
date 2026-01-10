@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <lastBuildDate>Mon, 15 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/hannya_tech/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Command-Injection</title>
+      <link>http://localhost:1313/hannya_tech/tags/command-injection/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hannya_tech/tags/command-injection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dind</title>
+      <link>http://localhost:1313/hannya_tech/tags/dind/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hannya_tech/tags/dind/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>http://localhost:1313/hannya_tech/tags/kubernetes/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hannya_tech/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python-Exploit</title>
+      <link>http://localhost:1313/hannya_tech/tags/python-exploit/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hannya_tech/tags/python-exploit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rce</title>
+      <link>http://localhost:1313/hannya_tech/tags/rce/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hannya_tech/tags/rce/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Aws-Leak</title>
       <link>http://localhost:1313/hannya_tech/tags/aws-leak/</link>
@@ -34,13 +69,6 @@
       <link>http://localhost:1313/hannya_tech/tags/kubegoat/</link>
       <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/hannya_tech/tags/kubegoat/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kubernetes</title>
-      <link>http://localhost:1313/hannya_tech/tags/kubernetes/</link>
-      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hannya_tech/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>

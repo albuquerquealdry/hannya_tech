@@ -6,8 +6,15 @@
     <description>Recent content in Kubernetes on Hannya Tech</description>
     <generator>Hugo</generator>
     <language>pt</language>
-    <lastBuildDate>Mon, 15 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/hannya_tech/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DIND (docker-in-docker) exploitation</title>
+      <link>http://localhost:1313/hannya_tech/subpesquisa/dind-docker-in-docker-exploitation/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hannya_tech/subpesquisa/dind-docker-in-docker-exploitation/</guid>
+      <description>Exploração de falha de injeção de comando (RCE) em serviço de verificação de rede, resultando em acesso root ao container via Reverse Shell.</description>
+    </item>
     <item>
       <title>Exploração e Mitigação de Vulnerabilidades em Kubernetes: Estudo com Kubegoat</title>
       <link>http://localhost:1313/hannya_tech/pesquisa/kubegoat/</link>

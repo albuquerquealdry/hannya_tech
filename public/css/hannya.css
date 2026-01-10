@@ -276,8 +276,86 @@ body { font-family: 'Space Grotesk', system-ui, -apple-system, Segoe UI, Roboto,
 .inline-list a { text-decoration: none; }
 .chip.link { cursor: pointer; }
 
-.tech-logos { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
-.tech-logos img { height: 28px; width: auto; filter: saturate(1.1); }
+.tech-logos { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+  gap: 1rem; 
+  margin-top: 1rem;
+}
+
+.tech-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-logo-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tech-logo-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.15);
+  border-color: var(--accent-2);
+}
+
+.tech-logo-item:hover::before {
+  opacity: 1;
+}
+
+.tech-logo-item img { 
+  height: 40px; 
+  width: auto; 
+  max-width: 100%;
+  object-fit: contain;
+  filter: saturate(1.1);
+  transition: transform 0.3s ease;
+}
+
+.tech-logo-item:hover img {
+  transform: scale(1.1);
+}
+
+.tech-logo-item .tech-name {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .tech-logos {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .tech-logo-item {
+    padding: 1rem;
+    min-height: 90px;
+  }
+  
+  .tech-logo-item img {
+    height: 32px;
+  }
+}
 
 /* Ajustes do toggle de tema: remove fundo estranho e melhora hit area */
 .darkmode-toggle label { background: #f8fafc !important; border: 1px solid var(--border); padding: 0.6rem 1rem; border-radius: 999px; }
