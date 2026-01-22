@@ -2,10 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/hannya_tech/tags/command-injection/</loc>
-    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/hannya_tech/status/conclu%C3%ADdo/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hannya_tech/subpesquisa/container-escape-to-host/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hannya_tech/tags/container-escape/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hannya_tech/tags/cronjob/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hannya_tech/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hannya_tech/tags/kubernetes/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hannya_tech/tags/persistence/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hannya_tech/tags/privilege-escalation/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hannya_tech/tags/reverse-shell/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hannya_tech/status/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hannya_tech/subpesquisa/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hannya_tech/tags/</loc>
+    <lastmod>2026-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hannya_tech/tags/command-injection/</loc>
     <lastmod>2026-01-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/hannya_tech/tags/dind/</loc>
@@ -14,25 +47,10 @@
     <loc>http://localhost:1313/hannya_tech/subpesquisa/dind-docker-in-docker-exploitation/</loc>
     <lastmod>2026-01-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/hannya_tech/</loc>
-    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/hannya_tech/tags/kubernetes/</loc>
-    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/hannya_tech/tags/python-exploit/</loc>
     <lastmod>2026-01-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/hannya_tech/tags/rce/</loc>
-    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/hannya_tech/status/</loc>
-    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/hannya_tech/subpesquisa/</loc>
-    <lastmod>2026-01-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/hannya_tech/tags/</loc>
     <lastmod>2026-01-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/hannya_tech/tags/aws-leak/</loc>
@@ -63,12 +81,12 @@
     <lastmod>2025-12-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt"
+                hreflang="pt-br"
                 href="http://localhost:1313/hannya_tech/en/pesquisa/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt"
+                hreflang="pt-br"
                 href="http://localhost:1313/hannya_tech/pesquisa/"
                 />
   </url><url>
@@ -154,12 +172,12 @@
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt"
+                hreflang="pt-br"
                 href="http://localhost:1313/hannya_tech/pesquisa/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt"
+                hreflang="pt-br"
                 href="http://localhost:1313/hannya_tech/en/pesquisa/"
                 />
   </url><url>
@@ -175,6 +193,9 @@
     <loc>http://localhost:1313/hannya_tech/tags/whonix/</loc>
     <lastmod>2025-11-12T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/hannya_tech/posts/my-first-post/</loc>
+    <lastmod>2024-01-14T07:07:07+01:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/hannya_tech/posts/</loc>
     <lastmod>2024-01-14T07:07:07+01:00</lastmod>
   </url><url>
@@ -185,12 +206,12 @@
     <loc>http://localhost:1313/hannya_tech/en/sobre/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt"
+                hreflang="pt-br"
                 href="http://localhost:1313/hannya_tech/sobre/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt"
+                hreflang="pt-br"
                 href="http://localhost:1313/hannya_tech/en/sobre/"
                 />
   </url><url>
@@ -243,12 +264,12 @@
     <loc>http://localhost:1313/hannya_tech/sobre/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt"
+                hreflang="pt-br"
                 href="http://localhost:1313/hannya_tech/en/sobre/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="pt"
+                hreflang="pt-br"
                 href="http://localhost:1313/hannya_tech/sobre/"
                 />
   </url><url>

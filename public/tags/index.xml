@@ -5,9 +5,51 @@
     <link>http://localhost:1313/hannya_tech/tags/</link>
     <description>Recent content in Tags on Hannya Tech</description>
     <generator>Hugo</generator>
-    <language>pt</language>
-    <lastBuildDate>Fri, 09 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 21 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/hannya_tech/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Container-Escape</title>
+      <link>http://localhost:1313/hannya_tech/tags/container-escape/</link>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hannya_tech/tags/container-escape/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cronjob</title>
+      <link>http://localhost:1313/hannya_tech/tags/cronjob/</link>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hannya_tech/tags/cronjob/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>http://localhost:1313/hannya_tech/tags/kubernetes/</link>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hannya_tech/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Persistence</title>
+      <link>http://localhost:1313/hannya_tech/tags/persistence/</link>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hannya_tech/tags/persistence/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Privilege-Escalation</title>
+      <link>http://localhost:1313/hannya_tech/tags/privilege-escalation/</link>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hannya_tech/tags/privilege-escalation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reverse-Shell</title>
+      <link>http://localhost:1313/hannya_tech/tags/reverse-shell/</link>
+      <pubDate>Wed, 21 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/hannya_tech/tags/reverse-shell/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Command-Injection</title>
       <link>http://localhost:1313/hannya_tech/tags/command-injection/</link>
@@ -20,13 +62,6 @@
       <link>http://localhost:1313/hannya_tech/tags/dind/</link>
       <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/hannya_tech/tags/dind/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kubernetes</title>
-      <link>http://localhost:1313/hannya_tech/tags/kubernetes/</link>
-      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hannya_tech/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>

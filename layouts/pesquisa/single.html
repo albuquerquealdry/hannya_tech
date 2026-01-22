@@ -55,7 +55,7 @@
           {{ $subs := where .Site.RegularPages "Params.parent_path" "eq" $parentPath }}
           <div class="sub-grid">
             {{ range $subs }}
-              {{ if or (eq .File.BaseFileName "sensitive-keys-in-codebases") (eq .File.BaseFileName "dind-docker-in-docker-exploitation") }}
+              {{ if or (eq .File.BaseFileName "sensitive-keys-in-codebases") (eq .File.BaseFileName "dind-docker-in-docker-exploitation") (eq .File.BaseFileName "container-escape-to-host") }}
                 <a id="subpesquisa-{{ .File.BaseFileName }}" class="card" style="padding: 1rem; text-decoration: none;" href="{{ .RelPermalink }}">
                   <div class="card-header"><h3 style="font-size: 1.1rem;">{{ .Title }}</h3></div>
                   {{ with .Params.summary }}<p class="muted" style="font-size: 0.9rem; line-height: 1.5;">{{ . }}</p>{{ end }}
@@ -66,33 +66,6 @@
                   {{ with .Params.summary }}<p class="muted" style="font-size: 0.9rem; line-height: 1.5;">{{ . }}</p>{{ end }}
                   <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
                 </div>
-              {{ end }}
-            {{ end }}
-            {{ if .Params.subpesquisas }}
-              {{ range .Params.subpesquisas }}
-                {{ $item := . }}
-                {{ $slug := cond (isset $item "slug") (urlize $item.slug) (urlize $item.title) }}
-                {{ $existing := $.Site.GetPage "page" (printf "subpesquisa/%s" $slug) }}
-                {{ if or (eq $slug "sensitive-keys-in-codebases") (eq $slug "dind-docker-in-docker-exploitation") }}
-                  {{ if $existing }}
-                    <a id="subpesquisa-{{ $slug }}" class="card" style="padding: 1rem; text-decoration: none;" href="{{ $existing.RelPermalink }}">
-                      <div class="card-header"><h3 style="font-size: 1.1rem;">{{ $item.title }}</h3></div>
-                      {{ with (or $item.summary $existing.Params.summary) }}<p class="muted" style="font-size: 0.9rem; line-height: 1.5;">{{ . }}</p>{{ end }}
-                    </a>
-                  {{ else }}
-                    <div id="subpesquisa-{{ $slug }}" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
-                      <div class="card-header"><h3 style="font-size: 1.1rem;">{{ $item.title }}</h3></div>
-                      {{ with $item.summary }}<p class="muted" style="font-size: 0.9rem; line-height: 1.5;">{{ . }}</p>{{ end }}
-                      <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
-                    </div>
-                  {{ end }}
-                {{ else }}
-                  <div id="subpesquisa-{{ $slug }}" class="card" style="padding: 1rem; text-decoration: none; opacity: 0.6; cursor: not-allowed;">
-                    <div class="card-header"><h3 style="font-size: 1.1rem;">{{ $item.title }}</h3></div>
-                    {{ with $item.summary }}<p class="muted" style="font-size: 0.9rem; line-height: 1.5;">{{ . }}</p>{{ end }}
-                    <p class="muted" style="margin-top: 0.5rem; font-size: 0.85rem;">Indisponível</p>
-                  </div>
-                {{ end }}
               {{ end }}
             {{ end }}
             {{ if and (eq (len $subs) 0) (not .Params.subpesquisas) }}
